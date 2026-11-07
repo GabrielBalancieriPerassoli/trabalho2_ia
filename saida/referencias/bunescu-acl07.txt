@@ -1,0 +1,18 @@
+Referências de: Learning to Extract Relations from the Web using Minimal Supervision (16)
+
+[1] Stuart Andrews, Ioannis Tsochantaridis, and Thomas Hofmann. 2003. Support vector machines for multiple-instance learning. In NIPS 15, pages 561-568, Vancouver, BC. MIT Press.
+[2] Collin F. Baker, Charles J. Fillmore, and John B. Lowe. 1998. The Berkeley FrameNet project. In Proc. of COLING-ACL '98, pages 86-90, San Francisco, CA. Morgan Kaufmann Publishers.
+[3] Razvan C. Bunescu and Raymond J. Mooney. 2006. Subsequence kernels for relation extraction. In Y . Weiss, B. Sch ̈olkopf, and J. Platt, editors, NIPS 18.
+[4] M. Craven and J. Kumlien. 1999. Constructing biological knowledge bases by extracting information from text sources. In Proc. of ISMB'99 , pages 77-86, Heidelberg, Germany.
+[5] Aron Culotta and Jeffrey Sorensen. 2004. Dependency tree kernels for relation extraction. In Proc. of ACL'04 , pages 423-429, Barcelona, Spain, July.
+[6] Thomas G. Dietterich, Richard H. Lathrop, and Tomas Lozano- Perez. 1997. Solving the multiple instance problem with axis-parallel rectangles. Artificial Intelligence, 89(1-2):31- 71.
+[7] Oren Etzioni, Michael Cafarella, Doug Downey, Ana-Maria Popescu, Tal Shaked, Stephen Soderland, Daniel S. Weld, and Alexander Yates. 2005. Unsupervised named-entity extraction from the web: an experimental study. Artificial Intelligence, 165(1):91-134.
+[8] T. Gartner, P.A. Flach, A. Kowalczyk, and A.J. Smola. 2002. Multi-instance kernels. In In Proc. of ICML'02, pages 179- 186, Sydney, Australia, July. Morgan Kaufmann.
+[9] M. A. Hearst. 1992. Automatic acquisition of hyponyms from large text corpora. In Proc. of ACL'92, Nantes, France.
+[10] Judea Pearl. 1986. Fusion, propagation, and structuring in belief networks. Artificial Intelligence, 29(3):241-288.
+[11] Soumya Ray and Mark Craven. 2005. Supervised versus multiple instance learning: An empirical comparison. In Proc. of ICML'05, pages 697-704, Bonn, Germany.
+[12] Bernhard Sch ̈olkopf and Alexander J. Smola. 2002. Learning with kernels - support vector machines, regularization, optimization and beyond. MIT Press, Cambridge, MA.
+[13] N. A. Smith and J. Eisner. 2005. Contrastive estimation: Training log-linear models on unlabeled data. In Proc. of ACL'05, pages 354-362, Ann Arbor, Michigan.
+[14] Vladimir N. Vapnik. 1998. Statistical Learning Theory. John Wiley & Sons.
+[15] D. Zelenko, C. Aone, and A. Richardella. 2003. Kernel methods for relation extraction. Journal of Machine Learning Research, 3:1083-1106.
+[16] Q. Zhang, S. A. Goldman, W. Yu, and J. Fritts. 2002. Contentbased image retrieval using multiple-instance learning. In Proc. of ICML'02, pages 682-689.

@@ -1,0 +1,8 @@
+pypdf>=4.0
+pdfplumber>=0.10
+nltk>=3.8
+rdflib>=7.0
+matplotlib>=3.7
+wordcloud>=1.9
+networkx>=3.0
+numpy>=1.24

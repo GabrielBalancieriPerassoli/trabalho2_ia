@@ -1,0 +1,764 @@
+[
+  {
+    "arquivo": "2203.00130v1.pdf",
+    "titulo": "Paper Plain: Making Medical Research Papers Approachable to Healthcare Consumers with Natural Language Processing",
+    "ano": 2022,
+    "num_paginas": 39,
+    "secoes": [
+      {
+        "titulo": "Início",
+        "tipo": "inicio",
+        "num_palavras": 212
+      },
+      {
+        "titulo": "Keywords",
+        "tipo": "palavras_chave",
+        "num_palavras": 16
+      },
+      {
+        "titulo": "Keywords",
+        "tipo": "palavras_chave",
+        "num_palavras": 9
+      },
+      {
+        "titulo": "1 INTRODUCTION",
+        "tipo": "introducao",
+        "num_palavras": 1894
+      },
+      {
+        "titulo": "2 BACKGROUND AND RELATED WORK",
+        "tipo": "trabalhos_relacionados",
+        "num_palavras": 1554
+      },
+      {
+        "titulo": "3 OBSERVATIONS OF NON-EXPERT READERS",
+        "tipo": "outra",
+        "num_palavras": 2916
+      },
+      {
+        "titulo": "4 PAPER PLAIN: READING SUPPORT FOR MEDICAL RESEARCH PAPERS",
+        "tipo": "outra",
+        "num_palavras": 2161
+      },
+      {
+        "titulo": "5 IMPLEMENTATION",
+        "tipo": "metodologia",
+        "num_palavras": 782
+      },
+      {
+        "titulo": "6 USABILITY STUDY",
+        "tipo": "outra",
+        "num_palavras": 1569
+      },
+      {
+        "titulo": "7 RESULTS",
+        "tipo": "resultados",
+        "num_palavras": 2845
+      },
+      {
+        "titulo": "8 DISCUSSION & FUTURE WORK",
+        "tipo": "conclusao",
+        "num_palavras": 2011
+      },
+      {
+        "titulo": "9 CONCLUSION",
+        "tipo": "conclusao",
+        "num_palavras": 158
+      },
+      {
+        "titulo": "ACKNOWLEDGMENTS",
+        "tipo": "agradecimentos",
+        "num_palavras": 103
+      },
+      {
+        "titulo": "REFERENCES",
+        "tipo": "referencias",
+        "num_palavras": 3271
+      },
+      {
+        "titulo": "Appendix: A INTERVIEWS WITH HEALTHCARE CONSUMERS AND PROVIDERS",
+        "tipo": "apendice",
+        "num_palavras": 2331
+      }
+    ],
+    "top_termos": [
+      {
+        "termo": "read",
+        "frequencia": 237
+      },
+      {
+        "termo": "plain",
+        "frequencia": 189
+      },
+      {
+        "termo": "participant",
+        "frequencia": 176
+      },
+      {
+        "termo": "question",
+        "frequencia": 161
+      },
+      {
+        "termo": "answer",
+        "frequencia": 138
+      },
+      {
+        "termo": "reader",
+        "frequencia": 137
+      },
+      {
+        "termo": "gist",
+        "frequencia": 136
+      },
+      {
+        "termo": "information",
+        "frequencia": 135
+      },
+      {
+        "termo": "medical",
+        "frequencia": 119
+      },
+      {
+        "termo": "research",
+        "frequencia": 110
+      }
+    ],
+    "tecnicas": {
+      "LLM / GPT": 6,
+      "Questionário / entrevista / estudo com usuários": 27
+    },
+    "tarefas": {
+      "Análise sintática (parsing)": 1,
+      "Reconhecimento de entidades (NER)": 2,
+      "Tradução automática": 1,
+      "Sumarização": 6,
+      "Análise de sentimentos": 3,
+      "Perguntas e respostas": 17,
+      "Recuperação de informação / busca": 3,
+      "Recomendação": 1,
+      "Geração de texto / paráfrase": 2
+    },
+    "elementos": {
+      "objetivo": [
+        {
+          "texto": "In this paper, we ask how interactive information interfaces can make the research literature approachable to non-expert healthcare consumers that need it - whom we refer to as \"readers\" in this paper.",
+          "secao": "introducao",
+          "pontuacao": 5
+        },
+        {
+          "texto": "In this paper we ask how interactive interfaces can make medical research papers approachable to healthcare consumers that need it.",
+          "secao": "conclusao",
+          "pontuacao": 4
+        }
+      ],
+      "problema": [
+        {
+          "texto": "Reading medical papers, however, can be a challenging experience.",
+          "secao": "resumo",
+          "pontuacao": 5
+        },
+        {
+          "texto": "However, these resources do not cover all medical conditions and treatments [9, 90], especially those which are the focus of emerging research [17, 86].",
+          "secao": "introducao",
+          "pontuacao": 6
+        }
+      ],
+      "metodo": [
+        {
+          "texto": "To improve access to medical papers, we introduce a novel interactive interface - Paper Plain1 - with four features powered by natural language processing: definitions of unfamiliar terms, in-situ plain language section summaries, a collection of key questions that guide readers to answering passages, and plain language summaries of the answering passages.",
+          "secao": "resumo",
+          "pontuacao": 5
+        },
+        {
+          "texto": "To improve access to medical papers, we develop a novel interactive system, Paper Plain, through an iterative design process.",
+          "secao": "introducao",
+          "pontuacao": 5
+        },
+        {
+          "texto": "The system is designed to make medical papers accessible with four features (illustrated in Figure 1) that combine to provide support at multiple levels of granularity (e.g., term, paragraph, section) and throughout the reading process.",
+          "secao": "introducao",
+          "pontuacao": 5
+        }
+      ],
+      "contribuicao": [
+        {
+          "texto": "In summary, this paper contributes: (1) A characterization of the barriers readers face when they approach medical research papers.",
+          "secao": "introducao",
+          "pontuacao": 4
+        },
+        {
+          "texto": "(2) Paper Plain, an interactive reading interface for research papers that integrates existing affordances like term definition tooltips with novel affordances like in-situ plain language summaries of paper sections and a collection of key questions that guide readers to answering passages in the paper with paired plain language answers (§4).",
+          "secao": "introducao",
+          "pontuacao": 6
+        },
+        {
+          "texto": "(3) Evidence from our usability study that these new affordances helped readers quickly find places in a paper that were informative to them.",
+          "secao": "introducao",
+          "pontuacao": 6
+        }
+      ],
+      "trabalho_futuro": [
+        {
+          "texto": "We offer the following guidance for developing such future systems: Provide reading guidance Interactive reading systems for non-experts can provide more active support for guiding readers.",
+          "secao": "conclusao",
+          "pontuacao": 7
+        },
+        {
+          "texto": "Future systems could go further by reporting factuality measures along with generated text [83] or integrating a feedback mechanism for reporting inconsistent information in order to crowd-source these factuality checks.",
+          "secao": "conclusao",
+          "pontuacao": 7
+        },
+        {
+          "texto": "We are excited to integrate new advances for measuring and ensuring factuality in generations (e.g., [33, 60, 77]) into Paper Plain to help realize the promise of such models in real-world settings.",
+          "secao": "conclusao",
+          "pontuacao": 7
+        },
+        {
+          "texto": "In future work we are excited to observe the use of Paper Plain in more naturalistic settings.",
+          "secao": "conclusao",
+          "pontuacao": 13
+        }
+      ]
+    },
+    "num_referencias": 111,
+    "referencias": [
+      "2021. Fermat's Library. https://fermatslibrary.com/",
+      "2021. Hypothes.is: Annotate the web, with anyone, anywhere. https://web.hypothes.is",
+      "2021. New Standards for Plain Language Summaries. https://consumers.cochrane.org/PLEACS",
+      "2021. UpToDate: Evidence-based Clinical Decision Support. https://www.wolterskluwer.com/en/solutions/uptodate",
+      "Asma Ben Abacha and Dina Demner-Fushman. 2019. A question-entailment approach to question answering. BMC Bioinformatics 20 (2019).",
+      "Takeshi Abekawa and Akiko Aizawa. 2016. SideNoter: Scholarly Paper Browsing System based on PDF Restructuring and Text Annotation. In International Conference on Computational Linguistics .",
+      "Sriram Karthik Badam, Zhicheng Liu, and Niklas Elmqvist. 2019. Elastic Documents: Coupling Text and Tables through Contextual Visualizations for Enhanced Document Reading. IEEE Transactions on Visualization and Computer Graphics 25 (2019), 661-671.",
+      "Xiaoliang Bai, Yong sheng Lian, Jie Wang, Hongxing Zhang, Meichao Jiang, Hao Zhang, Bo Pei, Changqing Hu, and Qiang Yang. 2021. Percutaneous endoscopic lumbar discectomy compared with other surgeries for lumbar disc herniation. Medicine 100 (2021).",
+      "Alison S. Baskin, Ton Wang, Nicole M Mott, Sarah T. Hawley, Reshma Jagsi, and Lesly Dossett. 2020. Gaps in Online Breast Cancer Treatment Information for Older Women. Annals of Surgical Oncology 28 (2020), 950-957.",
+      "Douglas M. Bates, Benjamin M. Bolker, and Steven C. Walker. 2014. fitting linear mixed effects models using lme 4 arxiv.",
+      "Joachim Bingel, Gustavo Paetzold, and Anders Søgaard. 2018. Lexi: A tool for adaptive, personalized text simplification. In International Conference on Computational Linguistics.",
+      "Tanner A. Bohn and Charles X. Ling. 2021. Hone as You Read: A Practical Type of Interactive Summarization. ArXiv abs/2105.02923 (2021).",
+      "Anthony C. Breu. 2020. From Tweetstorm to Tweetorials: Threaded Tweets as a Tool for Medical Education and Knowledge Dissemination. Seminars in nephrology 40 3 (2020), 273-278.",
+      "Mary Anne Britt, Tobias Richter, and Jean-François Rouet. 2014. Scientific Literacy: The Role of Goal-Directed Reading and Evaluation in Understanding Scientific Information. Educational Psychologist 49 (2014), 104 - 122.",
+      "Rainer Bromme and Susan R. Goldman. 2014. The Public's Bounded Understanding of Science. Educational Psychologist 49 (2014), 59 - 69.",
+      "Alex Broom. 2005. Virtually He@lthy: The Impact of Internet Use on Disease Experience and the Doctor-Patient Relationship. Qualitative Health Research 15 (2005), 325 - 345.",
+      "Phil Brown, Stephen Zavestoski, Sabrina McCormick, Brian Mayer, Rachel Morello-Frosch, and Rebecca Gasior Altman. 2004. Embodied health movements: new approaches to social movements in health. Sociology of health & illness 26 1 (2004), 50-80.",
+      "Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, T. J. Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeff Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020. Language Models are Few-Shot Learners. ArXiv abs/2005.14165 (2020).",
+      "Ross C. Brownson, Jonathan E. Fielding, and L. W. Green. 2018. Building Capacity for Evidence-Based Public Health: Reconciling the Pulls of Practice and the Push of Research. Annual review of public health 39 (2018), 27-53.",
+      "Peter Brusilovsky and Leonid Pesin. 1998. Adaptive Navigation Support in Educational Hypermedia: An Evaluation of the ISIS-Tutor. In CIT 2015.",
+      "Yixin Cao, Ruihao Shui, Liangming Pan, Min-Yen Kan, Zhiyuan Liu, and Tat-Seng Chua. 2020. Expertise Style Transfer: A New Task Towards Better Communication between Experts and Laymen. In Association for Computational Linguistics .",
+      "Marc-Allen Cartright, Ryen W. White, and Eric Horvitz. 2011. Intentions and attention in exploratory health search. Proceedings of the 34th international ACM SIGIR conference on Research and development in Information Retrieval (2011).",
+      "Vinay K. Chaudhri, Britte Haugan Cheng, Adam Overholtzer, Jeremy Roschelle, Aaron Spaulding, Peter E. Clark, Mark T. Greaves, and David Gunning. 2013. Inquire Biology: A Textbook that Answers Questions. AI Magazine 34 (2013), 55-72.",
+      "Munmun De Choudhury, Meredith Ringel Morris, and Ryen W. White. 2014. Seeking and sharing health information online: comparing search engines and social media. Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (2014).",
+      "Rune Christensen. 2018. Cumulative Link Models for Ordinal Regression with the R Package ordinal.",
+      "Avital Cnaan, Nan M. Laird, and Peter Slasor. 1997. Using the General Linear Mixed Model to Analyse Unbalanced Repeated Measures and Longitudinal Data. Statistics in Medicine 16 (1997), 2349-2380.",
+      "Anthony M Cocco, Rachel D. Zordan, David Taylor, Tracey J Weiland, Stuart J Dilley, Joyce A Kant, Mahesha Hk Dombagolla, Andreas Hendarto, Fiona Wy Lai, and Jennie Hutton. 2018. Dr Google in the ED: searching for online health information by adult emergency department patients. Medical Journal of Australia 209 (2018).",
+      "Kevyn Collins-Thompson, Paul N. Bennett, Ryen W. White, Sebastian de la Chica, and David A. Sontag. 2011. Personalizing web search results by reading level. In ACM International Conference on Information and Knowledge Management .",
+      "Robert Cudeck. 1996. Mixed-effects Models in the Study of Individual Differences with Repeated Measures Data. Multivariate behavioral research 31 3 (1996), 371-403.",
+      "Suzanne Day, Stuart Rennie, Danyang Luo, and Joseph D. Tucker. 2020. Open to the public: paywalls and the public rationale for open access medical research publishing. Research Involvement and Engagement 6 (2020).",
+      "Dina Demner-Fushman and Noémie Elhadad. 2016. Aspiring to Unintended Consequences of Natural Language Processing: A Review of Recent Developments in Clinical and Consumer-Generated Text Processing. Yearbook of medical informatics 1 (2016), 224-233.",
+      "Ashwin Devaraj, Iain James Marshall, Byron C. Wallace, and Junyi Jessy Li. 2021. Paragraph-level Simplification of Medical Texts. ArXiv abs/2104.05767 (2021).",
+      "Yue Dong, Shuohang Wang, Zhe Gan, Yu Cheng, Jackie Chi Kit Cheung, and Jingjing Liu. 2020. Multi-Fact Correction in Abstractive Text Summarization. In Conference on Empirical Methods in Natural Language Processing .",
+      "Kristina Dzara and Ariel S Frey-Vogel. 2019. Medical Education Journal Club for the Millennial Resident: An Interactive, No-Prep Approach. Academic pediatrics (2019).",
+      "Saul Epstein. 1997. Impure Science: AIDS, Activism, and the Politics of Knowledge. Nature Medicine 3 (1997), 242-243.",
+      "Günes Erkan and Dragomir R. Radev. 2004. LexRank: Graph-based Lexical Centrality as Salience in Text Summarization. Journal of Artificial Intelligence Research 22 (2004), 457-479.",
+      "A. R. Fabbri, Wojciech Kryscinski, Bryan McCann, Richard Socher, and Dragomir Radev. 2021. SummEval: Re-evaluating Summarization Evaluation. Transactions of the Association for Computational Linguistics 9 (2021), 391-409.",
+      "Saadia Gabriel, Antoine Bosselut, Jeff Da, Ari Holtzman, Jan Buys, Asli Çelikyilmaz, and Yejin Choi. 2021. Discourse Understanding and Factual Consistency in Abstractive Summarization. In European Chapter of the Association of Computational Linguistics .",
+      "Saadia Gabriel, Asli Çelikyilmaz, Rahul Jha, Yejin Choi, and Jianfeng Gao. 2021. GO FIGURE: A Meta Evaluation of Factuality in Summarization. In Association for Computational Linguistics FINDINGS .",
+      "Wee Chung Gan and Hwee Tou Ng. 2019. Improving the Robustness of Question Answering Systems to Question Paraphrasing. In Association for Computational Linguistics.",
+      "Katy I. Gero, Vivian Liu, and Lydia B. Chilton. 2021. Sparks: Inspiration for Science Writing using Language Models. ArXiv abs/2110.07640 (2021).",
+      "Yue Guo, Weijian Qiu, Yizhong Wang, and Trevor A. Cohen. 2021. Automated Lay Language Summarization of Biomedical Scientific Reviews. ArXiv abs/2012.12573 (2021).",
+      "Gordon H. Guyatt, John A. Cairns, David N. Churchill, Deborah J. Cook, Brian R Haynes, Jack Hirsh, Jan Irvine, M. Levine, Mitchell A. H. Levine, Jim Nishikawa, David L. Sackett, Patrick Brill-Edwards, Hertzel C. Gerstein, Jim Gibson, Roman Z. Jaeschke, Anthony T. Kerigan, Alan J. Neville, Akbar A Panju, Allan S. Detsky, Murray W. Enkin, Pamela J Frid, Martha S. Gerrity, Andreas Laupacis, Valerie A. Lawrence, Joël Ménard, Virginia A. Moyer, Cynthia D. Mulrow, Paul S. Links, Andrew David Oxman, Jack Sinclair, and Peter Tugwell. 1992. Evidence-based medicine. A new approach to teaching the practi",
+      "Andrew Head, Kyle Lo, Dongyeop Kang, Raymond Fok, Sam Skjonsberg, Daniel S. Weld, and Marti A. Hearst. 2021. Augmenting Scientific Papers with Just-in-Time, Position-Sensitive Definitions of Terms and Symbols. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (2021).",
+      "Marti A. Hearst, Emily Pedersen, Lekha Priya Patil, Elsie Lee, Paul Laskowski, and Steven L. Franconeri. 2020. An Evaluation of Semantically Grouped Word Cloud Designs. IEEE Transactions on Visualization and Computer Graphics 26 (2020), 2748-2761.",
+      "Sture Holm. 1979. A Simple Sequentially Rejective Multiple Test Procedure. Scandinavian Journal of Statistics 6 (1979), 65-70.",
+      "Hossein Hosseini, Sreeram Kannan, Baosen Zhang, and Radha Poovendran. 2017. Deceiving Google's Perspective API Built for Detecting Toxic Comments. ArXiv abs/1702.08138 (2017).",
+      "Abhinav Jain, Nitin Gupta, Shashank Mujumdar, Sameep Mehta, and Rishi Madhok. 2018. Content Driven Enrichment of Formal Text using Concept Definitions and Applications. Proceedings of the 29th on Hypertext and Social Media (2018).",
+      "Victoria Johansson, Anna Sigridur Islind, Tomas Lindroth, Eva Angenete, and Martin Gellerstedt. 2021. Online Communities as a Driver for Patient Empowerment: Systematic Review. Journal of Medical Internet Research 23 (2021).",
+      "Meghana Kalavar, Sasha Hubschman, Julia L Hudson, Ajay E. Kuriyan, and Jayanth Sridhar. 2021. Evaluation of Available Online Information Regarding Treatment for Vitreous Floaters. Seminars in Ophthalmology 36 (2021), 58 - 63.",
+      "Anna Kernder, Elena Elefante, Gamal Chehab, Chiara Tani, Marta Mosca, and Matthias Schneider. 2020. The patient's perspective: are quality of life and disease burden a possible treatment target in systemic lupus erythematosus? Rheumatology (Oxford, England) 59 (2020), 63 - 68.",
+      "Martin Kerwer, Anita Chasiotis, Johannes Stricker, Armin Günther, and Tom Rosman. 2021. Straight From the Scientist's Mouth - Plain Language Summaries Promote Laypeople's Comprehension and Knowledge Acquisition When Reading About Individual Research Findings in Psychology. Collabra: Psychology (2021).",
+      "Yea-Seul Kim, Jessica R. Hullman, and Eytan Adar. 2015. DeScipher : A Text Simplification Tool for Science Journalism.",
+      "Katrin Kirchhoff, Anne M. Turner, Amittai Axelrod, and Francisco Saavedra. 2011. Application of statistical machine translation to public health information: a feasibility study. Journal of the American Medical Informatics Association 18 4 (2011), 473-8.",
+      "Joëlle Kivits. 2006. Informed Patients and the Internet. Journal of Health Psychology 11 (2006), 269 - 282.",
+      "Wojciech Kryscinski, Bryan McCann, Caiming Xiong, and Richard Socher. 2020. Evaluating the Factual Consistency of Abstractive Text Summarization. ArXiv abs/1910.12840 (2020).",
+      "Alexandra Kuznetsova, Per Bruun Brockhoff, and Rune Christensen. 2017. lmerTest Package: Tests in Linear Mixed Effects Models. Journal of Statistical Software 82 (2017), 1-26.",
+      "Philippe Laban. 2020. A framework for a text-centric user interface for navigating complex news stories.",
+      "Philippe Laban, Tobias Schnabel, Paul Bennett, and Marti A. Hearst. 2021. Keep It Simple: Unsupervised Simplification of Multi-Paragraph Text. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) . Association for Computational Linguistics, Online, 6365-6378. https://doi.org/10.18653/v1/2021.acl-long.498",
+      "Philippe Laban, Tobias Schnabel, Paul N. Bennett, and Marti A. Hearst. 2021. SummaC: Re-Visiting NLI-based Models for Inconsistency Detection in Summarization. ArXiv abs/2111.09525 (2021).",
+      "Gondy Leroy, James E. Endicott, David Kauchak, Obay Mouradi, and Melissa Just. 2013. User Evaluation of the Effects of a Text Simplification Algorithm Using Term Familiarity on Perception, Understanding, Learning, and Information Retention. Journal of Medical Internet Research 15 (2013).",
+      "Julie Letchford, Hazel R. Corradi, and Trevor Day. 2017. A flexible e-learning resource promoting the critical reading of scientific papers for science undergraduates. Biochemistry and Molecular Biology Education 45 (2017).",
+      "Daniel Li, Thomas Chen, Albert Tung, and Lydia B Chilton. 2021. Hierarchical Summarization for Longform Spoken Dialog. In The 34th Annual ACM Symposium on User Interface Software and Technology . 582-597.",
+      "Jiazhao Li, Corey A. Lester, Xinyan Zhao, Yuting Ding, Yun Jiang, and V. G. Vinod Vydiswaran. 2020. PharmMT: A Neural Machine Translation Approach to Simplify Prescription Directions. In Association for Computational Linguistics FINDINGS .",
+      "Magnus Lindstrom and Douglas M. Bates. 1990. Nonlinear mixed effects models for repeated measures data. Biometrics 46 3 (1990), 673-87.",
+      "Pengfei Liu, Weizhe Yuan, Jinlan Fu, Zhengbao Jiang, Hiroaki Hayashi, and Graham Neubig. 2021. Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing. ArXiv abs/2107.13586 (2021).",
+      "Patrice Lopez. 2009. GROBID: Combining Automatic Bibliographic Data Recognition and Term Extraction for Scholarship Publications. In ECDL.",
+      "Sean MacAvaney, Hao-Ren Yao, Eugene Yang, Katina Russell, Nazli Goharian, and Ophir Frieder. 2019. Hate speech detection: Challenges and solutions. PLoS ONE 14 (2019).",
+      "Iain James Marshall, Joël Kuiper, and Byron C. Wallace. 2016. RobotReviewer: evaluation of a system for automatically assessing bias in clinical trials. Journal of the American Medical Informatics Association 23 (2016), 193 - 201.",
+      "Alejandro Martínez and Stefano Mammola. 2021. Specialized terminology reduces the number of citations of scientific papers. Proceedings of the Royal Society B 288 (2021).",
+      "Joshua Maynez, Shashi Narayan, Bernd Bohnet, and Ryan T. McDonald. 2020. On Faithfulness and Factuality in Abstractive Summarization. ArXiv abs/2005.00661 (2020).",
+      "Lisa McCorkell, Gina S. Assaf, Hannah E. Davis, Hannah Wei, and Athena Akrami. 2021. Patient-Led Research Collaborative: embedding patients in the Long COVID narrative. Pain Reports 6 (2021).",
+      "Khalil Mrini, Franck Dernoncourt, Seunghyun Yoon, Trung H. Bui, Walter Chang, Emilia Farcas, and Ndapandula Nakashole. 2021. A Gradually Soft Multi-Task and Data-Augmented Approach to Medical Question Understanding. InAssociation for Computational Linguistics .",
+      "H. Münchow, T. Richter, and S. Schmid. 2020. What Does It Take to Deal with Academic Literature? Springer Fachmedien Wiesbaden, Wiesbaden, 241-260.",
+      "Sonia Krishna Murthy, Daniel King, Tom Hope, Daniel Weld, and Doug Downey. 2021. Towards Personalized Descriptions of Scientific Concepts. In Proceedings of The Fifth Widening Natural Language Processing Workshop . Association for Computational Linguistics, Punta Cana, Dominican Republic.",
+      "Vinay Nair, Shahab Khan, and Kenar D. Jhaveri. 2012. Interactive journals and the future of medical publications. The American journal of medicine 125 10 (2012), 1038-42.",
+      "Feng Nan, Cícero Nogueira dos Santos, Henghui Zhu, Patrick Ng, Kathleen McKeown, Ramesh Nallapati, Dejiao Zhang, Zhiguo Wang, Andrew O. Arnold, and Bing Xiang. 2021. Improving Factual Consistency of Abstractive Summarization via Question Answering.ArXiv abs/2105.04623 (2021).",
+      "Engineering National Academies of Sciences and Medicine. 2018. Returning Individual Research Results to Participants: Guidance for a New Research Paradigm. The National Academies Press, Washington, DC.",
+      "Mark Neumann, Daniel King, Iz Beltagy, and Waleed Ammar. 2019. ScispaCy: Fast and Robust Models for Biomedical Natural Language Processing. In Proceedings of the 18th BioNLP Workshop and Shared Task . Association for Computational Linguistics, Florence, Italy, 319-327.",
+      "Emily Nunn and Stephen Pinfield. 2014. Lay summaries of open access journal articles: engaging with the general public on medical research. Learned Publishing 27 (2014).",
+      "National Institutes of Health et al. 2005. Policy on enhancing public access to archived publications resulting from NIH-funded research. Bethesda, MA: National Institutes of Health;(Notice Number: NOT-OD-05-022).",
+      "Gustavo Paetzold and Lucia Specia. 2016. Anita: An Intelligent Text Adaptation Tool. In International Conference on Computational Linguistics .",
+      "Artidoro Pagnoni, Vidhisha Balachandran, and Yulia Tsvetkov. 2021. Understanding Factuality in Abstractive Summarization with FRANK: A Benchmark for Factuality Metrics. ArXiv abs/2104.13346 (2021).",
+      "George Philipp and Ryen W. White. 2014. Interactions between health searchers and search engines. Proceedings of the 37th international ACM SIGIR conference on Research & development in information retrieval (2014).",
+      "Basel Qenam, Tae Youn Kim, Mark J Carroll, and Michael A. Hogarth. 2017. Text Simplification Using Consumer Health Vocabulary to Generate Patient-Centered Radiology Reporting: Translation and Evaluation. Journal of Medical Internet Research 19 (2017).",
+      "Vololona Rabeharisoa, Tiago Moreira, and Madeleine Akrich. 2013. Evidence-based activism: Patients', users' and activists' groups in knowledge society. BioSocieties 9 (2013), 111-128.",
+      "Tessa Richards and Fiona Godlee. 2014. The BMJ's own patient journey. BMJ 348 (2014).",
+      "W. Scott Richardson, M. C. Wilson, Jim Nishikawa, and Robert S. Hayward. 1995. The well-built clinical question: a key to evidence-based decisions. ACP journal club 123 3 (1995), A12-3.",
+      "Kirk Roberts, Halil Kilicoglu, Marcelo Fiszman, and Dina Demner-Fushman. 2014. Automatically Classifying Question Types for Consumer Health Questions. American Medical Informatics Association Annual Symposium proceedings 2014 (2014), 1018-27.",
+      "Mary A M Rogers, Kelsey Lemmen, Rachel Kramer, Jason Mann, and Vineet Chopra. 2017. Internet-Delivered Health Interventions That Work: Systematic Review of Meta-Analyses and Evaluation of Website Availability. Journal of Medical Internet Research 19 (2017).",
+      "Lisa Scharrer, Yvonne Rupieper, Marc Stadtler, and Rainer Bromme. 2017. When science becomes too easy: Science popularization inclines laypeople to underrate their dependence on experts. Public Understanding of Science 26 (2017), 1003 - 1018.",
+      "Skipper Seabold and Josef Perktold. 2010. statsmodels: Econometric and statistical modeling with python. In 9th Python in Science Conference .",
+      "Cynthia Shanahan, Timothy Shanahan, and Cynthia Misischia. 2011. Analysis of Expert Readers in Three Disciplines. Journal of Literacy Research 43 (2011), 393 - 429.",
+      "Zejiang Shen, Kyle Lo, Lucy Lu Wang, Bailey Kuehl, Daniel S. Weld, and Doug Downey. 2021. Incorporating Visual Layout Structures for Scientific Text Classification. ArXiv abs/2106.00676 (2021).",
+      "Kathrin Sommerhalder, A Abraham, Maria Caiata Zufferey, Jürgen Barth, and Thomas Abel. 2009. Internet information and medical consultations: experiences from patients' and physicians' perspectives. Patient education and counseling 77 2 (2009), 266-71.",
+      "Alessandra Storino, Manuel Castillo-Angeles, Ammara A Watkins, Christina R. Vargas, Joseph D. Mancias, Andrea J Bullock, Aram N. Demirjian, A J Moser, and Tara S. Kent. 2016. Assessing the Accuracy and Readability of Online Health Information for Patients With Pancreatic Cancer. Journal of the American Medical Association surgery 151 9 (2016), 831-7.",
+      "Petroc Sumner, Solveiga Vivian-Griffiths, Jacky Boivin, Andy Williams, Christos A Venetis, Aimée Davies, Jack Ogden, Leanne Whelan, Bethan Hughes, Bethan Dalton, Fred Boy, and Christopher D. Chambers. 2014. The association between exaggeration in health related science news and academic press releases: retrospective observational study. The BMJ 349 (2014).",
+      "Rossella Talotta, Fabiola Atzeni, and Magdalena Janina Laska. 2020. Therapeutic peptides for the treatment of systemic lupus erythematosus: a place in therapy. Expert Opinion on Investigational Drugs 29 (2020), 845 - 867.",
+      "Sharon Swee-Lin Tan and Nadee Goonawardene. 2017. Internet Health Information Seeking and the Patient-Physician Relationship: A Systematic Review. Journal of Medical Internet Research 19 (2017).",
+      "Jonathan P. Tennant, François Waldner, Damien Christophe Jacques, Paola Masuzzo, Lauren B. Collister, and C.H.J. Hartgerink. 2016. The academic, economic and societal impacts of Open Access: an evidence-based review. F1000Research 5 (2016).",
+      "Hoang Van, David Kauchak, and Gondy Leroy. 2020. AutoMeTS: The Autocomplete for Medical Text Simplification. InInternational Conference on Computational Linguistics.",
+      "Amir Pouran Ben Veyseh, Franck Dernoncourt, W. Chang, and Thien Huu Nguyen. 2021. MadDog: A Web-based System for Acronym Identification and Disambiguation. In European Chapter of the Association for Computational Linguistics .",
+      "Esteban Walker and Amy S. Nowacki. 2010. Understanding Equivalence and Noninferiority Testing. Journal of General Internal Medicine 26 (2010), 192-196.",
+      "Benyou Wang, Qianqian Xie, Jiahuan Pei, Prayag Tiwari, Zhao Li, and Jie fu. 2021. Pre-trained Language Models in Biomedical Domain: A Survey from Multiscale Perspective.",
+      "Gerhard Weber and Peter Brusilovsky. 2015. ELM-ART - An Interactive and Intelligent Web-Based Electronic Textbook. International Journal of Artificial Intelligence in Education 26 (2015), 72-81.",
+      "Ryen W. White and Ahmed Hassan Awadallah. 2014. Content Bias in Online Health Search. ACM Trans. Web 8 (2014), 25:1-25:33.",
+      "Ryen W. White and Eric Horvitz. 2014. From health search to healthcare: explorations of intention and utilization via query logs and user surveys. Journal of the American Medical Informatics Association 21 1 (2014), 49-55.",
+      "Wonjin Yoon, Jinhyuk Lee, Donghyeon Kim, Minbyul Jeong, and Jaewoo Kang. 2020. Pre-trained Language Model for Biomedical Question Answering. In Machine Learning and Knowledge Discovery in Databases , Peggy Cellier and Kurt Driessens (Eds.). Springer International Publishing, Cham, 727-740.",
+      "Yan Zhang. 2014. Searching for specific health-related information in MedlinePlus: Behavioral patterns and user experience. Journal of the Association for Information Science and Technology 65 (2014).",
+      "Tian Zhao and Kyusong Lee. 2020. Talk to Papers: Bringing Neural Question Answering to Academic Search. ArXiv abs/2004.02002 (2020).",
+      "Alesia A. Zuccala. 2010. Open access and civic scientific information literacy. Information Research 15 (2010)."
+    ],
+    "tempo": 3.0
+  },
+  {
+    "arquivo": "2206.10883v3.pdf",
+    "titulo": "Multi-LexSum: Real-World Summaries of Civil Rights Lawsuits at Multiple Granularities",
+    "ano": 2022,
+    "num_paginas": 37,
+    "secoes": [
+      {
+        "titulo": "Início",
+        "tipo": "inicio",
+        "num_palavras": 37
+      },
+      {
+        "titulo": "Abstract",
+        "tipo": "resumo",
+        "num_palavras": 212
+      },
+      {
+        "titulo": "1 Introduction",
+        "tipo": "introducao",
+        "num_palavras": 630
+      },
+      {
+        "titulo": "2 Related work",
+        "tipo": "trabalhos_relacionados",
+        "num_palavras": 1359
+      },
+      {
+        "titulo": "3 Multi-LexSum",
+        "tipo": "outra",
+        "num_palavras": 1326
+      },
+      {
+        "titulo": "4 Experiments",
+        "tipo": "resultados",
+        "num_palavras": 1705
+      },
+      {
+        "titulo": "5 Human evaluation",
+        "tipo": "resultados",
+        "num_palavras": 422
+      },
+      {
+        "titulo": "6 Conclusion",
+        "tipo": "conclusao",
+        "num_palavras": 236
+      },
+      {
+        "titulo": "Acknowledgements",
+        "tipo": "agradecimentos",
+        "num_palavras": 153
+      },
+      {
+        "titulo": "References",
+        "tipo": "referencias",
+        "num_palavras": 2179
+      },
+      {
+        "titulo": "Appendix: A Multi-LexSum release",
+        "tipo": "apendice",
+        "num_palavras": 8093
+      }
+    ],
+    "top_termos": [
+      {
+        "termo": "summary",
+        "frequencia": 126
+      },
+      {
+        "termo": "summarization",
+        "frequencia": 58
+      },
+      {
+        "termo": "model",
+        "frequencia": 53
+      },
+      {
+        "termo": "document",
+        "frequencia": 47
+      },
+      {
+        "termo": "multi-lexsum",
+        "frequencia": 43
+      },
+      {
+        "termo": "source",
+        "frequencia": 41
+      },
+      {
+        "termo": "task",
+        "frequencia": 31
+      },
+      {
+        "termo": "train",
+        "frequencia": 29
+      },
+      {
+        "termo": "long",
+        "frequencia": 29
+      },
+      {
+        "termo": "generate",
+        "frequencia": 28
+      }
+    ],
+    "tecnicas": {
+      "Transformer / atenção": 2,
+      "BERT / modelos pré-treinados": 7,
+      "CNN": 1,
+      "Word embeddings": 2,
+      "Modelo de linguagem": 3,
+      "LLM / GPT": 2,
+      "Naive Bayes": 1,
+      "Beam search": 1,
+      "Agrupamento (clustering)": 2,
+      "N-gramas": 1,
+      "Fine-tuning / transfer learning": 5,
+      "Questionário / entrevista / estudo com usuários": 1
+    },
+    "tarefas": {
+      "Sumarização": 43,
+      "Perguntas e respostas": 1,
+      "Recomendação": 1,
+      "Geração de texto / paráfrase": 2
+    },
+    "elementos": {
+      "objetivo": [
+        {
+          "texto": "We present extensive analysis demonstrating that despite the high-quality summaries in the training data (adhering to strict content and style guidelines), state-of-the-art summarization models perform poorly on this task.",
+          "secao": "resumo",
+          "pontuacao": 5
+        },
+        {
+          "texto": "In this paper, we present a new dataset, Multi-LexSum, for studying automatic summarization in an important real-world application setting found in the Civil Rights Litigation Clearinghouse (CRLC).",
+          "secao": "introducao",
+          "pontuacao": 5
+        }
+      ],
+      "problema": [
+        {
+          "texto": "With the advent of large language models, methods for abstractive summarization have made great strides, creating potential for use in applications to aid knowledge workers processing unwieldy document collections.",
+          "secao": "resumo",
+          "pontuacao": 4
+        },
+        {
+          "texto": "Multi-LexSum presents a challenging multi-document summarization task given the length of the source documents, often exceeding two hundred pages per case.",
+          "secao": "resumo",
+          "pontuacao": 4
+        }
+      ],
+      "metodo": [
+        {
+          "texto": "We conduct a series of experiments on Multi-LexSum, and find that existing summarization models perform poorly.",
+          "secao": "introducao",
+          "pontuacao": 5
+        }
+      ],
+      "contribuicao": [
+        {
+          "texto": "But to our knowledge, Multi-LexSum is the first dataset to provide summaries at multiple levels of granularity.",
+          "secao": "introducao",
+          "pontuacao": 4
+        }
+      ],
+      "trabalho_futuro": []
+    },
+    "num_referencias": 64,
+    "referencias": [
+      "Iz Beltagy, Matthew E Peters, and Arman Cohan. Longformer: The long-document transformer. arXiv preprint arXiv:2004.05150, 2020.",
+      "Michael J. Bommarito II, Daniel Martin Katz, and Eric M. Detterman. LexNLP: Natural language processing and information extraction for legal and regulatory texts.arXiv:1806.03688 [cs, stat], June 2018. URL http://arxiv.org/abs/1806.03688. arXiv: 1806.03688.",
+      "Rishi Bommasani, Drew A. Hudson, Ehsan Adeli, Russ Altman, Simran Arora, Sydney von Arx, Michael S. Bernstein, Jeannette Bohg, Antoine Bosselut, Emma Brunskill, Erik Brynjolfsson, Shyamal Buch, Dallas Card, Rodrigo Castellon, Niladri Chatterji, Annie Chen, Kathleen Creel, Jared Quincy Davis, Dora Demszky, Chris Donahue, Moussa Doumbouya, Esin Durmus, Stefano Ermon, John Etchemendy, Kawin Ethayarajh, Li Fei-Fei, Chelsea Finn, Trevor Gale, Lauren Gillespie, Karan Goel, Noah Goodman, Shelby Grossman, Neel Guha, Tatsunori Hashimoto, Peter Henderson, John Hewitt, Daniel E. Ho, Jenny Hong, Kyle Hsu,",
+      "Ilias Chalkidis, Ion Androutsopoulos, and Achilleas Michos. Obligation and prohibition extraction using hierarchical RNNs. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pages 254-259, Melbourne, Australia, July 2018. Association for Computational Linguistics. doi: 10.18653/v1/P18-2041. URL https://aclanthology.org/P18-2041.",
+      "Ilias Chalkidis, Ion Androutsopoulos, and Nikolaos Aletras. Neural legal judgment prediction in English. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pages 4317-4323, Florence, Italy, July 2019. Association for Computational Linguistics. doi: 10.18653/v1/P19-1424. URL https://aclanthology.org/P19-1424.",
+      "Ilias Chalkidis, Manos Fergadiotis, Prodromos Malakasiotis, Nikolaos Aletras, and Ion Androutsopoulos. LEGAL-BERT: The Muppets straight out of Law School. In Findings of the Association for Computational Linguistics: EMNLP 2020 , pages 2898-2904, Online, 2020. Association for Computational Linguistics. doi: 10.18653/v1/2020.findings-emnlp.261. URL https://www.aclweb.org/anthology/2020.findings-emnlp.261.",
+      "Ilias Chalkidis, Manos Fergadiotis, and Ion Androutsopoulos. Multieurlex-a multi-lingual and multi-label legal document classification dataset for zero-shot cross-lingual transfer. arXiv preprint arXiv:2109.00904, 2021.",
+      "Ilias Chalkidis, Abhik Jana, Dirk Hartung, Michael Bommarito, Ion Androutsopoulos, Daniel Martin Katz, and Nikolaos Aletras. LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. arXiv:2110.00976 [cs] , March 2022. URL http: //arxiv.org/abs/2110.00976. arXiv: 2110.00976.",
+      "Tianqi Chen, Bing Xu, Chiyuan Zhang, and Carlos Guestrin. Training deep nets with sublinear memory cost. arXiv preprint arXiv:1604.06174, 2016.",
+      "Civil Rights Litigation Clearinghouse. Mission. https://clearinghouse.net/about, 2022. Last accessed June 5, 2022.",
+      "Arman Cohan, Franck Dernoncourt, Doo Soon Kim, Trung Bui, Seokhwan Kim, Walter Chang, and Nazli Goharian. A Discourse-Aware Attention Model for Abstractive Summarization of Long Documents. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers), pages 615-621, New Orleans, Louisiana, 2018. Association for Computational Linguistics. doi: 10.18653/v1/N18-2097. URL http://aclweb.org/anthology/N18-2097.",
+      "U.S. Courts. Civil cases. https://www.uscourts.gov/about-federal-courts/ types-cases/civil-cases, 2022. Last accessed April 17, 2022.",
+      "U.S. Courts. Covering civil cases - journalist's guide. https://www.uscourts.gov/ statistics-reports/covering-civil-cases-journalists-guide , 2022. Last accessed April 17, 2022.",
+      "Jay DeYoung, Iz Beltagy, Madeleine van Zuylen, Bailey Kuehl, and Lucy Lu Wang. MS2: Multi-Document Summarization of Medical Studies. arXiv:2104.06486 [cs], November 2021. URL http://arxiv.org/abs/2104.06486. arXiv: 2104.06486.",
+      "Alexander R Fabbri, Irene Li, Tianwei She, Suyi Li, and Dragomir R Radev. Multi-news: A large-scale multi-document summarization dataset and abstractive hierarchical model. arXiv preprint arXiv:1906.01749, 2019.",
+      "Alexander R. Fabbri, Irene Li, Tianwei She, Suyi Li, and Dragomir R. Radev. Multi-News: a Large-Scale Multi-Document Summarization Dataset and Abstractive Hierarchical Model. arXiv:1906.01749 [cs], June 2019. URL http://arxiv.org/abs/1906.01749. arXiv: 1906.01749.",
+      "Atefeh Farzindar and Guy Lapalme. Letsum, an automatic legal text summarizing. In Legal Knowledge and Information Systems: JURIX 2004, the Seventeenth Annual Conference, volume 120, page 11. IOS Press, 2004.",
+      "Filippo Galgani, Paul Compton, and Achim Hoffmann. Hauss: Incrementally building a summarizer combining multiple techniques. International journal of human-computer studies, 72(7):584-605, 2014.",
+      "Timnit Gebru, Jamie Morgenstern, Briana Vecchione, Jennifer Wortman Vaughan, Hanna Wallach, Hal Daumé Iii, and Kate Crawford. Datasheets for datasets. Communications of the ACM, 64(12):86-92, 2021.",
+      "Graham Greenleaf et al. Public access to law via internet: the australasian legal information institute.-paper presented at the asian pacific specials, health and law librarians conference (6th: 1995: Sydney)-. Journal of Law and Information Science, 6(1):49-69, 1995.",
+      "Claire Grover, Ben Hachey, and Ian Hughson. The HOLJ corpus. supporting summarisation of legal texts. In Proceedings of the 5th International Workshop on Linguistically Interpreted Corpora, pages 47-54, Geneva, Switzerland, aug 29 2004. COLING. URL https://aclanthology.org/W04-1907.",
+      "Max Grusky, Mor Naaman, and Yoav Artzi. Newsroom: A Dataset of 1.3 Million Summaries with Diverse Extractive Strategies. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers) , pages 708-719, New Orleans, Louisiana, 2018. Association for Computational Linguistics. doi: 10.18653/v1/N18-1065. URL http://aclweb.org/anthology/N18-1065.",
+      "Ben Hachey and Claire Grover. Extractive summarisation of legal texts. Artificial Intelligence and Law, 14(4):305-345, 2006.",
+      "Pengcheng He, Xiaodong Liu, Jianfeng Gao, and Weizhu Chen. Deberta: Decoding-enhanced bert with disentangled attention. arXiv preprint arXiv:2006.03654, 2020.",
+      "Dan Hendrycks, Collin Burns, Anya Chen, and Spencer Ball. Cuad: An expert-annotated nlp dataset for legal contract review. arXiv preprint arXiv:2103.06268, 2021.",
+      "Karl Moritz Hermann, Tomáš Koˇciský, Edward Grefenstette, Lasse Espeholt, Will Kay, Mustafa Suleyman, and Phil Blunsom. Teaching Machines to Read and Comprehend. arXiv:1506.03340 [cs], November 2015. URL http://arxiv.org/abs/1506.03340. arXiv: 1506.03340.",
+      "Matthew Honnibal, Ines Montani, Sofie Van Landeghem, and Adriane Boyd. spaCy: Industrialstrength Natural Language Processing in Python. 2020. doi: 10.5281/zenodo.1212303.",
+      "Luyang Huang, Shuyang Cao, Nikolaus Parulian, Heng Ji, and Lu Wang. Efficient Attentions for Long Document Summarization. arXiv:2104.02112 [cs], April 2021. URL http://arxiv. org/abs/2104.02112. arXiv: 2104.02112.",
+      "Deepali Jain, Malaya Dutta Borah, and Anupam Biswas. Summarization of legal documents: Where are we now and the way forward. Computer Science Review, 40:100388, 2021.",
+      "Phi Manh Kien, Ha-Thanh Nguyen, Ngo Xuan Bach, Vu Tran, Minh Le Nguyen, and Tu Minh Phuong. Answering legal questions by learning neural attentive text representation. In Proceedings of the 28th International Conference on Computational Linguistics, pages 988-998, Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. doi: 10.18653/v1/2020.coling-main.86. URL https: //aclanthology.org/2020.coling-main.86.",
+      "Mi-Young Kim, Ying Xu, and Randy Goebel. Summarization of legal texts with high cohesion and automatic compression rate. In JSAI International Symposium on Artificial Intelligence, pages 190-204. Springer, 2012.",
+      "Mi-Young Kim, Ying Xu, and Randy Goebel. A convolutional neural network in legal question answering. In JURISIN Workshop, 2015.",
+      "Daniel King, Zejiang Shen, Nishant Subramani, Daniel S Weld, Iz Beltagy, and Doug Downey. Don't say what you don't know: Improving the consistency of abstractive summarization by constraining beam search. arXiv preprint arXiv:2203.08436, 2022.",
+      "Anastassia Kornilova and Vlad Eidelman. BillSum: A Corpus for Automatic Summarization of US Legislation. Proceedings of the 2nd Workshop on New Frontiers in Summarization, pages 48-56, 2019. doi: 10.18653/v1/D19-5406. URL http://arxiv.org/abs/1910.00523. arXiv: 1910.00523.",
+      "Wojciech Kry ́sci ́nski, Nazneen Rajani, Divyansh Agarwal, Caiming Xiong, and Dragomir Radev. BookSum: A Collection of Datasets for Long-form Narrative Summarization.arXiv:2105.08209 [cs], May 2021. URL http://arxiv.org/abs/2105.08209. arXiv: 2105.08209.",
+      "Mike Lewis, Yinhan Liu, Naman Goyal, Marjan Ghazvininejad, Abdelrahman Mohamed, Omer Levy, Ves Stoyanov, and Luke Zettlemoyer. Bart: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension. arXiv preprint arXiv:1910.13461, 2019.",
+      "Chin-Yew Lin. ROUGE: A package for automatic evaluation of summaries. In Text Summarization Branches Out, pages 74-81, Barcelona, Spain, July 2004. Association for Computational Linguistics. URL https://aclanthology.org/W04-1013.",
+      "Marco Lippi, Przemysław Pałka, Giuseppe Contissa, Francesca Lagioia, Hans-Wolfgang Micklitz, Giovanni Sartor, and Paolo Torroni. Claudette: an automated detector of potentially unfair clauses in online terms of service. Artificial Intelligence and Law, 27(2):117-139, 2019.",
+      "Yao Lu, Yue Dong, and Laurent Charlin. Multi-xscience: A large-scale dataset for extreme multi-document summarization of scientific articles. arXiv preprint arXiv:2010.14235, 2020.",
+      "Joshua Maynez, Shashi Narayan, Bernd Bohnet, and Ryan McDonald. On faithfulness and factuality in abstractive summarization. arXiv preprint arXiv:2005.00661, 2020.",
+      "Derek Miller. Leveraging bert for extractive text summarization on lectures. arXiv preprint arXiv:1906.04165, 2019.",
+      "Ramesh Nallapati and Christopher D Manning. Legal Docket-Entry Classification: Where Machine Learning stumbles. page 9.",
+      "Ramesh Nallapati, Bowen Zhou, Cicero Nogueira dos santos, Caglar Gulcehre, and Bing Xiang. Abstractive Text Summarization Using Sequence-to-Sequence RNNs and Beyond. arXiv:1602.06023 [cs], August 2016. URL http://arxiv.org/abs/1602.06023. arXiv: 1602.06023.",
+      "Shashi Narayan, Shay B. Cohen, and Mirella Lapata. Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization. arXiv:1808.08745 [cs], August 2018. URL http://arxiv.org/abs/1808.08745. arXiv: 1808.08745.",
+      "Adam R Pah, David L Schwartz, Sarath Sanga, Zachary D Clopton, Peter DiCola, Rachel Davis Mersey, Charlotte S Alexander, Kristian J Hammond, and Luís A Nunes Amaral. How to build a more open justice system. Science, 369(6500):134-136, 2020.",
+      "Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et al. Pytorch: An imperative style, high-performance deep learning library. Advances in neural information processing systems, 32, 2019.",
+      "Seth Polsley, Pooja Jhunjhunwala, and Ruihong Huang. CaseSummarizer: A System for Automated Summarization of Legal Texts. page 5.",
+      "Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter J Liu. Exploring the limits of transfer learning with a unified text-to-text transformer. arXiv preprint arXiv:1910.10683, 2019.",
+      "Abhilasha Ravichander, Alan W Black, Shomir Wilson, Thomas Norton, and Norman Sadeh. Question answering for privacy policies: Combining computational and legal perspectives. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), pages 4947-4958, Hong Kong, China, November 2019. Association for Computational Linguistics. doi: 10.18653/v1/D19-1500. URL https://aclanthology.org/D19-1500.",
+      "Nils Reimers and Iryna Gurevych. Sentence-bert: Sentence embeddings using siamese bertnetworks. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, 11 2019. URL https://arxiv.org/ abs/1908.10084.",
+      "Abigail See, Peter J. Liu, and Christopher D. Manning. Get To The Point: Summarization with Pointer-Generator Networks. arXiv:1704.04368 [cs], April 2017. URL http://arxiv.org/ abs/1704.04368. arXiv: 1704.04368.",
+      "Eva Sharma, Chen Li, and Lu Wang. BIGPATENT: A Large-Scale Dataset for Abstractive and Coherent Summarization. arXiv:1906.03741 [cs], June 2019. URL http://arxiv.org/abs/ 1906.03741. arXiv: 1906.03741.",
+      "Sam Shleifer and Alexander M Rush. Pre-trained summarization distillation. arXiv preprint arXiv:2010.13002, 2020.",
+      "Don Tuggener, Pius von Däniken, Thomas Peetz, and Mark Cieliebak. LEDGAR: A large-scale multi-label corpus for text classification of legal provisions in contracts. In Proceedings of the 12th Language Resources and Evaluation Conference, pages 1235-1241, Marseille, France, May 2020. European Language Resources Association. ISBN 979-10-95546-34-4. URL https://aclanthology.org/2020.lrec-1.155.",
+      "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. Advances in neural information processing systems, 30, 2017.",
+      "Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony Moi, Pierric Cistac, Tim Rault, Rémi Louf, Morgan Funtowicz, et al. Huggingface's transformers: State-of-the-art natural language processing. arXiv preprint arXiv:1910.03771, 2019.",
+      "Chaojun Xiao, Xueyu Hu, Zhiyuan Liu, Cunchao Tu, and Maosong Sun. Lawformer: A Pre-trained Language Model for Chinese Legal Long Documents. arXiv:2105.03887 [cs], May 2021. URL http://arxiv.org/abs/2105.03887. arXiv: 2105.03887.",
+      "Wen Xiao, Iz Beltagy, Giuseppe Carenini, and Arman Cohan. Primer: Pyramid-based masked sentence pre-training for multi-document summarization. arXiv preprint arXiv:2110.08499, 2021.",
+      "Mehdi Yousfi-Monod, Atefeh Farzindar, and Guy Lapalme. Supervised machine learning for summarizing legal documents. In Canadian Conference on Artificial Intelligence, pages 51-62. Springer, 2010.",
+      "Jingqing Zhang, Yao Zhao, Mohammad Saleh, and Peter Liu. Pegasus: Pre-training with extracted gap-sentences for abstractive summarization. In International Conference on Machine Learning, pages 11328-11339. PMLR, 2020.",
+      "Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q Weinberger, and Yoav Artzi. Bertscore: Evaluating text generation with bert. arXiv preprint arXiv:1904.09675, 2019.",
+      "Lucia Zheng, Neel Guha, Brandon R. Anderson, Peter Henderson, and Daniel E. Ho. When Does Pretraining Help? Assessing Self-Supervised Learning for Law and the CaseHOLD Dataset. arXiv:2104.08671 [cs], July 2021. URL http://arxiv.org/abs/2104.08671. arXiv: 2104.08671.",
+      "Haoxi Zhong, Chaojun Xiao, Cunchao Tu, Tianyang Zhang, Zhiyuan Liu, and Maosong Sun. Jec-qa: A legal-domain question answering dataset. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 34, pages 9701-9708, 2020.",
+      "Linwu Zhong, Ziyi Zhong, Zinian Zhao, Siyuan Wang, Kevin D Ashley, and Matthias Grabmair. Automatic summarization of legal decisions using iterative masking of predictive sentences. In Proceedings of the seventeenth international conference on artificial intelligence and law, pages 163-172, 2019."
+    ],
+    "tempo": 1.26
+  },
+  {
+    "arquivo": "2304.02623v1.pdf",
+    "titulo": "Beyond Summarization: Designing AI Support for Real-World Expository Writing Tasks",
+    "ano": 2023,
+    "num_paginas": 4,
+    "secoes": [
+      {
+        "titulo": "Início",
+        "tipo": "inicio",
+        "num_palavras": 39
+      },
+      {
+        "titulo": "ABSTRACT",
+        "tipo": "resumo",
+        "num_palavras": 160
+      },
+      {
+        "titulo": "KEYWORDS",
+        "tipo": "palavras_chave",
+        "num_palavras": 9
+      },
+      {
+        "titulo": "1 INTRODUCTION",
+        "tipo": "introducao",
+        "num_palavras": 1005
+      },
+      {
+        "titulo": "2 CHARACTERIZING EXPOSITORY",
+        "tipo": "outra",
+        "num_palavras": 202
+      },
+      {
+        "titulo": "3 DESIGNING AI SUPPORTS FOR",
+        "tipo": "metodologia",
+        "num_palavras": 862
+      },
+      {
+        "titulo": "4 CONCLUSION",
+        "tipo": "conclusao",
+        "num_palavras": 51
+      },
+      {
+        "titulo": "ACKNOWLEDGMENTS",
+        "tipo": "agradecimentos",
+        "num_palavras": 36
+      },
+      {
+        "titulo": "REFERENCES",
+        "tipo": "referencias",
+        "num_palavras": 1324
+      }
+    ],
+    "top_termos": [
+      {
+        "termo": "write",
+        "frequencia": 77
+      },
+      {
+        "termo": "author",
+        "frequencia": 27
+      },
+      {
+        "termo": "support",
+        "frequencia": 23
+      },
+      {
+        "termo": "expository",
+        "frequencia": 23
+      },
+      {
+        "termo": "new",
+        "frequencia": 22
+      },
+      {
+        "termo": "document",
+        "frequencia": 22
+      },
+      {
+        "termo": "generation",
+        "frequencia": 19
+      },
+      {
+        "termo": "source",
+        "frequencia": 18
+      },
+      {
+        "termo": "read",
+        "frequencia": 17
+      },
+      {
+        "termo": "model",
+        "frequencia": 16
+      }
+    ],
+    "tecnicas": {
+      "BERT / modelos pré-treinados": 1,
+      "Modelo de linguagem": 7,
+      "LLM / GPT": 11,
+      "Fine-tuning / transfer learning": 1,
+      "Questionário / entrevista / estudo com usuários": 2
+    },
+    "tarefas": {
+      "Extração de informação / relações": 1,
+      "Sumarização": 8,
+      "Geração de texto / paráfrase": 2
+    },
+    "elementos": {
+      "objetivo": [
+        {
+          "texto": "In this position paper, we argue that developing AI supports for expository writing has unique and exciting research challenges and can lead to high real-world impacts.",
+          "secao": "resumo",
+          "pontuacao": 5
+        },
+        {
+          "texto": "In this paper, we argue that the unique characteristics in expository writing open up new opportunities for designing AI support.",
+          "secao": "conclusao",
+          "pontuacao": 4
+        }
+      ],
+      "problema": [
+        {
+          "texto": "However, AI-supported expository writing - including real-world tasks like scholars writing literature reviews or doctors writing progress notes - is relatively understudied.",
+          "secao": "resumo",
+          "pontuacao": 8
+        },
+        {
+          "texto": "While prior work has explored many exciting applications for LLMs, we argue thatexpository writing is a task that is understudied in existing work on AI augmented writing.",
+          "secao": "introducao",
+          "pontuacao": 8
+        }
+      ],
+      "metodo": [
+        {
+          "texto": "We characterize expository writing as evidence-based and knowledge-generating: it contains summaries of external documents as well as new information or knowledge.",
+          "secao": "resumo",
+          "pontuacao": 4
+        },
+        {
+          "texto": "We sketch three components for AI support design and discuss considerations for future research.",
+          "secao": "resumo",
+          "pontuacao": 4
+        },
+        {
+          "texto": "For example, when starting writing a survey paper, the authors come up with the query to find relevant papers first, and AI helps execute the search and discover related documents; after authors read the retrieved papers and come up with ideas for the writing, AI can help generate the writing text based on authors' ideas, and the writers only need to proofread model output.",
+          "secao": "introducao",
+          "pontuacao": 3
+        }
+      ],
+      "contribuicao": [],
+      "trabalho_futuro": []
+    },
+    "num_referencias": 35,
+    "referencias": [
+      "Griffin Adams, Emily Alsentzer, Mert Ketenci, Jason Zucker, and Noémie Elhadad. 2021. What's in a Summary? Laying the Groundwork for Advances in Hospital-Course Summarization. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. Association for Computational Linguistics, Online, 4794-4811. https://doi.org/10.18653/v1/2021.naacl-main.382",
+      "Alan Baddeley. 1992. Working memory. Science 255, 5044 (1992), 556-559.",
+      "Sigall K Bell, Tom Delbanco, Joann G Elmore, Patricia S Fitzgerald, Alan Fossa, Kendall Harcourt, Suzanne G Leveille, Thomas H Payne, Rebecca A Stametz, Jan Walker, et al. 2020. Frequency and types of patient-reported errors in electronic health record ambulatory care notes. JAMA network open 3, 6 (2020), e205867- e205867.",
+      "Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel Ziegler, Jeffrey Wu, Clemens Winter, Chris Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020. Language Models are Few-Shot Learners. In Advances in Neural Information Processing Systems, H. Larochelle, M. Ranzato, R",
+      "Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey, and Tom Hope. 2021. Scico: Hierarchical cross-document coreference for scientific concepts. arXiv preprint arXiv:2104.08809 (2021).",
+      "Ruijia Cheng, Alison Smith-Renner, Ke Zhang, Joel R Tetreault, and Alejandro Jaimes. 2022. Mapping the design space of human-ai interaction in text summarization. arXiv preprint arXiv:2206.14863 (2022).",
+      "John Joon Young Chung, Wooseok Kim, Kang Min Yoo, Hwaran Lee, Eytan Adar, and Minsuk Chang. 2022. TaleBrush: sketching stories with generative pretrained language models. In Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems. 1-19.",
+      "Arman Cohan, Sergey Feldman, Iz Beltagy, Doug Downey, and Daniel S. Weld. 2020. SPECTER: Document-level Representation Learning using Citationinformed Transformers. In Annual Meeting of the Association for Computational Linguistics.",
+      "Joseph Chee Chang et al. 2022. CiteSee: Augmenting Citations in Scientific Papers with Persistent and Personalized Historical Context.ArXiv abs/2022.99999 (2022).",
+      "Linda Flower and John R Hayes. 1981. A cognitive process theory of writing. College composition and communication 32, 4 (1981), 365-387.",
+      "K. Gero, Vivian Liu, and Lydia B. Chilton. 2021. Sparks: Inspiration for Science Writing using Language Models. Designing Interactive Systems Conference (2021).",
+      "Han L. Han, Junhang Yu, Raphael Bournet, Alexandre Ciorascu, Wendy E. Mackay, and Michel Beaudouin-Lafon. 2022. Passages: Interacting with Text Across Documents. Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems (2022).",
+      "John R Hayes. 2000. A new framework for understanding cognition and affect in writing. Perspectives on writing: Research, theory, and practice (2000), 6-44.",
+      "Andrew Head, Kyle Lo, Dongyeop Kang, Raymond Fok, Sam Skjonsberg, Daniel S. Weld, and Marti A. Hearst. 2020. Augmenting Scientific Papers with Just-in-Time, Shen, et al. Position-Sensitive Definitions of Terms and Symbols. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (2020).",
+      "Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Yejin Bang, Andrea Madotto, and Pascale Fung. 2022. Survey of hallucination in natural language generation. Comput. Surveys (2022).",
+      "Hyeonsu B Kang, Joseph Chee Chang, Yongsung Kim, and Aniket Kittur. 2022. Threddy: An Interactive System for Personalized Thread-based Exploration and Organization of Scientific Literature. arXiv preprint arXiv:2208.03455 (2022).",
+      "Hyeonsu B Kang, Nouran Soliman, Matt Latzke, Joseph Chee Chang, and Joseph Chee Chang. 2023. ComLittee: Literature Discovery with Personal Elected Author Committees. ArXiv abs/2302.06780 (2023).",
+      "Amy JH Kind and Maureen A Smith. 2008. Documentation of mandated discharge summary components in transitions from acute to subacute care. Advances in patient safety: new directions and alternative approaches (Vol. 2: culture and redesign) (2008).",
+      "Daniel King, Zejiang Shen, Nishant Subramani, Daniel S. Weld, Iz Beltagy, and Doug Downey. 2022. Don't Say What You Don't Know: Improving the Consistency of Abstractive Summarization by Constraining Beam Search. ArXiv abs/2203.08436 (2022).",
+      "Takeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa. 2022. Large language models are zero-shot reasoners. arXiv preprint arXiv:2205.11916 (2022).",
+      "Mina Lee, Percy Liang, and Qian Yang. 2022. Coauthor: Designing a human-ai collaborative writing dataset for exploring language model capabilities. In Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems . 1-19.",
+      "Piotr Mirowski, Kory W Mathewson, Jaylen Pittman, and Richard Evans. 2022. Co-writing screenplays and theatre scripts with language models: An evaluation by industry professionals. arXiv preprint arXiv:2209.14958 (2022).",
+      "Srishti Palani, Aakanksha Naik, Doug Downey, Amy X Zhang, Jonathan Bragg, and Joseph Chee Chang. 2023. Relatedly: Scaffolding Literature Reviews with Existing Related Work Sections. arXiv preprint arXiv:2302.06754 (2023).",
+      "Peter Pirolli. 2007. The Sensemaking Process and Leverage Points for Analyst Technology as Identified Through Cognitive Task Analysis.",
+      "Napol Rachatasumrit, Jonathan Bragg, Amy X. Zhang, and Daniel S. Weld. 2022. CiteRead: Integrating Localized Citation Contexts into Scientific Paper Reading. 27th International Conference on Intelligent User Interfaces (2022).",
+      "Napol Rachatasumrit, Gonzalo A. Ramos, Jina Suh, Rachel Ng, and Christopher Meek. 2021. ForSense: Accelerating Online Research Through Sensemaking Integration and Machine Research Support. 26th International Conference on Intelligent User Interfaces (2021).",
+      "Jack W. Rae, Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, Sarah Henderson, Roman Ring, Susannah Young, Eliza Rutherford, Tom Hennigan, Jacob Menick, Albin Cassirer, Richard Powell, George van den Driessche, Lisa Anne Hendricks, Maribeth Rauh, Po-Sen Huang, Amelia Glaese, Johannes Welbl, Sumanth Dathathri, Saffron Huang, Jonathan Uesato, John F. J. Mellor, Irina Higgins, Antonia Creswell, Nathan McAleese, Amy Wu, Erich Elsen, Siddhant M. Jayakumar, Elena Buchatskaya, David Budden, Esme Sutherland, Karen Simonyan, Michela Paganini, L. Sifre, Lena",
+      "Nils Reimers and Iryna Gurevych. 2019. Sentence-bert: Sentence embeddings using siamese bert-networks. arXiv preprint arXiv:1908.10084 (2019).",
+      "Daniel M Russell, Mark J Stefik, Peter Pirolli, and Stuart K Card. 1993. The cost structure of sensemaking. In Proceedings of the INTERACT'93 and CHI'93 conference on Human factors in computing systems . 269-276.",
+      "Zejiang Shen, Kyle Lo, Lauren Yu, Nathan Dahlberg, Margo Schlanger, and Doug Downey. 2022. Multi-LexSum: Real-World Summaries of Civil Rights Lawsuits at Multiple Granularities. arXiv preprint arXiv:2206.10883 (2022).",
+      "Nikhil Singh, Guillermo Bernal, Daria Savchenko, and Elena L Glassman. 2022. Where to hide a stolen elephant: Leaps in creative writing with multimodal machine intelligence. ACM Transactions on Computer-Human Interaction (2022).",
+      "Shaden Smith, Mostofa Patwary, Brandon Norick, Patrick LeGresley, Samyam Rajbhandari, Jared Casper, Zhun Liu, Shrimai Prabhumoye, George Zerveas, Vijay Anand Korthikanti, Elton Zhang, Rewon Child, Reza Yazdani Aminabadi, Julie Bernauer, Xia Song, Mohammad Shoeybi, Yuxiong He, Michael Houston, Saurabh Tiwary, and Bryan Catanzaro. 2022. Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model. ArXiv abs/2201.11990 (2022).",
+      "Kevin Yang, Nanyun Peng, Yuandong Tian, and Dan Klein. 2022. Re3: Generating longer stories with recursive reprompting and revision. arXiv preprint arXiv:2210.06774 (2022).",
+      "Tianyi Zhang, Faisal Ladhak, Esin Durmus, Percy Liang, Kathleen McKeown, and Tatsunori B. Hashimoto. 2023. Benchmarking Large Language Models for News Summarization. CoRR (2023). arXiv:2301.13848 [cs.CL] http://arxiv.org/ abs/2301.13848v1",
+      "Daniel M Ziegler, Nisan Stiennon, Jeffrey Wu, Tom B Brown, Alec Radford, Dario Amodei, Paul Christiano, and Geoffrey Irving. 2019. Fine-tuning language models from human preferences. arXiv preprint arXiv:1909.08593 (2019)."
+    ],
+    "tempo": 0.27
+  }
+]

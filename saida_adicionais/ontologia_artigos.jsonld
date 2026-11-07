@@ -1,0 +1,5454 @@
+{
+  "@context": {
+    "art": "http://www.din.uem.br/iia/artigo#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "art:artigo_2206_10883v3_ref_62",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 62,
+      "art:texto": "Lucia Zheng, Neel Guha, Brandon R. Anderson, Peter Henderson, and Daniel E. Ho. When Does Pretraining Help? Assessing Self-Supervised Learning for Law and the CaseHOLD Dataset. arXiv:2104.08671 [cs], July 2021. URL http://arxiv.org/abs/2104.08671. arXiv: 2104.08671."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_termo_6",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_document"
+      },
+      "art:frequencia": 22,
+      "art:posicaoRanking": 6
+    },
+    {
+      "@id": "art:tarefa_Reconhecimento_de_entidades_NER",
+      "@type": "art:Tarefa",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Reconhecimento de entidades (NER)"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_termo_5",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_multi_lexsum"
+      },
+      "art:frequencia": 43,
+      "art:posicaoRanking": 5
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_18",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 18,
+      "art:texto": "Filippo Galgani, Paul Compton, and Achim Hoffmann. Hauss: Incrementally building a summarizer combining multiple techniques. International journal of human-computer studies, 72(7):584-605, 2014."
+    },
+    {
+      "@id": "art:numeroPaginas",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:integer"
+      }
+    },
+    {
+      "@id": "art:tecnica_Fine_tuning_transfer_learning",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Fine-tuning / transfer learning"
+      }
+    },
+    {
+      "@id": "art:tecnica_Naive_Bayes",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Naive Bayes"
+      }
+    },
+    {
+      "@id": "art:temTrabalhoFuturo",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:range": {
+        "@id": "art:TrabalhoFuturo"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "art:temElemento"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_53",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2015"
+      },
+      "art:ordem": 53,
+      "art:texto": "Yea-Seul Kim, Jessica R. Hullman, and Eytan Adar. 2015. DeScipher : A Text Simplification Tool for Science Journalism."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_54",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 54,
+      "art:texto": "Don Tuggener, Pius von Däniken, Thomas Peetz, and Mark Cieliebak. LEDGAR: A large-scale multi-label corpus for text classification of legal provisions in contracts. In Proceedings of the 12th Language Resources and Evaluation Conference, pages 1235-1241, Marseille, France, May 2020. European Language Resources Association. ISBN 979-10-95546-34-4. URL https://aclanthology.org/2020.lrec-1.155."
+    },
+    {
+      "@id": "art:tecnica_CNN",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "CNN"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tarefa_Analise_sintatica_parsing",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tarefa_Analise_sintatica_parsing"
+      }
+    },
+    {
+      "@id": "art:temSecao",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:ArtigoCientifico"
+      },
+      "rdfs:range": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_98",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 98,
+      "art:texto": "Rossella Talotta, Fabiola Atzeni, and Magdalena Janina Laska. 2020. Therapeutic peptides for the treatment of systemic lupus erythematosus: a place in therapy. Expert Opinion on Investigational Drugs 29 (2020), 845 - 867."
+    },
+    {
+      "@id": "art:Similaridade",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Valor do cosseno TF-IDF entre dois artigos."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Similaridade entre artigos"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_5",
+      "@type": "art:OutraSecao",
+      "art:numeroPalavras": 2916,
+      "art:ordem": 5,
+      "art:tituloSecao": "3 OBSERVATIONS OF NON-EXPERT READERS"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_37",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2004"
+      },
+      "art:ordem": 37,
+      "art:texto": "Chin-Yew Lin. ROUGE: A package for automatic evaluation of summaries. In Text Summarization Branches Out, pages 74-81, Barcelona, Spain, July 2004. Association for Computational Linguistics. URL https://aclanthology.org/W04-1013."
+    },
+    {
+      "@id": "art:Conclusao",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Conclusão"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_metodo_1",
+      "@type": "art:Metodo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2304_02623v1_secao_1"
+      },
+      "art:pontuacao": 4,
+      "art:texto": {
+        "@language": "en",
+        "@value": "We characterize expository writing as evidence-based and knowledge-generating: it contains summaries of external documents as well as new information or knowledge."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_103",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      },
+      "art:ordem": 103,
+      "art:texto": "Esteban Walker and Amy S. Nowacki. 2010. Understanding Equivalence and Noninferiority Testing. Journal of General Internal Medicine 26 (2010), 192-196."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_1",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 1,
+      "art:texto": "Griffin Adams, Emily Alsentzer, Mert Ketenci, Jason Zucker, and Noémie Elhadad. 2021. What's in a Summary? Laying the Groundwork for Advances in Hospital-Course Summarization. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. Association for Computational Linguistics, Online, 4794-4811. https://doi.org/10.18653/v1/2021.naacl-main.382"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_80",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 80,
+      "art:texto": "Emily Nunn and Stephen Pinfield. 2014. Lay summaries of open access journal articles: engaging with the general public on medical research. Learned Publishing 27 (2014)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tarefa_Analise_de_sentimentos",
+      "@type": "art:Mencao",
+      "art:frequencia": 3,
+      "art:refereSe": {
+        "@id": "art:tarefa_Analise_de_sentimentos"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_21",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 21,
+      "art:texto": "Yixin Cao, Ruihao Shui, Liangming Pan, Min-Yen Kan, Zhiyuan Liu, and Tat-Seng Chua. 2020. Expertise Style Transfer: A New Task Towards Better Communication between Experts and Laymen. In Association for Computational Linguistics ."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_77",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 77,
+      "art:texto": "Feng Nan, Cícero Nogueira dos Santos, Henghui Zhu, Patrick Ng, Kathleen McKeown, Ramesh Nallapati, Dejiao Zhang, Zhiguo Wang, Andrew O. Arnold, and Bing Xiang. 2021. Improving Factual Consistency of Abstractive Summarization via Question Answering.ArXiv abs/2105.04623 (2021)."
+    },
+    {
+      "@id": "art:OcorrenciaTermo",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Liga um artigo a um termo com a sua frequência (relação n-ária)."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Ocorrência de termo"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_51",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "art:ordem": 51,
+      "art:texto": "Abigail See, Peter J. Liu, and Christopher D. Manning. Get To The Point: Summarization with Pointer-Generator Networks. arXiv:1704.04368 [cs], April 2017. URL http://arxiv.org/ abs/1704.04368. arXiv: 1704.04368."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_52",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1906"
+      },
+      "art:ordem": 52,
+      "art:texto": "Eva Sharma, Chen Li, and Lu Wang. BIGPATENT: A Large-Scale Dataset for Abstractive and Coherent Summarization. arXiv:1906.03741 [cs], June 2019. URL http://arxiv.org/abs/ 1906.03741. arXiv: 1906.03741."
+    },
+    {
+      "@id": "art:Contribuicao",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "O que o artigo acrescenta à área (resultado entregue), diferente do objetivo."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Contribuição"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:ElementoRetorico"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_secao_9",
+      "@type": "art:SecaoReferencias",
+      "art:numeroPalavras": 2179,
+      "art:ordem": 9,
+      "art:tituloSecao": "References"
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_4",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 4,
+      "art:texto": "Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel Ziegler, Jeffrey Wu, Clemens Winter, Chris Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020. Language Models are Few-Shot Learners. In Advances in Neural Information Processing Systems, H. Larochelle, M. Ranzato, R"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_108",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 108,
+      "art:texto": "Wonjin Yoon, Jinhyuk Lee, Donghyeon Kim, Minbyul Jeong, and Jaewoo Kang. 2020. Pre-trained Language Model for Biomedical Question Answering. In Machine Learning and Knowledge Discovery in Databases , Peggy Cellier and Kurt Driessens (Eds.). Springer International Publishing, Cham, 727-740."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_4",
+      "@type": "art:TrabalhosRelacionados",
+      "art:numeroPalavras": 1554,
+      "art:ordem": 4,
+      "art:tituloSecao": "2 BACKGROUND AND RELATED WORK"
+    },
+    {
+      "@id": "art:temObjetivo",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:range": {
+        "@id": "art:Objetivo"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "art:temElemento"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_secao_7",
+      "@type": "art:Agradecimentos",
+      "art:numeroPalavras": 36,
+      "art:ordem": 7,
+      "art:tituloSecao": "ACKNOWLEDGMENTS"
+    },
+    {
+      "@id": "art:tecnica_N_gramas",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "N-gramas"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_30",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 30,
+      "art:texto": "Zejiang Shen, Kyle Lo, Lauren Yu, Nathan Dahlberg, Margo Schlanger, and Doug Downey. 2022. Multi-LexSum: Real-World Summaries of Civil Rights Lawsuits at Multiple Granularities. arXiv preprint arXiv:2206.10883 (2022)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_3",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 3,
+      "art:texto": "2021. New Standards for Plain Language Summaries. https://consumers.cochrane.org/PLEACS"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_10",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 10,
+      "art:texto": "Douglas M. Bates, Benjamin M. Bolker, and Steven C. Walker. 2014. fitting linear mixed effects models using lme 4 arxiv."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_54",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2011"
+      },
+      "art:ordem": 54,
+      "art:texto": "Katrin Kirchhoff, Anne M. Turner, Amittai Axelrod, and Francisco Saavedra. 2011. Application of statistical machine translation to public health information: a feasibility study. Journal of the American Medical Informatics Association 18 4 (2011), 473-8."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_16",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2005"
+      },
+      "art:ordem": 16,
+      "art:texto": "Alex Broom. 2005. Virtually He@lthy: The Impact of Internet Use on Disease Experience and the Doctor-Patient Relationship. Qualitative Health Research 15 (2005), 325 - 345."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_104",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 104,
+      "art:texto": "Benyou Wang, Qianqian Xie, Jiahuan Pei, Prayag Tiwari, Zhao Li, and Jie fu. 2021. Pre-trained Language Models in Biomedical Domain: A Survey from Multiscale Perspective."
+    },
+    {
+      "@id": "art:termo_multi_lexsum",
+      "@type": "art:Termo",
+      "art:lema": "multi-lexsum",
+      "art:radical": "multi-lexsum"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_Questionario_entrevista_estudo_com_usuarios",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tecnica_Questionario_entrevista_estudo_com_usuarios"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_25",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 25,
+      "art:texto": "Rune Christensen. 2018. Cumulative Link Models for Ordinal Regression with the R Package ordinal."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_59",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      },
+      "art:ordem": 59,
+      "art:texto": "Mehdi Yousfi-Monod, Atefeh Farzindar, and Guy Lapalme. Supervised machine learning for summarizing legal documents. In Canadian Conference on Artificial Intelligence, pages 51-62. Springer, 2010."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tarefa_Recomendacao",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tarefa_Recomendacao"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_100",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      },
+      "art:ordem": 100,
+      "art:texto": "Jonathan P. Tennant, François Waldner, Damien Christophe Jacques, Paola Masuzzo, Lauren B. Collister, and C.H.J. Hartgerink. 2016. The academic, economic and societal impacts of Open Access: an evidence-based review. F1000Research 5 (2016)."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_26",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 26,
+      "art:texto": "Napol Rachatasumrit, Gonzalo A. Ramos, Jina Suh, Rachel Ng, and Christopher Meek. 2021. ForSense: Accelerating Online Research Through Sensemaking Integration and Machine Research Support. 26th International Conference on Intelligent User Interfaces (2021)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_32",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2015"
+      },
+      "art:ordem": 32,
+      "art:texto": "Mi-Young Kim, Ying Xu, and Randy Goebel. A convolutional neural network in legal question answering. In JURISIN Workshop, 2015."
+    },
+    {
+      "@id": "art:temArtigo",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:Corpus"
+      },
+      "rdfs:range": {
+        "@id": "art:ArtigoCientifico"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_34",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 34,
+      "art:texto": "Anastassia Kornilova and Vlad Eidelman. BillSum: A Corpus for Automatic Summarization of US Legislation. Proceedings of the 2nd Workshop on New Frontiers in Summarization, pages 48-56, 2019. doi: 10.18653/v1/D19-5406. URL http://arxiv.org/abs/1910.00523. arXiv: 1910.00523."
+    },
+    {
+      "@id": "art:doTermo",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:OcorrenciaTermo"
+      },
+      "rdfs:range": {
+        "@id": "art:Termo"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_termo_9",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_read"
+      },
+      "art:frequencia": 17,
+      "art:posicaoRanking": 9
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_termo_4",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_expository"
+      },
+      "art:frequencia": 23,
+      "art:posicaoRanking": 4
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_termo_2",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_summarization"
+      },
+      "art:frequencia": 58,
+      "art:posicaoRanking": 2
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_28",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 28,
+      "art:texto": "Luyang Huang, Shuyang Cao, Nikolaus Parulian, Heng Ji, and Lu Wang. Efficient Attentions for Long Document Summarization. arXiv:2104.02112 [cs], April 2021. URL http://arxiv. org/abs/2104.02112. arXiv: 2104.02112."
+    },
+    {
+      "@id": "art:SecaoReferencias",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Referências"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_95",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2009"
+      },
+      "art:ordem": 95,
+      "art:texto": "Kathrin Sommerhalder, A Abraham, Maria Caiata Zufferey, Jürgen Barth, and Thomas Abel. 2009. Internet information and medical consultations: experiences from patients' and physicians' perspectives. Patient education and counseling 77 2 (2009), 266-71."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_67",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2009"
+      },
+      "art:ordem": 67,
+      "art:texto": "Patrice Lopez. 2009. GROBID: Combining Automatic Bibliographic Data Recognition and Term Extraction for Scholarship Publications. In ECDL."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_18",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2008"
+      },
+      "art:ordem": 18,
+      "art:texto": "Amy JH Kind and Maureen A Smith. 2008. Documentation of mandated discharge summary components in transitions from acute to subacute care. Advances in patient safety: new directions and alternative approaches (Vol. 2: culture and redesign) (2008)."
+    },
+    {
+      "@id": "art:Tecnica",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Técnica ou modelo da área (ex.: CRF, SVM, Transformer)."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Técnica"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Termo"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_11",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 11,
+      "art:texto": "K. Gero, Vivian Liu, and Lydia B. Chilton. 2021. Sparks: Inspiration for Science Writing using Language Models. Designing Interactive Systems Conference (2021)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_9",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      },
+      "art:ordem": 9,
+      "art:texto": "Tianqi Chen, Bing Xu, Chiyuan Zhang, and Carlos Guestrin. Training deep nets with sublinear memory cost. arXiv preprint arXiv:1604.06174, 2016."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_7",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 7,
+      "art:texto": "John Joon Young Chung, Wooseok Kim, Kang Min Yoo, Hwaran Lee, Eytan Adar, and Minsuk Chang. 2022. TaleBrush: sketching stories with generative pretrained language models. In Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems. 1-19."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_Transformer_atencao",
+      "@type": "art:Mencao",
+      "art:frequencia": 2,
+      "art:refereSe": {
+        "@id": "art:tecnica_Transformer_atencao"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_termo_2",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_author"
+      },
+      "art:frequencia": 27,
+      "art:posicaoRanking": 2
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_62",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "art:ordem": 62,
+      "art:texto": "Julie Letchford, Hazel R. Corradi, and Trevor Day. 2017. A flexible e-learning resource promoting the critical reading of scientific papers for science undergraduates. Biochemistry and Molecular Biology Education 45 (2017)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_38",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 38,
+      "art:texto": "Saadia Gabriel, Antoine Bosselut, Jeff Da, Ari Holtzman, Jan Buys, Asli Çelikyilmaz, and Yejin Choi. 2021. Discourse Understanding and Factual Consistency in Abstractive Summarization. In European Chapter of the Association of Computational Linguistics ."
+    },
+    {
+      "@id": "art:termo_participant",
+      "@type": "art:Termo",
+      "art:lema": "participant",
+      "art:radical": "particip"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_63",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 63,
+      "art:texto": "Daniel Li, Thomas Chen, Albert Tung, and Lydia B Chilton. 2021. Hierarchical Summarization for Longform Spoken Dialog. In The 34th Annual ACM Symposium on User Interface Software and Technology . 582-597."
+    },
+    {
+      "@id": "art:termo_source",
+      "@type": "art:Termo",
+      "art:lema": "source",
+      "art:radical": "sourc"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tarefa_Geracao_de_texto_parafrase",
+      "@type": "art:Mencao",
+      "art:frequencia": 2,
+      "art:refereSe": {
+        "@id": "art:tarefa_Geracao_de_texto_parafrase"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tarefa_Perguntas_e_respostas",
+      "@type": "art:Mencao",
+      "art:frequencia": 17,
+      "art:refereSe": {
+        "@id": "art:tarefa_Perguntas_e_respostas"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tecnica_LLM_GPT",
+      "@type": "art:Mencao",
+      "art:frequencia": 6,
+      "art:refereSe": {
+        "@id": "art:tecnica_LLM_GPT"
+      }
+    },
+    {
+      "@id": "art:tarefa_Sumarizacao",
+      "@type": "art:Tarefa",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Sumarização"
+      }
+    },
+    {
+      "@id": "art:termo_document",
+      "@type": "art:Termo",
+      "art:lema": "document",
+      "art:radical": "document"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_1",
+      "@type": "art:OutraSecao",
+      "art:numeroPalavras": 16,
+      "art:ordem": 1,
+      "art:tituloSecao": "Keywords"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_68",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 68,
+      "art:texto": "Sean MacAvaney, Hao-Ren Yao, Eugene Yang, Katina Russell, Nazli Goharian, and Ophir Frieder. 2019. Hate speech detection: Challenges and solutions. PLoS ONE 14 (2019)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_47",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "art:ordem": 47,
+      "art:texto": "Hossein Hosseini, Sreeram Kannan, Baosen Zhang, and Radha Poovendran. 2017. Deceiving Google's Perspective API Built for Detecting Toxic Comments. ArXiv abs/1702.08138 (2017)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_N_gramas",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tecnica_N_gramas"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_11",
+      "@type": "art:Conclusao",
+      "art:numeroPalavras": 158,
+      "art:ordem": 11,
+      "art:tituloSecao": "9 CONCLUSION"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_49",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 49,
+      "art:texto": "Victoria Johansson, Anna Sigridur Islind, Tomas Lindroth, Eva Angenete, and Martin Gellerstedt. 2021. Online Communities as a Driver for Patient Empowerment: Systematic Review. Journal of Medical Internet Research 23 (2021)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_11",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 11,
+      "art:texto": "Arman Cohan, Franck Dernoncourt, Doo Soon Kim, Trung Bui, Seokhwan Kim, Walter Chang, and Nazli Goharian. A Discourse-Aware Attention Model for Abstractive Summarization of Long Documents. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers), pages 615-621, New Orleans, Louisiana, 2018. Association for Computational Linguistics. doi: 10.18653/v1/N18-2097. URL http://aclweb.org/anthology/N18-2097."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_termo_7",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_task"
+      },
+      "art:frequencia": 31,
+      "art:posicaoRanking": 7
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_50",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 50,
+      "art:texto": "Nils Reimers and Iryna Gurevych. Sentence-bert: Sentence embeddings using siamese bertnetworks. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, 11 2019. URL https://arxiv.org/ abs/1908.10084."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_12",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 12,
+      "art:texto": "U.S. Courts. Civil cases. https://www.uscourts.gov/about-federal-courts/ types-cases/civil-cases, 2022. Last accessed April 17, 2022."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_tecnica_Fine_tuning_transfer_learning",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tecnica_Fine_tuning_transfer_learning"
+      }
+    },
+    {
+      "@id": "art:termo_train",
+      "@type": "art:Termo",
+      "art:lema": "train",
+      "art:radical": "train"
+    },
+    {
+      "@id": "art:extraidoDe",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Seção de onde o trecho foi extraído."
+      },
+      "rdfs:domain": {
+        "@id": "art:ElementoRetorico"
+      },
+      "rdfs:range": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_24",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 24,
+      "art:texto": "Munmun De Choudhury, Meredith Ringel Morris, and Ryen W. White. 2014. Seeking and sharing health information online: comparing search engines and social media. Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (2014)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1",
+      "@type": "art:ArtigoCientifico",
+      "art:ano": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:citaReferencia": [
+        {
+          "@id": "art:artigo_2203_00130v1_ref_1"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_2"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_3"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_4"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_5"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_6"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_7"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_8"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_9"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_10"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_11"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_12"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_13"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_14"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_15"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_16"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_17"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_18"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_19"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_20"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_21"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_22"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_23"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_24"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_25"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_26"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_27"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_28"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_29"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_30"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_31"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_32"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_33"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_34"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_35"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_36"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_37"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_38"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_39"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_40"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_41"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_42"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_43"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_44"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_45"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_46"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_47"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_48"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_49"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_50"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_51"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_52"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_53"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_54"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_55"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_56"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_57"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_58"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_59"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_60"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_61"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_62"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_63"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_64"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_65"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_66"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_67"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_68"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_69"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_70"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_71"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_72"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_73"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_74"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_75"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_76"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_77"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_78"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_79"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_80"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_81"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_82"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_83"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_84"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_85"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_86"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_87"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_88"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_89"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_90"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_91"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_92"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_93"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_94"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_95"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_96"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_97"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_98"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_99"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_100"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_101"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_102"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_103"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_104"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_105"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_106"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_107"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_108"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_109"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_110"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_ref_111"
+        }
+      ],
+      "art:mencionaTarefa": [
+        {
+          "@id": "art:artigo_2203_00130v1_tarefa_Analise_sintatica_parsing"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_tarefa_Reconhecimento_de_entidades_NER"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_tarefa_Traducao_automatica"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_tarefa_Sumarizacao"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_tarefa_Analise_de_sentimentos"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_tarefa_Perguntas_e_respostas"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_tarefa_Recuperacao_de_informacao_busca"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_tarefa_Recomendacao"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_tarefa_Geracao_de_texto_parafrase"
+        }
+      ],
+      "art:mencionaTecnica": [
+        {
+          "@id": "art:artigo_2203_00130v1_tecnica_LLM_GPT"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_tecnica_Questionario_entrevista_estudo_com_usuarios"
+        }
+      ],
+      "art:nomeArquivo": "2203.00130v1.pdf",
+      "art:numeroPaginas": 39,
+      "art:numeroReferencias": 111,
+      "art:similarA": [
+        {
+          "@id": "art:artigo_2206_10883v3"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1"
+        }
+      ],
+      "art:temContribuicao": [
+        {
+          "@id": "art:artigo_2203_00130v1_contribuicao_1"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_contribuicao_2"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_contribuicao_3"
+        }
+      ],
+      "art:temMetodo": [
+        {
+          "@id": "art:artigo_2203_00130v1_metodo_1"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_metodo_2"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_metodo_3"
+        }
+      ],
+      "art:temObjetivo": [
+        {
+          "@id": "art:artigo_2203_00130v1_objetivo_1"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_objetivo_2"
+        }
+      ],
+      "art:temOcorrencia": [
+        {
+          "@id": "art:artigo_2203_00130v1_termo_1"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_termo_2"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_termo_3"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_termo_4"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_termo_5"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_termo_6"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_termo_7"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_termo_8"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_termo_9"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_termo_10"
+        }
+      ],
+      "art:temProblema": [
+        {
+          "@id": "art:artigo_2203_00130v1_problema_1"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_problema_2"
+        }
+      ],
+      "art:temSecao": [
+        {
+          "@id": "art:artigo_2203_00130v1_secao_1"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_2"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_3"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_4"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_5"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_6"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_7"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_8"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_9"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_10"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_11"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_12"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_13"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_secao_14"
+        }
+      ],
+      "art:temTrabalhoFuturo": [
+        {
+          "@id": "art:artigo_2203_00130v1_trabalho_futuro_1"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_trabalho_futuro_2"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_trabalho_futuro_3"
+        },
+        {
+          "@id": "art:artigo_2203_00130v1_trabalho_futuro_4"
+        }
+      ],
+      "art:titulo": {
+        "@language": "en",
+        "@value": "Paper Plain: Making Medical Research Papers Approachable to Healthcare Consumers with Natural Language Processing"
+      },
+      "rdfs:label": "Paper Plain: Making Medical Research Papers Approachable to Healthcare Consumers with Natural Language Processing"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_36",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2004"
+      },
+      "art:ordem": 36,
+      "art:texto": "Günes Erkan and Dragomir R. Radev. 2004. LexRank: Graph-based Lexical Centrality as Salience in Text Summarization. Journal of Artificial Intelligence Research 22 (2004), 457-479."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_1",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2004"
+      },
+      "art:ordem": 1,
+      "art:texto": "Iz Beltagy, Matthew E Peters, and Arman Cohan. Longformer: The long-document transformer. arXiv preprint arXiv:2004.05150, 2020."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3",
+      "@type": "art:ArtigoCientifico",
+      "art:ano": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:citaReferencia": [
+        {
+          "@id": "art:artigo_2206_10883v3_ref_1"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_2"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_3"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_4"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_5"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_6"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_7"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_8"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_9"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_10"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_11"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_12"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_13"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_14"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_15"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_16"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_17"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_18"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_19"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_20"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_21"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_22"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_23"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_24"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_25"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_26"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_27"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_28"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_29"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_30"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_31"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_32"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_33"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_34"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_35"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_36"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_37"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_38"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_39"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_40"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_41"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_42"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_43"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_44"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_45"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_46"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_47"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_48"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_49"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_50"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_51"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_52"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_53"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_54"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_55"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_56"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_57"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_58"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_59"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_60"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_61"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_62"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_63"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_ref_64"
+        }
+      ],
+      "art:mencionaTarefa": [
+        {
+          "@id": "art:artigo_2206_10883v3_tarefa_Sumarizacao"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tarefa_Perguntas_e_respostas"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tarefa_Recomendacao"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tarefa_Geracao_de_texto_parafrase"
+        }
+      ],
+      "art:mencionaTecnica": [
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_Transformer_atencao"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_BERT_modelos_pre_treinados"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_CNN"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_Word_embeddings"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_Modelo_de_linguagem"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_LLM_GPT"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_Naive_Bayes"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_Beam_search"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_Agrupamento_clustering"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_N_gramas"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_Fine_tuning_transfer_learning"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_tecnica_Questionario_entrevista_estudo_com_usuarios"
+        }
+      ],
+      "art:nomeArquivo": "2206.10883v3.pdf",
+      "art:numeroPaginas": 37,
+      "art:numeroReferencias": 64,
+      "art:similarA": [
+        {
+          "@id": "art:artigo_2203_00130v1"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1"
+        }
+      ],
+      "art:temContribuicao": {
+        "@id": "art:artigo_2206_10883v3_contribuicao_1"
+      },
+      "art:temMetodo": {
+        "@id": "art:artigo_2206_10883v3_metodo_1"
+      },
+      "art:temObjetivo": [
+        {
+          "@id": "art:artigo_2206_10883v3_objetivo_1"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_objetivo_2"
+        }
+      ],
+      "art:temOcorrencia": [
+        {
+          "@id": "art:artigo_2206_10883v3_termo_1"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_termo_2"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_termo_3"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_termo_4"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_termo_5"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_termo_6"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_termo_7"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_termo_8"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_termo_9"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_termo_10"
+        }
+      ],
+      "art:temProblema": [
+        {
+          "@id": "art:artigo_2206_10883v3_problema_1"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_problema_2"
+        }
+      ],
+      "art:temSecao": [
+        {
+          "@id": "art:artigo_2206_10883v3_secao_1"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_secao_2"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_secao_3"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_secao_4"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_secao_5"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_secao_6"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_secao_7"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_secao_8"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_secao_9"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3_secao_10"
+        }
+      ],
+      "art:titulo": {
+        "@language": "en",
+        "@value": "Multi-LexSum: Real-World Summaries of Civil Rights Lawsuits at Multiple Granularities"
+      },
+      "rdfs:label": "Multi-LexSum: Real-World Summaries of Civil Rights Lawsuits at Multiple Granularities"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_termo_3",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_participant"
+      },
+      "art:frequencia": 176,
+      "art:posicaoRanking": 3
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_16",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 16,
+      "art:texto": "Hyeonsu B Kang, Joseph Chee Chang, Yongsung Kim, and Aniket Kittur. 2022. Threddy: An Interactive System for Personalized Thread-based Exploration and Organization of Scientific Literature. arXiv preprint arXiv:2208.03455 (2022)."
+    },
+    {
+      "@id": "art:Referencia",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Referência bibliográfica"
+      },
+      "rdfs:seeAlso": {
+        "@id": "http://purl.org/spar/biro/BibliographicReference"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_termo_9",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_long"
+      },
+      "art:frequencia": 29,
+      "art:posicaoRanking": 9
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_28",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 28,
+      "art:texto": "Nils Reimers and Iryna Gurevych. 2019. Sentence-bert: Sentence embeddings using siamese bert-networks. arXiv preprint arXiv:1908.10084 (2019)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_83",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 83,
+      "art:texto": "Artidoro Pagnoni, Vidhisha Balachandran, and Yulia Tsvetkov. 2021. Understanding Factuality in Abstractive Summarization with FRANK: A Benchmark for Factuality Metrics. ArXiv abs/2104.13346 (2021)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_66",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 66,
+      "art:texto": "Pengfei Liu, Weizhe Yuan, Jinlan Fu, Zhengbao Jiang, Hiroaki Hayashi, and Graham Neubig. 2021. Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing. ArXiv abs/2107.13586 (2021)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_3",
+      "@type": "art:Referencia",
+      "art:ordem": 3,
+      "art:texto": "Rishi Bommasani, Drew A. Hudson, Ehsan Adeli, Russ Altman, Simran Arora, Sydney von Arx, Michael S. Bernstein, Jeannette Bohg, Antoine Bosselut, Emma Brunskill, Erik Brynjolfsson, Shyamal Buch, Dallas Card, Rodrigo Castellon, Niladri Chatterji, Annie Chen, Kathleen Creel, Jared Quincy Davis, Dora Demszky, Chris Donahue, Moussa Doumbouya, Esin Durmus, Stefano Ermon, John Etchemendy, Kawin Ethayarajh, Li Fei-Fei, Chelsea Finn, Trevor Gale, Lauren Gillespie, Karan Goel, Noah Goodman, Shelby Grossman, Neel Guha, Tatsunori Hashimoto, Peter Henderson, John Hewitt, Daniel E. Ho, Jenny Hong, Kyle Hsu,"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_Word_embeddings",
+      "@type": "art:Mencao",
+      "art:frequencia": 2,
+      "art:refereSe": {
+        "@id": "art:tecnica_Word_embeddings"
+      }
+    },
+    {
+      "@id": "art:tecnica_LLM_GPT",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "LLM / GPT"
+      }
+    },
+    {
+      "@id": "art:termo_model",
+      "@type": "art:Termo",
+      "art:lema": "model",
+      "art:radical": "model"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_42",
+      "@type": "art:Referencia",
+      "art:ordem": 42,
+      "art:texto": "Ramesh Nallapati and Christopher D Manning. Legal Docket-Entry Classification: Where Machine Learning stumbles. page 9."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_contribuicao_2",
+      "@type": "art:Contribuicao",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_3"
+      },
+      "art:pontuacao": 6,
+      "art:texto": {
+        "@language": "en",
+        "@value": "(2) Paper Plain, an interactive reading interface for research papers that integrates existing affordances like term definition tooltips with novel affordances like in-situ plain language summaries of paper sections and a collection of key questions that guide readers to answering passages in the paper with paired plain language answers (§4)."
+      }
+    },
+    {
+      "@id": "art:sim_artigo_2203_00130v1__artigo_2304_02623v1",
+      "@type": "art:Similaridade",
+      "art:entreArtigos": [
+        {
+          "@id": "art:artigo_2203_00130v1"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1"
+        }
+      ],
+      "art:valor": {
+        "@type": "xsd:decimal",
+        "@value": "0.1871"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_15",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1906"
+      },
+      "art:ordem": 15,
+      "art:texto": "Alexander R Fabbri, Irene Li, Tianwei She, Suyi Li, and Dragomir R Radev. Multi-news: A large-scale multi-document summarization dataset and abstractive hierarchical model. arXiv preprint arXiv:1906.01749, 2019."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_44",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 44,
+      "art:texto": "Shashi Narayan, Shay B. Cohen, and Mirella Lapata. Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization. arXiv:1808.08745 [cs], August 2018. URL http://arxiv.org/abs/1808.08745. arXiv: 1808.08745."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_81",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2005"
+      },
+      "art:ordem": 81,
+      "art:texto": "National Institutes of Health et al. 2005. Policy on enhancing public access to archived publications resulting from NIH-funded research. Bethesda, MA: National Institutes of Health;(Notice Number: NOT-OD-05-022)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_6",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      },
+      "art:ordem": 6,
+      "art:texto": "Takeshi Abekawa and Akiko Aizawa. 2016. SideNoter: Scholarly Paper Browsing System based on PDF Restructuring and Text Annotation. In International Conference on Computational Linguistics ."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_27",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 27,
+      "art:texto": "Matthew Honnibal, Ines Montani, Sofie Van Landeghem, and Adriane Boyd. spaCy: Industrialstrength Natural Language Processing in Python. 2020. doi: 10.5281/zenodo.1212303."
+    },
+    {
+      "@id": "art:TrabalhoFuturo",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Trabalho futuro"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:ElementoRetorico"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_metodo_2",
+      "@type": "art:Metodo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_3"
+      },
+      "art:pontuacao": 5,
+      "art:texto": {
+        "@language": "en",
+        "@value": "To improve access to medical papers, we develop a novel interactive system, Paper Plain, through an iterative design process."
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_60",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 60,
+      "art:texto": "Jingqing Zhang, Yao Zhao, Mohammad Saleh, and Peter Liu. Pegasus: Pre-training with extracted gap-sentences for abstractive summarization. In International Conference on Machine Learning, pages 11328-11339. PMLR, 2020."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_termo_10",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_research"
+      },
+      "art:frequencia": 110,
+      "art:posicaoRanking": 10
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_21",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2004"
+      },
+      "art:ordem": 21,
+      "art:texto": "Claire Grover, Ben Hachey, and Ian Hughson. The HOLJ corpus. supporting summarisation of legal texts. In Proceedings of the 5th International Workshop on Linguistically Interpreted Corpora, pages 47-54, Geneva, Switzerland, aug 29 2004. COLING. URL https://aclanthology.org/W04-1907."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_60",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 60,
+      "art:texto": "Philippe Laban, Tobias Schnabel, Paul N. Bennett, and Marti A. Hearst. 2021. SummaC: Re-Visiting NLI-based Models for Inconsistency Detection in Summarization. ArXiv abs/2111.09525 (2021)."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_14",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 14,
+      "art:texto": "Andrew Head, Kyle Lo, Dongyeop Kang, Raymond Fok, Sam Skjonsberg, Daniel S. Weld, and Marti A. Hearst. 2020. Augmenting Scientific Papers with Just-in-Time, Shen, et al. Position-Sensitive Definitions of Terms and Symbols. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (2020)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_11",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 11,
+      "art:texto": "Joachim Bingel, Gustavo Paetzold, and Anders Søgaard. 2018. Lexi: A tool for adaptive, personalized text simplification. In International Conference on Computational Linguistics."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_20",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1995"
+      },
+      "art:ordem": 20,
+      "art:texto": "Graham Greenleaf et al. Public access to law via internet: the australasian legal information institute.-paper presented at the asian pacific specials, health and law librarians conference (6th: 1995: Sydney)-. Journal of Law and Information Science, 6(1):49-69, 1995."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_48",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1910"
+      },
+      "art:ordem": 48,
+      "art:texto": "Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter J Liu. Exploring the limits of transfer learning with a unified text-to-text transformer. arXiv preprint arXiv:1910.10683, 2019."
+    },
+    {
+      "@id": "art:Autor",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Autor"
+      }
+    },
+    {
+      "@id": "art:tecnica_Transformer_atencao",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Transformer / atenção"
+      }
+    },
+    {
+      "@id": "art:termo_medical",
+      "@type": "art:Termo",
+      "art:lema": "medical",
+      "art:radical": "medic"
+    },
+    {
+      "@id": "art:ElementoRetorico",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Trecho do artigo que cumpre um papel no discurso científico."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Elemento retórico"
+      },
+      "rdfs:seeAlso": {
+        "@id": "http://purl.org/spar/deo/DiscourseElement"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_61",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1904"
+      },
+      "art:ordem": 61,
+      "art:texto": "Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q Weinberger, and Yoav Artzi. Bertscore: Evaluating text generation with bert. arXiv preprint arXiv:1904.09675, 2019."
+    },
+    {
+      "@id": "art:termo_support",
+      "@type": "art:Termo",
+      "art:lema": "support",
+      "art:radical": "support"
+    },
+    {
+      "@id": "http://www.din.uem.br/iia/artigo",
+      "@type": "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.w3.org/2002/07/owl#versionInfo": "1.0",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Estrutura de um artigo científico: metadados, seções, elementos retóricos (objetivo, problema, método, contribuição, trabalho futuro), referências e termos."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Ontologia de Artigo Científico"
+      },
+      "rdfs:seeAlso": [
+        {
+          "@id": "http://purl.org/spar/fabio"
+        },
+        {
+          "@id": "http://purl.org/spar/doco"
+        },
+        {
+          "@id": "http://purl.org/spar/deo"
+        }
+      ]
+    },
+    {
+      "@id": "art:tecnica_Modelo_de_linguagem",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Modelo de linguagem"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_LLM_GPT",
+      "@type": "art:Mencao",
+      "art:frequencia": 2,
+      "art:refereSe": {
+        "@id": "art:tecnica_LLM_GPT"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_objetivo_1",
+      "@type": "art:Objetivo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_3"
+      },
+      "art:pontuacao": 5,
+      "art:texto": {
+        "@language": "en",
+        "@value": "In this paper, we ask how interactive information interfaces can make the research literature approachable to non-expert healthcare consumers that need it - whom we refer to as \"readers\" in this paper."
+      }
+    },
+    {
+      "@id": "art:Introducao",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Introdução"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_3",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 3,
+      "art:texto": "Sigall K Bell, Tom Delbanco, Joann G Elmore, Patricia S Fitzgerald, Alan Fossa, Kendall Harcourt, Suzanne G Leveille, Thomas H Payne, Rebecca A Stametz, Jan Walker, et al. 2020. Frequency and types of patient-reported errors in electronic health record ambulatory care notes. JAMA network open 3, 6 (2020), e205867- e205867."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_19",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 19,
+      "art:texto": "Daniel King, Zejiang Shen, Nishant Subramani, Daniel S. Weld, Iz Beltagy, and Doug Downey. 2022. Don't Say What You Don't Know: Improving the Consistency of Abstractive Summarization by Constraining Beam Search. ArXiv abs/2203.08436 (2022)."
+    },
+    {
+      "@id": "art:termo_gist",
+      "@type": "art:Termo",
+      "art:lema": "gist",
+      "art:radical": "gist"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_22",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 22,
+      "art:texto": "Max Grusky, Mor Naaman, and Yoav Artzi. Newsroom: A Dataset of 1.3 Million Summaries with Diverse Extractive Strategies. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers) , pages 708-719, New Orleans, Louisiana, 2018. Association for Computational Linguistics. doi: 10.18653/v1/N18-1065. URL http://aclweb.org/anthology/N18-1065."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_24",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2007"
+      },
+      "art:ordem": 24,
+      "art:texto": "Peter Pirolli. 2007. The Sensemaking Process and Leverage Points for Analyst Technology as Identified Through Cognitive Task Analysis."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tarefa_Geracao_de_texto_parafrase",
+      "@type": "art:Mencao",
+      "art:frequencia": 2,
+      "art:refereSe": {
+        "@id": "art:tarefa_Geracao_de_texto_parafrase"
+      }
+    },
+    {
+      "@id": "art:posicaoRanking",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "art:OcorrenciaTermo"
+      },
+      "rdfs:range": {
+        "@id": "xsd:integer"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_secao_4",
+      "@type": "art:OutraSecao",
+      "art:numeroPalavras": 1326,
+      "art:ordem": 4,
+      "art:tituloSecao": "3 Multi-LexSum"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_6",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 6,
+      "art:texto": "Ilias Chalkidis, Manos Fergadiotis, Prodromos Malakasiotis, Nikolaos Aletras, and Ion Androutsopoulos. LEGAL-BERT: The Muppets straight out of Law School. In Findings of the Association for Computational Linguistics: EMNLP 2020 , pages 2898-2904, Online, 2020. Association for Computational Linguistics. doi: 10.18653/v1/2020.findings-emnlp.261. URL https://www.aclweb.org/anthology/2020.findings-emnlp.261."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_31",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      },
+      "art:ordem": 31,
+      "art:texto": "Dina Demner-Fushman and Noémie Elhadad. 2016. Aspiring to Unintended Consequences of Natural Language Processing: A Review of Recent Developments in Clinical and Consumer-Generated Text Processing. Yearbook of medical informatics 1 (2016), 224-233."
+    },
+    {
+      "@id": "art:Agradecimentos",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Agradecimentos"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_40",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2005"
+      },
+      "art:ordem": 40,
+      "art:texto": "Joshua Maynez, Shashi Narayan, Bernd Bohnet, and Ryan McDonald. On faithfulness and factuality in abstractive summarization. arXiv preprint arXiv:2005.00661, 2020."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_71",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 71,
+      "art:texto": "Joshua Maynez, Shashi Narayan, Bernd Bohnet, and Ryan T. McDonald. 2020. On Faithfulness and Factuality in Abstractive Summarization. ArXiv abs/2005.00661 (2020)."
+    },
+    {
+      "@id": "art:TrabalhosRelacionados",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Trabalhos relacionados"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_3",
+      "@type": "art:Introducao",
+      "art:numeroPalavras": 1894,
+      "art:ordem": 3,
+      "art:tituloSecao": "1 INTRODUCTION"
+    },
+    {
+      "@id": "art:termo_information",
+      "@type": "art:Termo",
+      "art:lema": "information",
+      "art:radical": "inform"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_37",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 37,
+      "art:texto": "A. R. Fabbri, Wojciech Kryscinski, Bryan McCann, Richard Socher, and Dragomir Radev. 2021. SummEval: Re-evaluating Summarization Evaluation. Transactions of the Association for Computational Linguistics 9 (2021), 391-409."
+    },
+    {
+      "@id": "art:pontuacao",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Pontuação dada pelas regras de extração (confiança)."
+      },
+      "rdfs:domain": {
+        "@id": "art:ElementoRetorico"
+      },
+      "rdfs:range": {
+        "@id": "xsd:integer"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_26",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1997"
+      },
+      "art:ordem": 26,
+      "art:texto": "Avital Cnaan, Nan M. Laird, and Peter Slasor. 1997. Using the General Linear Mixed Model to Analyse Unbalanced Repeated Measures and Longitudinal Data. Statistics in Medicine 16 (1997), 2349-2380."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_99",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "art:ordem": 99,
+      "art:texto": "Sharon Swee-Lin Tan and Nadee Goonawardene. 2017. Internet Health Information Seeking and the Patient-Physician Relationship: A Systematic Review. Journal of Medical Internet Research 19 (2017)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_89",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 89,
+      "art:texto": "Kirk Roberts, Halil Kilicoglu, Marcelo Fiszman, and Dina Demner-Fushman. 2014. Automatically Classifying Question Types for Consumer Health Questions. American Medical Informatics Association Annual Symposium proceedings 2014 (2014), 1018-27."
+    },
+    {
+      "@id": "art:baseDados",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "art:Corpus"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_73",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 73,
+      "art:texto": "Khalil Mrini, Franck Dernoncourt, Seunghyun Yoon, Trung H. Bui, Walter Chang, Emilia Farcas, and Ndapandula Nakashole. 2021. A Gradually Soft Multi-Task and Data-Augmented Approach to Medical Question Understanding. InAssociation for Computational Linguistics ."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_9",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 9,
+      "art:texto": "Joseph Chee Chang et al. 2022. CiteSee: Augmenting Citations in Scientific Papers with Persistent and Personalized Historical Context.ArXiv abs/2022.99999 (2022)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_76",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2012"
+      },
+      "art:ordem": 76,
+      "art:texto": "Vinay Nair, Shahab Khan, and Kenar D. Jhaveri. 2012. Interactive journals and the future of medical publications. The American journal of medicine 125 10 (2012), 1038-42."
+    },
+    {
+      "@id": "art:tecnica_Beam_search",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Beam search"
+      }
+    },
+    {
+      "@id": "art:termo_research",
+      "@type": "art:Termo",
+      "art:lema": "research",
+      "art:radical": "research"
+    },
+    {
+      "@id": "art:similarA",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "http://www.w3.org/2002/07/owl#SymmetricProperty"
+      ],
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Os dois artigos têm similaridade TF-IDF acima do limiar."
+      },
+      "rdfs:domain": {
+        "@id": "art:ArtigoCientifico"
+      },
+      "rdfs:range": {
+        "@id": "art:ArtigoCientifico"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_5",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 5,
+      "art:texto": "Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey, and Tom Hope. 2021. Scico: Hierarchical cross-document coreference for scientific concepts. arXiv preprint arXiv:2104.08809 (2021)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_64",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 64,
+      "art:texto": "Linwu Zhong, Ziyi Zhong, Zinian Zhao, Siyuan Wang, Kevin D Ashley, and Matthias Grabmair. Automatic summarization of legal decisions using iterative masking of predictive sentences. In Proceedings of the seventeenth international conference on artificial intelligence and law, pages 163-172, 2019."
+    },
+    {
+      "@id": "art:sim_artigo_2203_00130v1__artigo_2206_10883v3",
+      "@type": "art:Similaridade",
+      "art:entreArtigos": [
+        {
+          "@id": "art:artigo_2203_00130v1"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3"
+        }
+      ],
+      "art:valor": {
+        "@type": "xsd:decimal",
+        "@value": "0.1512"
+      }
+    },
+    {
+      "@id": "art:Secao",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Seção"
+      },
+      "rdfs:seeAlso": {
+        "@id": "http://purl.org/spar/doco/Section"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_termo_4",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_document"
+      },
+      "art:frequencia": 47,
+      "art:posicaoRanking": 4
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_trabalho_futuro_1",
+      "@type": "art:TrabalhoFuturo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_10"
+      },
+      "art:pontuacao": 7,
+      "art:texto": {
+        "@language": "en",
+        "@value": "We offer the following guidance for developing such future systems: Provide reading guidance Interactive reading systems for non-experts can provide more active support for guiding readers."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_7",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 7,
+      "art:texto": "Sriram Karthik Badam, Zhicheng Liu, and Niklas Elmqvist. 2019. Elastic Documents: Coupling Text and Tables through Contextual Visualizations for Enhanced Document Reading. IEEE Transactions on Visualization and Computer Graphics 25 (2019), 661-671."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_9",
+      "@type": "art:Resultados",
+      "art:numeroPalavras": 2845,
+      "art:ordem": 9,
+      "art:tituloSecao": "7 RESULTS"
+    },
+    {
+      "@id": "art:temElemento",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:ArtigoCientifico"
+      },
+      "rdfs:range": {
+        "@id": "art:ElementoRetorico"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_problema_2",
+      "@type": "art:Problema",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_3"
+      },
+      "art:pontuacao": 6,
+      "art:texto": {
+        "@language": "en",
+        "@value": "However, these resources do not cover all medical conditions and treatments [9, 90], especially those which are the focus of emerging research [17, 86]."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tecnica_Questionario_entrevista_estudo_com_usuarios",
+      "@type": "art:Mencao",
+      "art:frequencia": 27,
+      "art:refereSe": {
+        "@id": "art:tecnica_Questionario_entrevista_estudo_com_usuarios"
+      }
+    },
+    {
+      "@id": "art:tema",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "art:Corpus"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_14",
+      "@type": "art:Apendice",
+      "art:numeroPalavras": 2331,
+      "art:ordem": 14,
+      "art:tituloSecao": "Appendix: A INTERVIEWS WITH HEALTHCARE CONSUMERS AND PROVIDERS"
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_problema_2",
+      "@type": "art:Problema",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2304_02623v1_secao_3"
+      },
+      "art:pontuacao": 8,
+      "art:texto": {
+        "@language": "en",
+        "@value": "While prior work has explored many exciting applications for LLMs, we argue thatexpository writing is a task that is understudied in existing work on AI augmented writing."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_8",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 8,
+      "art:texto": "Xiaoliang Bai, Yong sheng Lian, Jie Wang, Hongxing Zhang, Meichao Jiang, Hao Zhang, Bo Pei, Changqing Hu, and Qiang Yang. 2021. Percutaneous endoscopic lumbar discectomy compared with other surgeries for lumbar disc herniation. Medicine 100 (2021)."
+    },
+    {
+      "@id": "art:citaReferencia",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:ArtigoCientifico"
+      },
+      "rdfs:range": {
+        "@id": "art:Referencia"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_secao_6",
+      "@type": "art:Resultados",
+      "art:numeroPalavras": 422,
+      "art:ordem": 6,
+      "art:tituloSecao": "5 Human evaluation"
+    },
+    {
+      "@id": "art:tecnica_Questionario_entrevista_estudo_com_usuarios",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Questionário / entrevista / estudo com usuários"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_termo_5",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_new"
+      },
+      "art:frequencia": 22,
+      "art:posicaoRanking": 5
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_79",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 79,
+      "art:texto": "Mark Neumann, Daniel King, Iz Beltagy, and Waleed Ammar. 2019. ScispaCy: Fast and Robust Models for Biomedical Natural Language Processing. In Proceedings of the 18th BioNLP Workshop and Shared Task . Association for Computational Linguistics, Florence, Italy, 319-327."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_termo_10",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_model"
+      },
+      "art:frequencia": 16,
+      "art:posicaoRanking": 10
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_45",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 45,
+      "art:texto": "Marti A. Hearst, Emily Pedersen, Lekha Priya Patil, Elsie Lee, Paul Laskowski, and Steven L. Franconeri. 2020. An Evaluation of Semantically Grouped Word Cloud Designs. IEEE Transactions on Visualization and Computer Graphics 26 (2020), 2748-2761."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_tarefa_Extracao_de_informacao_relacoes",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tarefa_Extracao_de_informacao_relacoes"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_16",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1906"
+      },
+      "art:ordem": 16,
+      "art:texto": "Alexander R. Fabbri, Irene Li, Tianwei She, Suyi Li, and Dragomir R. Radev. Multi-News: a Large-Scale Multi-Document Summarization Dataset and Abstractive Hierarchical Model. arXiv:1906.01749 [cs], June 2019. URL http://arxiv.org/abs/1906.01749. arXiv: 1906.01749."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_39",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      },
+      "art:ordem": 39,
+      "art:texto": "Yao Lu, Yue Dong, and Laurent Charlin. Multi-xscience: A large-scale dataset for extreme multi-document summarization of scientific articles. arXiv preprint arXiv:2010.14235, 2020."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_50",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 50,
+      "art:texto": "Meghana Kalavar, Sasha Hubschman, Julia L Hudson, Ajay E. Kuriyan, and Jayanth Sridhar. 2021. Evaluation of Available Online Information Regarding Treatment for Vitreous Floaters. Seminars in Ophthalmology 36 (2021), 58 - 63."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_69",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      },
+      "art:ordem": 69,
+      "art:texto": "Iain James Marshall, Joël Kuiper, and Byron C. Wallace. 2016. RobotReviewer: evaluation of a system for automatically assessing bias in clinical trials. Journal of the American Medical Informatics Association 23 (2016), 193 - 201."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_termo_2",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_plain"
+      },
+      "art:frequencia": 189,
+      "art:posicaoRanking": 2
+    },
+    {
+      "@id": "art:valor",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "art:Similaridade"
+      },
+      "rdfs:range": {
+        "@id": "xsd:decimal"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_18",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 18,
+      "art:texto": "Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, T. J. Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeff Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020. Language Models are Few-Shot Learners. ArXiv abs/2005.14165 (2020)."
+    },
+    {
+      "@id": "art:termo_generate",
+      "@type": "art:Termo",
+      "art:lema": "generate",
+      "art:radical": "gener"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tarefa_Reconhecimento_de_entidades_NER",
+      "@type": "art:Mencao",
+      "art:frequencia": 2,
+      "art:refereSe": {
+        "@id": "art:tarefa_Reconhecimento_de_entidades_NER"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_38",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 38,
+      "art:texto": "Marco Lippi, Przemysław Pałka, Giuseppe Contissa, Francesca Lagioia, Hans-Wolfgang Micklitz, Giovanni Sartor, and Paolo Torroni. Claudette: an automated detector of potentially unfair clauses in online terms of service. Artificial Intelligence and Law, 27(2):117-139, 2019."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_19",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 19,
+      "art:texto": "Ross C. Brownson, Jonathan E. Fielding, and L. W. Green. 2018. Building Capacity for Evidence-Based Public Health: Reconciling the Pulls of Practice and the Push of Research. Annual review of public health 39 (2018), 27-53."
+    },
+    {
+      "@id": "art:Resultados",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Resultados / Experimentos"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:termo_new",
+      "@type": "art:Termo",
+      "art:lema": "new",
+      "art:radical": "new"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_objetivo_1",
+      "@type": "art:Objetivo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2206_10883v3_secao_1"
+      },
+      "art:pontuacao": 5,
+      "art:texto": {
+        "@language": "en",
+        "@value": "We present extensive analysis demonstrating that despite the high-quality summaries in the training data (adhering to strict content and style guidelines), state-of-the-art summarization models perform poorly on this task."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_2",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 2,
+      "art:texto": "2021. Hypothes.is: Annotate the web, with anyone, anywhere. https://web.hypothes.is"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_36",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1910"
+      },
+      "art:ordem": 36,
+      "art:texto": "Mike Lewis, Yinhan Liu, Naman Goyal, Marjan Ghazvininejad, Abdelrahman Mohamed, Omer Levy, Ves Stoyanov, and Luke Zettlemoyer. Bart: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension. arXiv preprint arXiv:1910.13461, 2019."
+    },
+    {
+      "@id": "art:ArtigoCientifico",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": [
+        {
+          "@language": "pt",
+          "@value": "Artigo científico"
+        },
+        {
+          "@language": "en",
+          "@value": "Research paper"
+        }
+      ],
+      "rdfs:seeAlso": {
+        "@id": "http://purl.org/spar/fabio/ResearchPaper"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_10",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1981"
+      },
+      "art:ordem": 10,
+      "art:texto": "Linda Flower and John R Hayes. 1981. A cognitive process theory of writing. College composition and communication 32, 4 (1981), 365-387."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_termo_7",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_generation"
+      },
+      "art:frequencia": 19,
+      "art:posicaoRanking": 7
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_88",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1995"
+      },
+      "art:ordem": 88,
+      "art:texto": "W. Scott Richardson, M. C. Wilson, Jim Nishikawa, and Robert S. Hayward. 1995. The well-built clinical question: a key to evidence-based decisions. ACP journal club 123 3 (1995), A12-3."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_problema_2",
+      "@type": "art:Problema",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2206_10883v3_secao_1"
+      },
+      "art:pontuacao": 4,
+      "art:texto": {
+        "@language": "en",
+        "@value": "Multi-LexSum presents a challenging multi-document summarization task given the length of the source documents, often exceeding two hundred pages per case."
+      }
+    },
+    {
+      "@id": "art:termo_generation",
+      "@type": "art:Termo",
+      "art:lema": "generation",
+      "art:radical": "gener"
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_35",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 35,
+      "art:texto": "Daniel M Ziegler, Nisan Stiennon, Jeffrey Wu, Tom B Brown, Alec Radford, Dario Amodei, Paul Christiano, and Geoffrey Irving. 2019. Fine-tuning language models from human preferences. arXiv preprint arXiv:1909.08593 (2019)."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_15",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 15,
+      "art:texto": "Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Yejin Bang, Andrea Madotto, and Pascale Fung. 2022. Survey of hallucination in natural language generation. Comput. Surveys (2022)."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_25",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 25,
+      "art:texto": "Napol Rachatasumrit, Jonathan Bragg, Amy X. Zhang, and Daniel S. Weld. 2022. CiteRead: Integrating Localized Citation Contexts into Scientific Paper Reading. 27th International Conference on Intelligent User Interfaces (2022)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_4",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 4,
+      "art:texto": "2021. UpToDate: Evidence-based Clinical Decision Support. https://www.wolterskluwer.com/en/solutions/uptodate"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_49",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 49,
+      "art:texto": "Abhilasha Ravichander, Alan W Black, Shomir Wilson, Thomas Norton, and Norman Sadeh. Question answering for privacy policies: Combining computational and legal perspectives. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), pages 4947-4958, Hong Kong, China, November 2019. Association for Computational Linguistics. doi: 10.18653/v1/D19-1500. URL https://aclanthology.org/D19-1500."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_102",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 102,
+      "art:texto": "Amir Pouran Ben Veyseh, Franck Dernoncourt, W. Chang, and Thien Huu Nguyen. 2021. MadDog: A Web-based System for Acronym Identification and Disambiguation. In European Chapter of the Association for Computational Linguistics ."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_8",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 8,
+      "art:texto": "Ilias Chalkidis, Abhik Jana, Dirk Hartung, Michael Bommarito, Ion Androutsopoulos, Daniel Martin Katz, and Nikolaos Aletras. LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. arXiv:2110.00976 [cs] , March 2022. URL http: //arxiv.org/abs/2110.00976. arXiv: 2110.00976."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_33",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 33,
+      "art:texto": "Kevin Yang, Nanyun Peng, Yuandong Tian, and Dan Klein. 2022. Re3: Generating longer stories with recursive reprompting and revision. arXiv preprint arXiv:2210.06774 (2022)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_13",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 13,
+      "art:texto": "U.S. Courts. Covering civil cases - journalist's guide. https://www.uscourts.gov/ statistics-reports/covering-civil-cases-journalists-guide , 2022. Last accessed April 17, 2022."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_problema_1",
+      "@type": "art:Problema",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2206_10883v3_secao_1"
+      },
+      "art:pontuacao": 4,
+      "art:texto": {
+        "@language": "en",
+        "@value": "With the advent of large language models, methods for abstractive summarization have made great strides, creating potential for use in applications to aid knowledge workers processing unwieldy document collections."
+      }
+    },
+    {
+      "@id": "art:lema",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "art:Termo"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_43",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1992"
+      },
+      "art:ordem": 43,
+      "art:texto": "Gordon H. Guyatt, John A. Cairns, David N. Churchill, Deborah J. Cook, Brian R Haynes, Jack Hirsh, Jan Irvine, M. Levine, Mitchell A. H. Levine, Jim Nishikawa, David L. Sackett, Patrick Brill-Edwards, Hertzel C. Gerstein, Jim Gibson, Roman Z. Jaeschke, Anthony T. Kerigan, Alan J. Neville, Akbar A Panju, Allan S. Detsky, Murray W. Enkin, Pamela J Frid, Martha S. Gerrity, Andreas Laupacis, Valerie A. Lawrence, Joël Ménard, Virginia A. Moyer, Cynthia D. Mulrow, Paul S. Links, Andrew David Oxman, Jack Sinclair, and Peter Tugwell. 1992. Evidence-based medicine. A new approach to teaching the practi"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_1",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 1,
+      "art:texto": "2021. Fermat's Library. https://fermatslibrary.com/"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_secao_8",
+      "@type": "art:Agradecimentos",
+      "art:numeroPalavras": 153,
+      "art:ordem": 8,
+      "art:tituloSecao": "Acknowledgements"
+    },
+    {
+      "@id": "art:Termo",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Palavra (lema) do vocabulário do corpus."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Termo"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_29",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 29,
+      "art:texto": "Deepali Jain, Malaya Dutta Borah, and Anupam Biswas. Summarization of legal documents: Where are we now and the way forward. Computer Science Review, 40:100388, 2021."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_13",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 13,
+      "art:texto": "Anthony C. Breu. 2020. From Tweetstorm to Tweetorials: Threaded Tweets as a Tool for Medical Education and Knowledge Dissemination. Seminars in nephrology 40 3 (2020), 273-278."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_23",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2013"
+      },
+      "art:ordem": 23,
+      "art:texto": "Vinay K. Chaudhri, Britte Haugan Cheng, Adam Overholtzer, Jeremy Roschelle, Aaron Spaulding, Peter E. Clark, Mark T. Greaves, and David Gunning. 2013. Inquire Biology: A Textbook that Answers Questions. AI Magazine 34 (2013), 55-72."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_72",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 72,
+      "art:texto": "Lisa McCorkell, Gina S. Assaf, Hannah E. Davis, Hannah Wei, and Athena Akrami. 2021. Patient-Led Research Collaborative: embedding patients in the Long COVID narrative. Pain Reports 6 (2021)."
+    },
+    {
+      "@id": "art:tarefa_Traducao_automatica",
+      "@type": "art:Tarefa",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Tradução automática"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_tecnica_BERT_modelos_pre_treinados",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tecnica_BERT_modelos_pre_treinados"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_CNN",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tecnica_CNN"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_70",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 70,
+      "art:texto": "Alejandro Martínez and Stefano Mammola. 2021. Specialized terminology reduces the number of citations of scientific papers. Proceedings of the Royal Society B 288 (2021)."
+    },
+    {
+      "@id": "art:termo_task",
+      "@type": "art:Termo",
+      "art:lema": "task",
+      "art:radical": "task"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_53",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      },
+      "art:ordem": 53,
+      "art:texto": "Sam Shleifer and Alexander M Rush. Pre-trained summarization distillation. arXiv preprint arXiv:2010.13002, 2020."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_secao_6",
+      "@type": "art:Conclusao",
+      "art:numeroPalavras": 51,
+      "art:ordem": 6,
+      "art:tituloSecao": "4 CONCLUSION"
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_12",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 12,
+      "art:texto": "Han L. Han, Junhang Yu, Raphael Bournet, Alexandre Ciorascu, Wendy E. Mackay, and Michel Beaudouin-Lafon. 2022. Passages: Interacting with Text Across Documents. Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems (2022)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_97",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 97,
+      "art:texto": "Petroc Sumner, Solveiga Vivian-Griffiths, Jacky Boivin, Andy Williams, Christos A Venetis, Aimée Davies, Jack Ogden, Leanne Whelan, Bethan Hughes, Bethan Dalton, Fred Boy, and Christopher D. Chambers. 2014. The association between exaggeration in health related science news and academic press releases: retrospective observational study. The BMJ 349 (2014)."
+    },
+    {
+      "@id": "art:temContribuicao",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:range": {
+        "@id": "art:Contribuicao"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "art:temElemento"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_termo_9",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_medical"
+      },
+      "art:frequencia": 119,
+      "art:posicaoRanking": 9
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_tarefa_Sumarizacao",
+      "@type": "art:Mencao",
+      "art:frequencia": 8,
+      "art:refereSe": {
+        "@id": "art:tarefa_Sumarizacao"
+      }
+    },
+    {
+      "@id": "art:temAutor",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:ArtigoCientifico"
+      },
+      "rdfs:range": {
+        "@id": "art:Autor"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_111",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      },
+      "art:ordem": 111,
+      "art:texto": "Alesia A. Zuccala. 2010. Open access and civic scientific information literacy. Information Research 15 (2010)."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_secao_1",
+      "@type": "art:Resumo",
+      "art:numeroPalavras": 160,
+      "art:ordem": 1,
+      "art:tituloSecao": "ABSTRACT"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_63",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 63,
+      "art:texto": "Haoxi Zhong, Chaojun Xiao, Cunchao Tu, Tianyang Zhang, Zhiyuan Liu, and Maosong Sun. Jec-qa: A legal-domain question answering dataset. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 34, pages 9701-9708, 2020."
+    },
+    {
+      "@id": "art:termo_expository",
+      "@type": "art:Termo",
+      "art:lema": "expository",
+      "art:radical": "expositori"
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_29",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1993"
+      },
+      "art:ordem": 29,
+      "art:texto": "Daniel M Russell, Mark J Stefik, Peter Pirolli, and Stuart K Card. 1993. The cost structure of sensemaking. In Proceedings of the INTERACT'93 and CHI'93 conference on Human factors in computing systems . 269-276."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_42",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 42,
+      "art:texto": "Yue Guo, Weijian Qiu, Yizhong Wang, and Trevor A. Cohen. 2021. Automated Lay Language Summarization of Biomedical Scientific Reviews. ArXiv abs/2012.12573 (2021)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_secao_3",
+      "@type": "art:TrabalhosRelacionados",
+      "art:numeroPalavras": 1359,
+      "art:ordem": 3,
+      "art:tituloSecao": "2 Related work"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_9",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 9,
+      "art:texto": "Alison S. Baskin, Ton Wang, Nicole M Mott, Sarah T. Hawley, Reshma Jagsi, and Lesly Dossett. 2020. Gaps in Online Breast Cancer Treatment Information for Older Women. Annals of Surgical Oncology 28 (2020), 950-957."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_termo_8",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_information"
+      },
+      "art:frequencia": 135,
+      "art:posicaoRanking": 8
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_106",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 106,
+      "art:texto": "Ryen W. White and Ahmed Hassan Awadallah. 2014. Content Bias in Online Health Search. ACM Trans. Web 8 (2014), 25:1-25:33."
+    },
+    {
+      "@id": "art:termo_long",
+      "@type": "art:Termo",
+      "art:lema": "long",
+      "art:radical": "long"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_BERT_modelos_pre_treinados",
+      "@type": "art:Mencao",
+      "art:frequencia": 7,
+      "art:refereSe": {
+        "@id": "art:tecnica_BERT_modelos_pre_treinados"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_34",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 34,
+      "art:texto": "Kristina Dzara and Ariel S Frey-Vogel. 2019. Medical Education Journal Club for the Millennial Resident: An Interactive, No-Prep Approach. Academic pediatrics (2019)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_35",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1997"
+      },
+      "art:ordem": 35,
+      "art:texto": "Saul Epstein. 1997. Impure Science: AIDS, Activism, and the Politics of Knowledge. Nature Medicine 3 (1997), 242-243."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_trabalho_futuro_4",
+      "@type": "art:TrabalhoFuturo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_10"
+      },
+      "art:pontuacao": 13,
+      "art:texto": {
+        "@language": "en",
+        "@value": "In future work we are excited to observe the use of Paper Plain in more naturalistic settings."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_55",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2006"
+      },
+      "art:ordem": 55,
+      "art:texto": "Joëlle Kivits. 2006. Informed Patients and the Internet. Journal of Health Psychology 11 (2006), 269 - 282."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_8",
+      "@type": "art:OutraSecao",
+      "art:numeroPalavras": 1569,
+      "art:ordem": 8,
+      "art:tituloSecao": "6 USABILITY STUDY"
+    },
+    {
+      "@id": "art:refereSe",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:Mencao"
+      },
+      "rdfs:range": {
+        "@id": "art:Termo"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_59",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 59,
+      "art:texto": "Philippe Laban, Tobias Schnabel, Paul Bennett, and Marti A. Hearst. 2021. Keep It Simple: Unsupervised Simplification of Multi-Paragraph Text. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) . Association for Computational Linguistics, Online, 6365-6378. https://doi.org/10.18653/v1/2021.acl-long.498"
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_secao_5",
+      "@type": "art:Metodologia",
+      "art:numeroPalavras": 862,
+      "art:ordem": 5,
+      "art:tituloSecao": "3 DESIGNING AI SUPPORTS FOR"
+    },
+    {
+      "@id": "art:corpus_artigos_adicionais",
+      "@type": "art:Corpus",
+      "art:baseDados": "IEEE Xplore",
+      "art:temArtigo": [
+        {
+          "@id": "art:artigo_2203_00130v1"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1"
+        }
+      ],
+      "art:tema": {
+        "@language": "pt",
+        "@value": "Processamento de Linguagem Natural"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_termo_4",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_question"
+      },
+      "art:frequencia": 161,
+      "art:posicaoRanking": 4
+    },
+    {
+      "@id": "art:artigo_2304_02623v1",
+      "@type": "art:ArtigoCientifico",
+      "art:ano": {
+        "@type": "xsd:gYear",
+        "@value": "2023"
+      },
+      "art:citaReferencia": [
+        {
+          "@id": "art:artigo_2304_02623v1_ref_1"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_2"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_3"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_4"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_5"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_6"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_7"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_8"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_9"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_10"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_11"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_12"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_13"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_14"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_15"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_16"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_17"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_18"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_19"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_20"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_21"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_22"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_23"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_24"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_25"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_26"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_27"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_28"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_29"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_30"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_31"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_32"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_33"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_34"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_ref_35"
+        }
+      ],
+      "art:mencionaTarefa": [
+        {
+          "@id": "art:artigo_2304_02623v1_tarefa_Extracao_de_informacao_relacoes"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_tarefa_Sumarizacao"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_tarefa_Geracao_de_texto_parafrase"
+        }
+      ],
+      "art:mencionaTecnica": [
+        {
+          "@id": "art:artigo_2304_02623v1_tecnica_BERT_modelos_pre_treinados"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_tecnica_Modelo_de_linguagem"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_tecnica_LLM_GPT"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_tecnica_Fine_tuning_transfer_learning"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_tecnica_Questionario_entrevista_estudo_com_usuarios"
+        }
+      ],
+      "art:nomeArquivo": "2304.02623v1.pdf",
+      "art:numeroPaginas": 4,
+      "art:numeroReferencias": 35,
+      "art:similarA": [
+        {
+          "@id": "art:artigo_2203_00130v1"
+        },
+        {
+          "@id": "art:artigo_2206_10883v3"
+        }
+      ],
+      "art:temMetodo": [
+        {
+          "@id": "art:artigo_2304_02623v1_metodo_1"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_metodo_2"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_metodo_3"
+        }
+      ],
+      "art:temObjetivo": [
+        {
+          "@id": "art:artigo_2304_02623v1_objetivo_1"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_objetivo_2"
+        }
+      ],
+      "art:temOcorrencia": [
+        {
+          "@id": "art:artigo_2304_02623v1_termo_1"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_termo_2"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_termo_3"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_termo_4"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_termo_5"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_termo_6"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_termo_7"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_termo_8"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_termo_9"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_termo_10"
+        }
+      ],
+      "art:temProblema": [
+        {
+          "@id": "art:artigo_2304_02623v1_problema_1"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_problema_2"
+        }
+      ],
+      "art:temSecao": [
+        {
+          "@id": "art:artigo_2304_02623v1_secao_1"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_secao_2"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_secao_3"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_secao_4"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_secao_5"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_secao_6"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_secao_7"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1_secao_8"
+        }
+      ],
+      "art:titulo": {
+        "@language": "en",
+        "@value": "Beyond Summarization: Designing AI Support for Real-World Expository Writing Tasks"
+      },
+      "rdfs:label": "Beyond Summarization: Designing AI Support for Real-World Expository Writing Tasks"
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_tecnica_LLM_GPT",
+      "@type": "art:Mencao",
+      "art:frequencia": 11,
+      "art:refereSe": {
+        "@id": "art:tecnica_LLM_GPT"
+      }
+    },
+    {
+      "@id": "art:Metodologia",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Metodologia"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_10",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 10,
+      "art:texto": "Civil Rights Litigation Clearinghouse. Mission. https://clearinghouse.net/about, 2022. Last accessed June 5, 2022."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_contribuicao_1",
+      "@type": "art:Contribuicao",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_3"
+      },
+      "art:pontuacao": 4,
+      "art:texto": {
+        "@language": "en",
+        "@value": "In summary, this paper contributes: (1) A characterization of the barriers readers face when they approach medical research papers."
+      }
+    },
+    {
+      "@id": "art:mencionaTarefa",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:ArtigoCientifico"
+      },
+      "rdfs:range": {
+        "@id": "art:Mencao"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_termo_8",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_train"
+      },
+      "art:frequencia": 29,
+      "art:posicaoRanking": 8
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_13",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2000"
+      },
+      "art:ordem": 13,
+      "art:texto": "John R Hayes. 2000. A new framework for understanding cognition and affect in writing. Perspectives on writing: Research, theory, and practice (2000), 6-44."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_96",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      },
+      "art:ordem": 96,
+      "art:texto": "Alessandra Storino, Manuel Castillo-Angeles, Ammara A Watkins, Christina R. Vargas, Joseph D. Mancias, Andrea J Bullock, Aram N. Demirjian, A J Moser, and Tara S. Kent. 2016. Assessing the Accuracy and Readability of Online Health Information for Patients With Pancreatic Cancer. Journal of the American Medical Association surgery 151 9 (2016), 831-7."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_secao_8",
+      "@type": "art:SecaoReferencias",
+      "art:numeroPalavras": 1324,
+      "art:ordem": 8,
+      "art:tituloSecao": "REFERENCES"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_Modelo_de_linguagem",
+      "@type": "art:Mencao",
+      "art:frequencia": 3,
+      "art:refereSe": {
+        "@id": "art:tecnica_Modelo_de_linguagem"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_75",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 75,
+      "art:texto": "Sonia Krishna Murthy, Daniel King, Tom Hope, Daniel Weld, and Doug Downey. 2021. Towards Personalized Descriptions of Scientific Concepts. In Proceedings of The Fifth Widening Natural Language Processing Workshop . Association for Computational Linguistics, Punta Cana, Dominican Republic."
+    },
+    {
+      "@id": "art:sim_artigo_2206_10883v3__artigo_2304_02623v1",
+      "@type": "art:Similaridade",
+      "art:entreArtigos": [
+        {
+          "@id": "art:artigo_2206_10883v3"
+        },
+        {
+          "@id": "art:artigo_2304_02623v1"
+        }
+      ],
+      "art:valor": {
+        "@type": "xsd:decimal",
+        "@value": "0.2615"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_12",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 12,
+      "art:texto": "Tanner A. Bohn and Charles X. Ling. 2021. Hone as You Read: A Practical Type of Interactive Summarization. ArXiv abs/2105.02923 (2021)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_26",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2015"
+      },
+      "art:ordem": 26,
+      "art:texto": "Karl Moritz Hermann, Tomáš Koˇciský, Edward Grefenstette, Lasse Espeholt, Will Kay, Mustafa Suleyman, and Phil Blunsom. Teaching Machines to Read and Comprehend. arXiv:1506.03340 [cs], November 2015. URL http://arxiv.org/abs/1506.03340. arXiv: 1506.03340."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_51",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 51,
+      "art:texto": "Anna Kernder, Elena Elefante, Gamal Chehab, Chiara Tani, Marta Mosca, and Matthias Schneider. 2020. The patient's perspective: are quality of life and disease burden a possible treatment target in systemic lupus erythematosus? Rheumatology (Oxford, England) 59 (2020), 63 - 68."
+    },
+    {
+      "@id": "art:titulo",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "http://purl.org/dc/terms/title"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_32",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 32,
+      "art:texto": "Shaden Smith, Mostofa Patwary, Brandon Norick, Patrick LeGresley, Samyam Rajbhandari, Jared Casper, Zhun Liu, Shrimai Prabhumoye, George Zerveas, Vijay Anand Korthikanti, Elton Zhang, Rewon Child, Reza Yazdani Aminabadi, Julie Bernauer, Xia Song, Mohammad Shoeybi, Yuxiong He, Michael Houston, Saurabh Tiwary, and Bryan Catanzaro. 2022. Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model. ArXiv abs/2201.11990 (2022)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_6",
+      "@type": "art:OutraSecao",
+      "art:numeroPalavras": 2161,
+      "art:ordem": 6,
+      "art:tituloSecao": "4 PAPER PLAIN: READING SUPPORT FOR MEDICAL RESEARCH PAPERS"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_27",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 27,
+      "art:texto": "Anthony M Cocco, Rachel D. Zordan, David Taylor, Tracey J Weiland, Stuart J Dilley, Joyce A Kant, Mahesha Hk Dombagolla, Andreas Hendarto, Fiona Wy Lai, and Jennie Hutton. 2018. Dr Google in the ED: searching for online health information by adult emergency department patients. Medical Journal of Australia 209 (2018)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_44",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 44,
+      "art:texto": "Andrew Head, Kyle Lo, Dongyeop Kang, Raymond Fok, Sam Skjonsberg, Daniel S. Weld, and Marti A. Hearst. 2021. Augmenting Scientific Papers with Just-in-Time, Position-Sensitive Definitions of Terms and Symbols. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (2021)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_problema_1",
+      "@type": "art:Problema",
+      "art:pontuacao": 5,
+      "art:texto": {
+        "@language": "en",
+        "@value": "Reading medical papers, however, can be a challenging experience."
+      }
+    },
+    {
+      "@id": "art:Apendice",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Apêndice"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_87",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 87,
+      "art:texto": "Tessa Richards and Fiona Godlee. 2014. The BMJ's own patient journey. BMJ 348 (2014)."
+    },
+    {
+      "@id": "art:termo_author",
+      "@type": "art:Termo",
+      "art:lema": "author",
+      "art:radical": "author"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_metodo_3",
+      "@type": "art:Metodo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_3"
+      },
+      "art:pontuacao": 5,
+      "art:texto": {
+        "@language": "en",
+        "@value": "The system is designed to make medical papers accessible with four features (illustrated in Figure 1) that combine to provide support at multiple levels of granularity (e.g., term, paragraph, section) and throughout the reading process."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_61",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2013"
+      },
+      "art:ordem": 61,
+      "art:texto": "Gondy Leroy, James E. Endicott, David Kauchak, Obay Mouradi, and Melissa Just. 2013. User Evaluation of the Effects of a Text Simplification Algorithm Using Term Familiarity on Perception, Understanding, Learning, and Information Retention. Journal of Medical Internet Research 15 (2013)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_trabalho_futuro_2",
+      "@type": "art:TrabalhoFuturo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_10"
+      },
+      "art:pontuacao": 7,
+      "art:texto": {
+        "@language": "en",
+        "@value": "Future systems could go further by reporting factuality measures along with generated text [83] or integrating a feedback mechanism for reporting inconsistent information in order to crowd-source these factuality checks."
+      }
+    },
+    {
+      "@id": "art:radical",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "art:Termo"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "art:termo_write",
+      "@type": "art:Termo",
+      "art:lema": "write",
+      "art:radical": "write"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_objetivo_2",
+      "@type": "art:Objetivo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2206_10883v3_secao_2"
+      },
+      "art:pontuacao": 5,
+      "art:texto": {
+        "@language": "en",
+        "@value": "In this paper, we present a new dataset, Multi-LexSum, for studying automatic summarization in an important real-world application setting found in the Civil Rights Litigation Clearinghouse (CRLC)."
+      }
+    },
+    {
+      "@id": "art:OutraSecao",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Outra seção"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:tarefa_Analise_sintatica_parsing",
+      "@type": "art:Tarefa",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Análise sintática (parsing)"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_17",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2004"
+      },
+      "art:ordem": 17,
+      "art:texto": "Phil Brown, Stephen Zavestoski, Sabrina McCormick, Brian Mayer, Rachel Morello-Frosch, and Rebecca Gasior Altman. 2004. Embodied health movements: new approaches to social movements in health. Sociology of health & illness 26 1 (2004), 50-80."
+    },
+    {
+      "@id": "art:tarefa_Analise_de_sentimentos",
+      "@type": "art:Tarefa",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Análise de sentimentos"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_90",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "art:ordem": 90,
+      "art:texto": "Mary A M Rogers, Kelsey Lemmen, Rachel Kramer, Jason Mann, and Vineet Chopra. 2017. Internet-Delivered Health Interventions That Work: Systematic Review of Meta-Analyses and Evaluation of Website Availability. Journal of Medical Internet Research 19 (2017)."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_23",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2023"
+      },
+      "art:ordem": 23,
+      "art:texto": "Srishti Palani, Aakanksha Naik, Doug Downey, Amy X Zhang, Jonathan Bragg, and Joseph Chee Chang. 2023. Relatedly: Scaffolding Literature Reviews with Existing Related Work Sections. arXiv preprint arXiv:2302.06754 (2023)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_33",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 33,
+      "art:texto": "Daniel King, Zejiang Shen, Nishant Subramani, Daniel S Weld, Iz Beltagy, and Doug Downey. Don't say what you don't know: Improving the consistency of abstractive summarization by constraining beam search. arXiv preprint arXiv:2203.08436, 2022."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tarefa_Sumarizacao",
+      "@type": "art:Mencao",
+      "art:frequencia": 43,
+      "art:refereSe": {
+        "@id": "art:tarefa_Sumarizacao"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_15",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 15,
+      "art:texto": "Rainer Bromme and Susan R. Goldman. 2014. The Public's Bounded Understanding of Science. Educational Psychologist 49 (2014), 59 - 69."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_65",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1990"
+      },
+      "art:ordem": 65,
+      "art:texto": "Magnus Lindstrom and Douglas M. Bates. 1990. Nonlinear mixed effects models for repeated measures data. Biometrics 46 3 (1990), 673-87."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_objetivo_2",
+      "@type": "art:Objetivo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_10"
+      },
+      "art:pontuacao": 4,
+      "art:texto": {
+        "@language": "en",
+        "@value": "In this paper we ask how interactive interfaces can make medical research papers approachable to healthcare consumers that need it."
+      }
+    },
+    {
+      "@id": "art:numeroPalavras",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "art:Secao"
+      },
+      "rdfs:range": {
+        "@id": "xsd:integer"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_termo_3",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_support"
+      },
+      "art:frequencia": 23,
+      "art:posicaoRanking": 3
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_22",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 22,
+      "art:texto": "Piotr Mirowski, Kory W Mathewson, Jaylen Pittman, and Richard Evans. 2022. Co-writing screenplays and theatre scripts with language models: An evaluation by industry professionals. arXiv preprint arXiv:2209.14958 (2022)."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_34",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2023"
+      },
+      "art:ordem": 34,
+      "art:texto": "Tianyi Zhang, Faisal Ladhak, Esin Durmus, Percy Liang, Kathleen McKeown, and Tatsunori B. Hashimoto. 2023. Benchmarking Large Language Models for News Summarization. CoRR (2023). arXiv:2301.13848 [cs.CL] http://arxiv.org/ abs/2301.13848v1"
+    },
+    {
+      "@id": "art:Objetivo",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "O que o artigo pretende fazer (intenção)."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Objetivo"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:ElementoRetorico"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_105",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2015"
+      },
+      "art:ordem": 105,
+      "art:texto": "Gerhard Weber and Peter Brusilovsky. 2015. ELM-ART - An Interactive and Intelligent Web-Based Electronic Textbook. International Journal of Artificial Intelligence in Education 26 (2015), 72-81."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_secao_2",
+      "@type": "art:Introducao",
+      "art:numeroPalavras": 630,
+      "art:ordem": 2,
+      "art:tituloSecao": "1 Introduction"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_56",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 56,
+      "art:texto": "Wojciech Kryscinski, Bryan McCann, Caiming Xiong, and Richard Socher. 2020. Evaluating the Factual Consistency of Abstractive Text Summarization. ArXiv abs/1910.12840 (2020)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_5",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 5,
+      "art:texto": "Ilias Chalkidis, Ion Androutsopoulos, and Nikolaos Aletras. Neural legal judgment prediction in English. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pages 4317-4323, Florence, Italy, July 2019. Association for Computational Linguistics. doi: 10.18653/v1/P19-1424. URL https://aclanthology.org/P19-1424."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_35",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 35,
+      "art:texto": "Wojciech Kry ́sci ́nski, Nazneen Rajani, Divyansh Agarwal, Caiming Xiong, and Dragomir Radev. BookSum: A Collection of Datasets for Long-form Narrative Summarization.arXiv:2105.08209 [cs], May 2021. URL http://arxiv.org/abs/2105.08209. arXiv: 2105.08209."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_55",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "art:ordem": 55,
+      "art:texto": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. Advances in neural information processing systems, 30, 2017."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_secao_1",
+      "@type": "art:Resumo",
+      "art:numeroPalavras": 212,
+      "art:ordem": 1,
+      "art:tituloSecao": "Abstract"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_2",
+      "@type": "art:OutraSecao",
+      "art:numeroPalavras": 9,
+      "art:ordem": 2,
+      "art:tituloSecao": "Keywords"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tarefa_Traducao_automatica",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tarefa_Traducao_automatica"
+      }
+    },
+    {
+      "@id": "art:termo_answer",
+      "@type": "art:Termo",
+      "art:lema": "answer",
+      "art:radical": "answer"
+    },
+    {
+      "@id": "art:tarefa_Recomendacao",
+      "@type": "art:Tarefa",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Recomendação"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_109",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 109,
+      "art:texto": "Yan Zhang. 2014. Searching for specific health-related information in MedlinePlus: Behavioral patterns and user experience. Journal of the Association for Information Science and Technology 65 (2014)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_secao_5",
+      "@type": "art:Resultados",
+      "art:numeroPalavras": 1705,
+      "art:ordem": 5,
+      "art:tituloSecao": "4 Experiments"
+    },
+    {
+      "@id": "art:Problema",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Lacuna, dificuldade ou limitação que motiva o trabalho."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Problema"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:ElementoRetorico"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_8",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 8,
+      "art:texto": "Arman Cohan, Sergey Feldman, Iz Beltagy, Doug Downey, and Daniel S. Weld. 2020. SPECTER: Document-level Representation Learning using Citationinformed Transformers. In Annual Meeting of the Association for Computational Linguistics."
+    },
+    {
+      "@id": "art:Tarefa",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Problema/tarefa da área (ex.: tradução automática, sumarização)."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Tarefa de PLN"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Termo"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_92",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      },
+      "art:ordem": 92,
+      "art:texto": "Skipper Seabold and Josef Perktold. 2010. statsmodels: Econometric and statistical modeling with python. In 9th Python in Science Conference ."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_termo_1",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_write"
+      },
+      "art:frequencia": 77,
+      "art:posicaoRanking": 1
+    },
+    {
+      "@id": "art:frequencia",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:integer"
+      }
+    },
+    {
+      "@id": "art:temProblema",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:range": {
+        "@id": "art:Problema"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "art:temElemento"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_82",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      },
+      "art:ordem": 82,
+      "art:texto": "Gustavo Paetzold and Lucia Specia. 2016. Anita: An Intelligent Text Adaptation Tool. In International Conference on Computational Linguistics ."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_93",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2011"
+      },
+      "art:ordem": 93,
+      "art:texto": "Cynthia Shanahan, Timothy Shanahan, and Cynthia Misischia. 2011. Analysis of Expert Readers in Three Disciplines. Journal of Literacy Research 43 (2011), 393 - 429."
+    },
+    {
+      "@id": "art:termo_summarization",
+      "@type": "art:Termo",
+      "art:lema": "summarization",
+      "art:radical": "summar"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_trabalho_futuro_3",
+      "@type": "art:TrabalhoFuturo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_10"
+      },
+      "art:pontuacao": 7,
+      "art:texto": {
+        "@language": "en",
+        "@value": "We are excited to integrate new advances for measuring and ensuring factuality in generations (e.g., [33, 60, 77]) into Paper Plain to help realize the promise of such models in real-world settings."
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_metodo_3",
+      "@type": "art:Metodo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2304_02623v1_secao_3"
+      },
+      "art:pontuacao": 3,
+      "art:texto": {
+        "@language": "en",
+        "@value": "For example, when starting writing a survey paper, the authors come up with the query to find relevant papers first, and AI helps execute the search and discover related documents; after authors read the retrieved papers and come up with ideas for the writing, AI can help generate the writing text based on authors' ideas, and the writers only need to proofread model output."
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_secao_2",
+      "@type": "art:OutraSecao",
+      "art:numeroPalavras": 9,
+      "art:ordem": 2,
+      "art:tituloSecao": "KEYWORDS"
+    },
+    {
+      "@id": "art:ano",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:gYear"
+      }
+    },
+    {
+      "@id": "_:na89a47bf10f94a6ea9d8fa2751417bdbb1",
+      "@type": "http://www.w3.org/2002/07/owl#AllDisjointClasses",
+      "http://www.w3.org/2002/07/owl#members": {
+        "@list": [
+          {
+            "@id": "art:Objetivo"
+          },
+          {
+            "@id": "art:Contribuicao"
+          },
+          {
+            "@id": "art:Problema"
+          },
+          {
+            "@id": "art:TrabalhoFuturo"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_91",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "art:ordem": 91,
+      "art:texto": "Lisa Scharrer, Yvonne Rupieper, Marc Stadtler, and Rainer Bromme. 2017. When science becomes too easy: Science popularization inclines laypeople to underrate their dependence on experts. Public Understanding of Science 26 (2017), 1003 - 1018."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_19",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 19,
+      "art:texto": "Timnit Gebru, Jamie Morgenstern, Briana Vecchione, Jennifer Wortman Vaughan, Hanna Wallach, Hal Daumé Iii, and Kate Crawford. Datasheets for datasets. Communications of the ACM, 64(12):86-92, 2021."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_64",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 64,
+      "art:texto": "Jiazhao Li, Corey A. Lester, Xinyan Zhao, Yuting Ding, Yun Jiang, and V. G. Vinod Vydiswaran. 2020. PharmMT: A Neural Machine Translation Approach to Simplify Prescription Directions. In Association for Computational Linguistics FINDINGS ."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_28",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2011"
+      },
+      "art:ordem": 28,
+      "art:texto": "Kevyn Collins-Thompson, Paul N. Bennett, Ryen W. White, Sebastian de la Chica, and David A. Sontag. 2011. Personalizing web search results by reading level. In ACM International Conference on Information and Knowledge Management ."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_objetivo_2",
+      "@type": "art:Objetivo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2304_02623v1_secao_6"
+      },
+      "art:pontuacao": 4,
+      "art:texto": {
+        "@language": "en",
+        "@value": "In this paper, we argue that the unique characteristics in expository writing open up new opportunities for designing AI support."
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_Agrupamento_clustering",
+      "@type": "art:Mencao",
+      "art:frequencia": 2,
+      "art:refereSe": {
+        "@id": "art:tecnica_Agrupamento_clustering"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_94",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 94,
+      "art:texto": "Zejiang Shen, Kyle Lo, Lucy Lu Wang, Bailey Kuehl, Daniel S. Weld, and Doug Downey. 2021. Incorporating Visual Layout Structures for Scientific Text Classification. ArXiv abs/2106.00676 (2021)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_110",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 110,
+      "art:texto": "Tian Zhao and Kyusong Lee. 2020. Talk to Papers: Bringing Neural Question Answering to Academic Search. ArXiv abs/2004.02002 (2020)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_57",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 57,
+      "art:texto": "Chaojun Xiao, Xueyu Hu, Zhiyuan Liu, Cunchao Tu, and Maosong Sun. Lawformer: A Pre-trained Language Model for Chinese Legal Long Documents. arXiv:2105.03887 [cs], May 2021. URL http://arxiv.org/abs/2105.03887. arXiv: 2105.03887."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_tarefa_Geracao_de_texto_parafrase",
+      "@type": "art:Mencao",
+      "art:frequencia": 2,
+      "art:refereSe": {
+        "@id": "art:tarefa_Geracao_de_texto_parafrase"
+      }
+    },
+    {
+      "@id": "art:temMetodo",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:range": {
+        "@id": "art:Metodo"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "art:temElemento"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_termo_10",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_generate"
+      },
+      "art:frequencia": 28,
+      "art:posicaoRanking": 10
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_32",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 32,
+      "art:texto": "Ashwin Devaraj, Iain James Marshall, Byron C. Wallace, and Junyi Jessy Li. 2021. Paragraph-level Simplification of Medical Texts. ArXiv abs/2104.05767 (2021)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_46",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 46,
+      "art:texto": "Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et al. Pytorch: An imperative style, high-performance deep learning library. Advances in neural information processing systems, 32, 2019."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_termo_6",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_reader"
+      },
+      "art:frequencia": 137,
+      "art:posicaoRanking": 6
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_7",
+      "@type": "art:Metodologia",
+      "art:numeroPalavras": 782,
+      "art:ordem": 7,
+      "art:tituloSecao": "5 IMPLEMENTATION"
+    },
+    {
+      "@id": "art:Metodo",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Como o trabalho foi feito: técnica, modelo, dados, experimento, survey, entrevistas."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Método"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:ElementoRetorico"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_58",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 58,
+      "art:texto": "Philippe Laban. 2020. A framework for a text-centric user interface for navigating complex news stories."
+    },
+    {
+      "@id": "art:tituloSecao",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "art:Secao"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_2",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 2,
+      "art:texto": "Michael J. Bommarito II, Daniel Martin Katz, and Eric M. Detterman. LexNLP: Natural language processing and information extraction for legal and regulatory texts.arXiv:1806.03688 [cs, stat], June 2018. URL http://arxiv.org/abs/1806.03688. arXiv: 1806.03688."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_56",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1910"
+      },
+      "art:ordem": 56,
+      "art:texto": "Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony Moi, Pierric Cistac, Tim Rault, Rémi Louf, Morgan Funtowicz, et al. Huggingface's transformers: State-of-the-art natural language processing. arXiv preprint arXiv:1910.03771, 2019."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_86",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2013"
+      },
+      "art:ordem": 86,
+      "art:texto": "Vololona Rabeharisoa, Tiago Moreira, and Madeleine Akrich. 2013. Evidence-based activism: Patients', users' and activists' groups in knowledge society. BioSocieties 9 (2013), 111-128."
+    },
+    {
+      "@id": "art:Corpus",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Conjunto de artigos analisados sobre um mesmo tema."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Corpus"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_metodo_1",
+      "@type": "art:Metodo",
+      "art:pontuacao": 5,
+      "art:texto": {
+        "@language": "en",
+        "@value": "To improve access to medical papers, we introduce a novel interactive interface - Paper Plain1 - with four features powered by natural language processing: definitions of unfamiliar terms, in-situ plain language section summaries, a collection of key questions that guide readers to answering passages, and plain language summaries of the answering passages."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_107",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 107,
+      "art:texto": "Ryen W. White and Eric Horvitz. 2014. From health search to healthcare: explorations of intention and utilization via query logs and user surveys. Journal of the American Medical Informatics Association 21 1 (2014), 49-55."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_41",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 41,
+      "art:texto": "Katy I. Gero, Vivian Liu, and Lydia B. Chilton. 2021. Sparks: Inspiration for Science Writing using Language Models. ArXiv abs/2110.07640 (2021)."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_objetivo_1",
+      "@type": "art:Objetivo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2304_02623v1_secao_1"
+      },
+      "art:pontuacao": 5,
+      "art:texto": {
+        "@language": "en",
+        "@value": "In this position paper, we argue that developing AI supports for expository writing has unique and exciting research challenges and can lead to high real-world impacts."
+      }
+    },
+    {
+      "@id": "art:temOcorrencia",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:ArtigoCientifico"
+      },
+      "rdfs:range": {
+        "@id": "art:OcorrenciaTermo"
+      }
+    },
+    {
+      "@id": "art:Resumo",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Resumo (Abstract)"
+      },
+      "rdfs:subClassOf": {
+        "@id": "art:Secao"
+      }
+    },
+    {
+      "@id": "art:tarefa_Recuperacao_de_informacao_busca",
+      "@type": "art:Tarefa",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Recuperação de informação / busca"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_termo_6",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_source"
+      },
+      "art:frequencia": 41,
+      "art:posicaoRanking": 6
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_22",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2011"
+      },
+      "art:ordem": 22,
+      "art:texto": "Marc-Allen Cartright, Ryen W. White, and Eric Horvitz. 2011. Intentions and attention in exploratory health search. Proceedings of the 34th international ACM SIGIR conference on Research and development in Information Retrieval (2011)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_14",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 14,
+      "art:texto": "Mary Anne Britt, Tobias Richter, and Jean-François Rouet. 2014. Scientific Literacy: The Role of Goal-Directed Reading and Evaluation in Understanding Scientific Information. Educational Psychologist 49 (2014), 104 - 122."
+    },
+    {
+      "@id": "art:entreArtigos",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:Similaridade"
+      },
+      "rdfs:range": {
+        "@id": "art:ArtigoCientifico"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_46",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1979"
+      },
+      "art:ordem": 46,
+      "art:texto": "Sture Holm. 1979. A Simple Sequentially Rejective Multiple Test Procedure. Scandinavian Journal of Statistics 6 (1979), 65-70."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_termo_1",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_read"
+      },
+      "art:frequencia": 237,
+      "art:posicaoRanking": 1
+    },
+    {
+      "@id": "art:termo_plain",
+      "@type": "art:Termo",
+      "art:lema": "plain",
+      "art:radical": "plain"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_23",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2006"
+      },
+      "art:ordem": 23,
+      "art:texto": "Ben Hachey and Claire Grover. Extractive summarisation of legal texts. Artificial Intelligence and Law, 14(4):305-345, 2006."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_tecnica_Modelo_de_linguagem",
+      "@type": "art:Mencao",
+      "art:frequencia": 7,
+      "art:refereSe": {
+        "@id": "art:tecnica_Modelo_de_linguagem"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_2",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1992"
+      },
+      "art:ordem": 2,
+      "art:texto": "Alan Baddeley. 1992. Working memory. Science 255, 5044 (1992), 556-559."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_secao_10",
+      "@type": "art:Apendice",
+      "art:numeroPalavras": 8093,
+      "art:ordem": 10,
+      "art:tituloSecao": "Appendix: A Multi-LexSum release"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_48",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 48,
+      "art:texto": "Abhinav Jain, Nitin Gupta, Shashank Mujumdar, Sameep Mehta, and Rishi Madhok. 2018. Content Driven Enrichment of Formal Text using Concept Definitions and Applications. Proceedings of the 29th on Hypertext and Social Media (2018)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_58",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 58,
+      "art:texto": "Wen Xiao, Iz Beltagy, Giuseppe Carenini, and Arman Cohan. Primer: Pyramid-based masked sentence pre-training for multi-document summarization. arXiv preprint arXiv:2110.08499, 2021."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_7",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 7,
+      "art:texto": "Ilias Chalkidis, Manos Fergadiotis, and Ion Androutsopoulos. Multieurlex-a multi-lingual and multi-label legal document classification dataset for zero-shot cross-lingual transfer. arXiv preprint arXiv:2109.00904, 2021."
+    },
+    {
+      "@id": "art:termo_read",
+      "@type": "art:Termo",
+      "art:lema": "read",
+      "art:radical": "read"
+    },
+    {
+      "@id": "art:anoReferencia",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "art:Referencia"
+      },
+      "rdfs:range": {
+        "@id": "xsd:gYear"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_5",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 5,
+      "art:texto": "Asma Ben Abacha and Dina Demner-Fushman. 2019. A question-entailment approach to question answering. BMC Bioinformatics 20 (2019)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_secao_7",
+      "@type": "art:Conclusao",
+      "art:numeroPalavras": 236,
+      "art:ordem": 7,
+      "art:tituloSecao": "6 Conclusion"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_4",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 4,
+      "art:texto": "Ilias Chalkidis, Ion Androutsopoulos, and Achilleas Michos. Obligation and prohibition extraction using hierarchical RNNs. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pages 254-259, Melbourne, Australia, July 2018. Association for Computational Linguistics. doi: 10.18653/v1/P18-2041. URL https://aclanthology.org/P18-2041."
+    },
+    {
+      "@id": "art:Mencao",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Quantas vezes um artigo menciona uma técnica ou tarefa."
+      },
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Menção"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tarefa_Recomendacao",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tarefa_Recomendacao"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_45",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 45,
+      "art:texto": "Adam R Pah, David L Schwartz, Sarath Sanga, Zachary D Clopton, Peter DiCola, Rachel Davis Mersey, Charlotte S Alexander, Kristian J Hammond, and Luís A Nunes Amaral. How to build a more open justice system. Science, 369(6500):134-136, 2020."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_31",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 31,
+      "art:texto": "Nikhil Singh, Guillermo Bernal, Daria Savchenko, and Elena L Glassman. 2022. Where to hide a stolen elephant: Leaps in creative writing with multimodal machine intelligence. ACM Transactions on Computer-Human Interaction (2022)."
+    },
+    {
+      "@id": "art:tecnica_Agrupamento_clustering",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Agrupamento (clustering)"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_metodo_2",
+      "@type": "art:Metodo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2304_02623v1_secao_1"
+      },
+      "art:pontuacao": 4,
+      "art:texto": {
+        "@language": "en",
+        "@value": "We sketch three components for AI support design and discuss considerations for future research."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_12",
+      "@type": "art:Agradecimentos",
+      "art:numeroPalavras": 103,
+      "art:ordem": 12,
+      "art:tituloSecao": "ACKNOWLEDGMENTS"
+    },
+    {
+      "@id": "art:tarefa_Geracao_de_texto_parafrase",
+      "@type": "art:Tarefa",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Geração de texto / paráfrase"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_tecnica_Questionario_entrevista_estudo_com_usuarios",
+      "@type": "art:Mencao",
+      "art:frequencia": 2,
+      "art:refereSe": {
+        "@id": "art:tecnica_Questionario_entrevista_estudo_com_usuarios"
+      }
+    },
+    {
+      "@id": "art:termo_reader",
+      "@type": "art:Termo",
+      "art:lema": "reader",
+      "art:radical": "reader"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_39",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 39,
+      "art:texto": "Saadia Gabriel, Asli Çelikyilmaz, Rahul Jha, Yejin Choi, and Jianfeng Gao. 2021. GO FIGURE: A Meta Evaluation of Factuality in Summarization. In Association for Computational Linguistics FINDINGS ."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_30",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 30,
+      "art:texto": "Suzanne Day, Stuart Rennie, Danyang Luo, and Joseph D. Tucker. 2020. Open to the public: paywalls and the public rationale for open access medical research publishing. Research Involvement and Engagement 6 (2020)."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_21",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 21,
+      "art:texto": "Mina Lee, Percy Liang, and Qian Yang. 2022. Coauthor: Designing a human-ai collaborative writing dataset for exploring language model capabilities. In Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems . 1-19."
+    },
+    {
+      "@id": "art:tecnica_BERT_modelos_pre_treinados",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "BERT / modelos pré-treinados"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_17",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2004"
+      },
+      "art:ordem": 17,
+      "art:texto": "Atefeh Farzindar and Guy Lapalme. Letsum, an automatic legal text summarizing. In Legal Knowledge and Information Systems: JURIX 2004, the Seventeenth Annual Conference, volume 120, page 11. IOS Press, 2004."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_Beam_search",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tecnica_Beam_search"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_problema_1",
+      "@type": "art:Problema",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2304_02623v1_secao_1"
+      },
+      "art:pontuacao": 8,
+      "art:texto": {
+        "@language": "en",
+        "@value": "However, AI-supported expository writing - including real-world tasks like scholars writing literature reviews or doctors writing progress notes - is relatively understudied."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_termo_5",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_answer"
+      },
+      "art:frequencia": 138,
+      "art:posicaoRanking": 5
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_Fine_tuning_transfer_learning",
+      "@type": "art:Mencao",
+      "art:frequencia": 5,
+      "art:refereSe": {
+        "@id": "art:tecnica_Fine_tuning_transfer_learning"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_metodo_1",
+      "@type": "art:Metodo",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2206_10883v3_secao_2"
+      },
+      "art:pontuacao": 5,
+      "art:texto": {
+        "@language": "en",
+        "@value": "We conduct a series of experiments on Multi-LexSum, and find that existing summarization models perform poorly."
+      }
+    },
+    {
+      "@id": "art:texto",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "pt",
+        "@value": "Texto do trecho extraído ou da referência."
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_101",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 101,
+      "art:texto": "Hoang Van, David Kauchak, and Gondy Leroy. 2020. AutoMeTS: The Autocomplete for Medical Text Simplification. InInternational Conference on Computational Linguistics."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_contribuicao_3",
+      "@type": "art:Contribuicao",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2203_00130v1_secao_3"
+      },
+      "art:pontuacao": 6,
+      "art:texto": {
+        "@language": "en",
+        "@value": "(3) Evidence from our usability study that these new affordances helped readers quickly find places in a paper that were informative to them."
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_termo_1",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_summary"
+      },
+      "art:frequencia": 126,
+      "art:posicaoRanking": 1
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_termo_7",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_gist"
+      },
+      "art:frequencia": 136,
+      "art:posicaoRanking": 7
+    },
+    {
+      "@id": "art:nome",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "art:Autor"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_termo_8",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_source"
+      },
+      "art:frequencia": 18,
+      "art:posicaoRanking": 8
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_20",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1998"
+      },
+      "art:ordem": 20,
+      "art:texto": "Peter Brusilovsky and Leonid Pesin. 1998. Adaptive Navigation Support in Educational Hypermedia: An Evaluation of the ISIS-Tutor. In CIT 2015."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_57",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "art:ordem": 57,
+      "art:texto": "Alexandra Kuznetsova, Per Bruun Brockhoff, and Rune Christensen. 2017. lmerTest Package: Tests in Linear Mixed Effects Models. Journal of Statistical Software 82 (2017), 1-26."
+    },
+    {
+      "@id": "art:mencionaTecnica",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "rdfs:domain": {
+        "@id": "art:ArtigoCientifico"
+      },
+      "rdfs:range": {
+        "@id": "art:Mencao"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_27",
+      "@type": "art:Referencia",
+      "art:ordem": 27,
+      "art:texto": "Jack W. Rae, Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, Sarah Henderson, Roman Ring, Susannah Young, Eliza Rutherford, Tom Hennigan, Jacob Menick, Albin Cassirer, Richard Powell, George van den Driessche, Lisa Anne Hendricks, Maribeth Rauh, Po-Sen Huang, Amelia Glaese, Johannes Welbl, Sumanth Dathathri, Saffron Huang, Jonathan Uesato, John F. J. Mellor, Irina Higgins, Antonia Creswell, Nathan McAleese, Amy Wu, Erich Elsen, Siddhant M. Jayakumar, Elena Buchatskaya, David Budden, Esme Sutherland, Karen Simonyan, Michela Paganini, L. Sifre, Lena"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_30",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 30,
+      "art:texto": "Phi Manh Kien, Ha-Thanh Nguyen, Ngo Xuan Bach, Vu Tran, Minh Le Nguyen, and Tu Minh Phuong. Answering legal questions by learning neural attentive text representation. In Proceedings of the 28th International Conference on Computational Linguistics, pages 988-998, Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. doi: 10.18653/v1/2020.coling-main.86. URL https: //aclanthology.org/2020.coling-main.86."
+    },
+    {
+      "@id": "art:termo_summary",
+      "@type": "art:Termo",
+      "art:lema": "summary",
+      "art:radical": "summari"
+    },
+    {
+      "@id": "art:tarefa_Perguntas_e_respostas",
+      "@type": "art:Tarefa",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Perguntas e respostas"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_14",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 14,
+      "art:texto": "Jay DeYoung, Iz Beltagy, Madeleine van Zuylen, Bailey Kuehl, and Lucy Lu Wang. MS2: Multi-Document Summarization of Medical Studies. arXiv:2104.06486 [cs], November 2021. URL http://arxiv.org/abs/2104.06486. arXiv: 2104.06486."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_84",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "art:ordem": 84,
+      "art:texto": "George Philipp and Ryen W. White. 2014. Interactions between health searchers and search engines. Proceedings of the 37th international ACM SIGIR conference on Research & development in information retrieval (2014)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_10",
+      "@type": "art:Conclusao",
+      "art:numeroPalavras": 2011,
+      "art:ordem": 10,
+      "art:tituloSecao": "8 DISCUSSION & FUTURE WORK"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_31",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2012"
+      },
+      "art:ordem": 31,
+      "art:texto": "Mi-Young Kim, Ying Xu, and Randy Goebel. Summarization of legal texts with high cohesion and automatic compression rate. In JSAI International Symposium on Artificial Intelligence, pages 190-204. Springer, 2012."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_contribuicao_1",
+      "@type": "art:Contribuicao",
+      "art:extraidoDe": {
+        "@id": "art:artigo_2206_10883v3_secao_2"
+      },
+      "art:pontuacao": 4,
+      "art:texto": {
+        "@language": "en",
+        "@value": "But to our knowledge, Multi-LexSum is the first dataset to provide summaries at multiple levels of granularity."
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tarefa_Recuperacao_de_informacao_busca",
+      "@type": "art:Mencao",
+      "art:frequencia": 3,
+      "art:refereSe": {
+        "@id": "art:tarefa_Recuperacao_de_informacao_busca"
+      }
+    },
+    {
+      "@id": "art:termo_question",
+      "@type": "art:Termo",
+      "art:lema": "question",
+      "art:radical": "question"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_85",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "art:ordem": 85,
+      "art:texto": "Basel Qenam, Tae Youn Kim, Mark J Carroll, and Michael A. Hogarth. 2017. Text Simplification Using Consumer Health Vocabulary to Generate Patient-Centered Radiology Reporting: Translation and Evaluation. Journal of Medical Internet Research 19 (2017)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_29",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1996"
+      },
+      "art:ordem": 29,
+      "art:texto": "Robert Cudeck. 1996. Mixed-effects Models in the Study of Individual Differences with Repeated Measures Data. Multivariate behavioral research 31 3 (1996), 371-403."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_74",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 74,
+      "art:texto": "H. Münchow, T. Richter, and S. Schmid. 2020. What Does It Take to Deal with Academic Literature? Springer Fachmedien Wiesbaden, Wiesbaden, 241-260."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_secao_4",
+      "@type": "art:OutraSecao",
+      "art:numeroPalavras": 202,
+      "art:ordem": 4,
+      "art:tituloSecao": "2 CHARACTERIZING EXPOSITORY"
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_78",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2018"
+      },
+      "art:ordem": 78,
+      "art:texto": "Engineering National Academies of Sciences and Medicine. 2018. Returning Individual Research Results to Participants: Guidance for a New Research Paradigm. The National Academies Press, Washington, DC."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_52",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 52,
+      "art:texto": "Martin Kerwer, Anita Chasiotis, Johannes Stricker, Armin Günther, and Tom Rosman. 2021. Straight From the Scientist's Mouth - Plain Language Summaries Promote Laypeople's Comprehension and Knowledge Acquisition When Reading About Individual Research Findings in Psychology. Collabra: Psychology (2021)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_43",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      },
+      "art:ordem": 43,
+      "art:texto": "Ramesh Nallapati, Bowen Zhou, Cicero Nogueira dos santos, Caglar Gulcehre, and Bing Xiang. Abstractive Text Summarization Using Sequence-to-Sequence RNNs and Beyond. arXiv:1602.06023 [cs], August 2016. URL http://arxiv.org/abs/1602.06023. arXiv: 1602.06023."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_41",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "1906"
+      },
+      "art:ordem": 41,
+      "art:texto": "Derek Miller. Leveraging bert for extractive text summarization on lectures. arXiv preprint arXiv:1906.04165, 2019."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_47",
+      "@type": "art:Referencia",
+      "art:ordem": 47,
+      "art:texto": "Seth Polsley, Pooja Jhunjhunwala, and Ruihong Huang. CaseSummarizer: A System for Automated Summarization of Legal Texts. page 5."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_termo_3",
+      "@type": "art:OcorrenciaTermo",
+      "art:doTermo": {
+        "@id": "art:termo_model"
+      },
+      "art:frequencia": 53,
+      "art:posicaoRanking": 3
+    },
+    {
+      "@id": "art:nomeArquivo",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "art:numeroReferencias",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:integer"
+      }
+    },
+    {
+      "@id": "art:tecnica_Word_embeddings",
+      "@type": "art:Tecnica",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Word embeddings"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_6",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 6,
+      "art:texto": "Ruijia Cheng, Alison Smith-Renner, Ke Zhang, Joel R Tetreault, and Alejandro Jaimes. 2022. Mapping the design space of human-ai interaction in text summarization. arXiv preprint arXiv:2206.14863 (2022)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tecnica_Naive_Bayes",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tecnica_Naive_Bayes"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_20",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "art:ordem": 20,
+      "art:texto": "Takeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa. 2022. Large language models are zero-shot reasoners. arXiv preprint arXiv:2205.11916 (2022)."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_tarefa_Sumarizacao",
+      "@type": "art:Mencao",
+      "art:frequencia": 6,
+      "art:refereSe": {
+        "@id": "art:tarefa_Sumarizacao"
+      }
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_secao_3",
+      "@type": "art:Introducao",
+      "art:numeroPalavras": 1005,
+      "art:ordem": 3,
+      "art:tituloSecao": "1 INTRODUCTION"
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_24",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2006"
+      },
+      "art:ordem": 24,
+      "art:texto": "Pengcheng He, Xiaodong Liu, Jianfeng Gao, and Weizhu Chen. Deberta: Decoding-enhanced bert with disentangled attention. arXiv preprint arXiv:2006.03654, 2020."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_40",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      },
+      "art:ordem": 40,
+      "art:texto": "Wee Chung Gan and Hwee Tou Ng. 2019. Improving the Robustness of Question Answering Systems to Question Paraphrasing. In Association for Computational Linguistics."
+    },
+    {
+      "@id": "art:ordem",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "rdfs:range": {
+        "@id": "xsd:integer"
+      }
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_secao_13",
+      "@type": "art:SecaoReferencias",
+      "art:numeroPalavras": 3271,
+      "art:ordem": 13,
+      "art:tituloSecao": "REFERENCES"
+    },
+    {
+      "@id": "art:tarefa_Extracao_de_informacao_relacoes",
+      "@type": "art:Tarefa",
+      "rdfs:label": {
+        "@language": "pt",
+        "@value": "Extração de informação / relações"
+      }
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_ref_25",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "art:ordem": 25,
+      "art:texto": "Dan Hendrycks, Collin Burns, Anya Chen, and Spencer Ball. Cuad: An expert-annotated nlp dataset for legal contract review. arXiv preprint arXiv:2103.06268, 2021."
+    },
+    {
+      "@id": "art:artigo_2203_00130v1_ref_33",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "art:ordem": 33,
+      "art:texto": "Yue Dong, Shuohang Wang, Zhe Gan, Yu Cheng, Jackie Chi Kit Cheung, and Jingjing Liu. 2020. Multi-Fact Correction in Abstractive Text Summarization. In Conference on Empirical Methods in Natural Language Processing ."
+    },
+    {
+      "@id": "art:artigo_2304_02623v1_ref_17",
+      "@type": "art:Referencia",
+      "art:anoReferencia": {
+        "@type": "xsd:gYear",
+        "@value": "2023"
+      },
+      "art:ordem": 17,
+      "art:texto": "Hyeonsu B Kang, Nouran Soliman, Matt Latzke, Joseph Chee Chang, and Joseph Chee Chang. 2023. ComLittee: Literature Discovery with Personal Elected Author Committees. ArXiv abs/2302.06780 (2023)."
+    },
+    {
+      "@id": "art:artigo_2206_10883v3_tarefa_Perguntas_e_respostas",
+      "@type": "art:Mencao",
+      "art:frequencia": 1,
+      "art:refereSe": {
+        "@id": "art:tarefa_Perguntas_e_respostas"
+      }
+    }
+  ]
+}

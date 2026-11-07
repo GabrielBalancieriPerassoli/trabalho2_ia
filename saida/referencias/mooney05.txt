@@ -1,0 +1,19 @@
+Referências de: A Statistical Semantic Parser that Integrates Syntax and Semantics (17)
+
+[1] Daniel M. Bikel. 2004. Intricacies of Collins' parsing mode l. Computational Linguistics, 30(4):479-511.
+[2] Ezra Black, Frederick Jelineck, John Lafferty, David M. Magerman, Robert L. Mercer, and Salim Roukos. 1993. Towards history-based grammars: Using richer models for probabilistic parsing. In Proc. of ACL-93 , pages 31-37, Columbus, Ohio.
+[3] Borland International. 1988. Turbo Prolog 2.0 Reference Guide. Borland International, Scotts Valley, CA.
+[4] Mao Chen et al. 2003. Users manual: RoboCup soccer server manual for soccer server version 7.07 and later. Available at http://sourceforge.net/ projects/sserver/.
+[5] Michael J. Collins. 1997. Three generative, lexicalised mo dels for statistical parsing. In Proc. of ACL-97, pages 16-23, Madrid, Spain.
+[6] Yuqing Gao et al. 2002. Mars: A statistical semantic parsing and generation-based multilingual automatic translation system. Machine Translation, 17:185-212.
+[7] Daniel Gildea and Daniel Jurafsky. 2002. Automated labelin g of semantic roles. Computational Linguistics , 28(3):245- 288.
+[8] Daniel Jurafsky and James H. Martin. 2000. Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition. Prentice Hall, Upper Saddle River, NJ.
+[9] Rohit J. Kate, Yuk Wah Wong, and Raymond J. Mooney. 2005. Learning to transform natural to formal languages. To appear in Proc. of AAAI-05, Pittsburgh, PA.
+[10] Iddo Lev, Bill MacCartney, Christopher D. Manning, and Roger Levy. 2004. Solving logic puzzles: From robust processing to precise semantics. In Proc. of 2nd Workshop on Text Meaning and Interpretation, ACL-04, Barcelona, Spain.
+[11] Scott Miller, David Stallard, Robert Bobrow, and Richard Schwartz. 1996. A fully statistical approach to natural lan - guage interfaces. In ACL-96, pages 55-61, Santa Cruz, CA.
+[12] Scott Miller, Heidi Fox, Lance A. Ramshaw, and Ralph M. Weischedel. 2000. A novel use of statistical parsing to extract information from text. In Proc. of NAACL-00 , pages 226-233, Seattle, Washington.
+[13] Ana-Maria Popescu, Oren Etzioni, and Henry Kautz. 2003. Towards a theory of natural language interfaces to databases.In Proc. of IUI-2003, pages 149-157, Miami, FL. ACM.
+[14] Ana-Maria Popescu, Alex Armanasu, Oren Etzioni, David Ko, and Alexander Yates. 2004. Modern natural language interfaces to databases: Composing statistical parsing with semantic tractability. In COLING-04, Geneva, Switzerland.
+[15] Lappoon R. Tang and Raymond J. Mooney. 2001. Using multiple clause constructors in inductive logic programming for semantic parsing. In Proc. of ECML-01 , pages 466-477, Freiburg, Germany.
+[16] John M. Zelle and Raymond J. Mooney. 1996. Learning to parse database queries using inductive logic programming. In Proc. of AAAI-96, pages 1050-1055, Portland, OR.
+[17] Victor W. Zue and James R. Glass. 2000. Conversational interfaces: Advances and challenges. In Proc. of the IEEE , volume 88(8), pages 1166-1180.

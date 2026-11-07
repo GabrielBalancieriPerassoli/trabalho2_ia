@@ -1,0 +1,22 @@
+Referências de: Efficient Parsing of Syntactic and Semantic Dependency Structures (20)
+
+[1] Sabine Buchholz and Erwin Marsi. 2006. CoNLL-X Shared Task on Multilingual Dependency Parsing. In In Proc. of CoNLL, pages 149-164.
+[2] Aljoscha Burchardt, Katrin Erk, Anette Frank, Andrea Kowalski, Sebastian Pado, and Manfred Pinkal. 2006. The SALSA corpus: a German corpus resource for lexical semantics. In Proceedings of the 5th International Conference on Language Resources and Evaluation (LREC-2006), Genoa, Italy.
+[3] Michael Collins. 2002. Discriminative Training Methods for Hidden Markov Models: Theory and Experiments with Perceptron Algorithms. In EMNLP.
+[4] Koby Crammer, Ofer Dekel, Shai Shalev-Shwartz, and Yoram Singer. 2003. Online Passive-Aggressive Algorithms. In Sixteenth Annual Conference on Neural Information Processing Systems (NIPS).
+[5] Jason Eisner. 1996. Three new probabilistic models for dependency parsing: An exploration. In Proceedings of the 16th International Conference on Computational Linguistics (COLING-96), pages 340-345, Copenhaen.
+[6] Jan Hajiˇ c, Jarmila Panevov ́ a, Eva Hajiˇ cov ́ a, Petr Sgall, Petr Pajas, Jan ˇStˇ ep ́ anek, Jiˇ r ́ ı Havelka, Marie Mikulov ́ a, and Zdenˇk ˇZabokrtsk ́ y. 2006. Prague Dependency Treebank 2.0.
+[7] Jan Hajiˇ c, Massimiliano Ciaramita, Richard Johansson, Daisuke Kawahara, Maria Ant` onia Mart ́ ı, Llu'is M` arquez, Adam Meyers, Joakim Nivre, Sebastian Pad ́ o, JanˇStˇ ep ́ anek, Pavel Straˇ n ́ ak, Miahi Surdeanu, Nianwen Xue, and Yi Zhang. 2009. The CoNLL- 2009 Shared Task: Syntactic and Semantic Dependencies in Multiple Languages. In Proceedings of the 13th CoNLL-2009, June 4-5, Boulder, Colorado, USA.
+[8] Richard Johansson and Pierre Nugues. 2008. Dependency-based syntactic-semantic analysis with PropBank and NomBank. In Proceedings of the Shared Task Session of CoNLL-2008 , Manchester, UK.
+[9] Daisuke Kawahara, Sadao Kurohashi, and Kˆ oiti Hasida. 2002. Construction of a Japanese relevance-tagged corpus. In Proceedings of the 3rd International Conference on Language Resources and Evaluation (LREC-2002), pages 2008-2013, Las Palmas, Canary Islands.
+[10] Ryan McDonald and Fernando Pereira. 2006. Online Learning of Approximate Dependency Parsing Algorithms. In In Proc. of EACL, pages 81-88.
+[11] Ryan McDonald, Koby Crammer, and Fernando Pereira. 2005. Online Large-margin Training of Dependency Parsers. In Proc. ACL, pages 91-98.
+[12] Ryan McDonald, Kevin Lerman, Koby Crammer, and Fernando Pereira. 2006. Multilingual Dependency Parsing with a Two-Stage Discriminative Parser. In Tenth Conference on Computational Natural Language Learning (CoNLL-X), pages 91-98.
+[13] Adam Meyers, Ruth Reeves, Catherine Macleod, Rachel Szekely, Veronika Zielinska, Brian Young, and Ralph Grishman. 2004. The nombank project: An interim report. In A. Meyers, editor, HLT-NAACL 2004 Workshop: Frontiers in Corpus Annotation , pages 24-31, Boston, Massachusetts, USA, May 2 - May 7. Association for Computational Linguistics. Joakim.
+[14] Nivre and Jens Nilsson. 2005. Pseudo- Projective Dependency Parsing. In In Proceedings of the 43rd Annual Meeting of the Association for Computational Linguistics, pages 99-106.
+[15] Joakim Nivre, Johan Hall, and Jens Nilsson. 2004. Memory-Based Dependency Parsing. In Proceedings of the 8th CoNLL , pages 49-56, Boston, Massachusetts.
+[16] Joakim Nivre, Johan Hall, Sandra K ̈ ubler, Rayn McDonald, Jens Nilsson, Sebastian Riedel, and Deniz Yuret. 2007. The conll 2007 shared task on dependency parsing. In Proc. of the CoNLL 2007 Shared Task. Joint Conf. on Empirical Methods in Natural Language Processing and Computational Natural Language Learning (EMNLP-CoNLL), June.
+[17] Martha Palmer and Nianwen Xue. 2009. Adding Semantic Roles to the Chinese Treebank. Natural Language Engineering, 15(1):143-172.
+[18] Martha Palmer, Paul Kingsbury, and Daniel Gildea. 2005. The Proposition Bank: An Annotated Corpus of Semantic Roles. volume 31, pages 71-106.
+[19] Mihai Surdeanu, Richard Johansson, Adam Meyers, Llu ́ ıs M` arquez, and Joakim Nivre. 2008. The CoNLL- 2008 shared task on joint parsing of syntactic and semantic dependencies. In Proceedings of the 12th CoNLL-2008.
+[20] Mariona Taul ́ e, Maria Ant` onia Mart ́ ı, and Marta Recasens. 2008. AnCora: Multilevel Annotated Corpora for Catalan and Spanish. In Proceedings of the LREC- 2008, Marrakesh, Morroco.

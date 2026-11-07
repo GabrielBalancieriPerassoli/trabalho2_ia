@@ -1,0 +1,162 @@
+{
+  "resumo": {
+    "artigos_avaliados": 3,
+    "objetivo": {
+      "precisao": 0.6666666666666666,
+      "revocacao": 0.6666666666666666,
+      "f1": 0.6666666666666666,
+      "acertos": 4,
+      "extraidas": 6,
+      "anotadas": 6
+    },
+    "problema": {
+      "precisao": 0.6666666666666666,
+      "revocacao": 0.6666666666666666,
+      "f1": 0.6666666666666666,
+      "acertos": 4,
+      "extraidas": 6,
+      "anotadas": 6
+    },
+    "metodo": {
+      "precisao": 0.5714285714285714,
+      "revocacao": 0.5714285714285714,
+      "f1": 0.5714285714285714,
+      "acertos": 4,
+      "extraidas": 7,
+      "anotadas": 7
+    },
+    "contribuicao": {
+      "precisao": 1.0,
+      "revocacao": 1.0,
+      "f1": 1.0,
+      "acertos": 4,
+      "extraidas": 4,
+      "anotadas": 4
+    },
+    "trabalho_futuro": {
+      "precisao": 0.5,
+      "revocacao": 0.6666666666666666,
+      "f1": 0.5714285714285715,
+      "acertos": 2,
+      "extraidas": 4,
+      "anotadas": 3
+    },
+    "media": {
+      "precisao": 0.680952380952381,
+      "revocacao": 0.7142857142857142,
+      "f1": 0.6952380952380952
+    },
+    "referencias": {
+      "erro_medio": 0.0,
+      "artigos_sem_erro": 3,
+      "acerto": 1.0
+    },
+    "titulo_correto": 1.0,
+    "ano_correto": 1.0,
+    "tempo_medio": 1.51,
+    "trocas_entre_elementos": {
+      "objetivo -> metodo": 1,
+      "objetivo -> contribuicao": 1,
+      "metodo -> objetivo": 1,
+      "contribuicao -> metodo": 1
+    }
+  },
+  "por_artigo": [
+    {
+      "arquivo": "2203.00130v1.pdf",
+      "objetivo": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 1,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 3,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "trabalho_futuro": {
+        "acertos": 2,
+        "extraidas": 4,
+        "anotadas": 3
+      },
+      "referencias": {
+        "sistema": 111,
+        "gabarito": 111
+      }
+    },
+    {
+      "arquivo": "2206.10883v3.pdf",
+      "objetivo": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 1,
+        "extraidas": 1,
+        "anotadas": 2
+      },
+      "contribuicao": {
+        "acertos": 1,
+        "extraidas": 1,
+        "anotadas": 1
+      },
+      "trabalho_futuro": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "referencias": {
+        "sistema": 64,
+        "gabarito": 64
+      }
+    },
+    {
+      "arquivo": "2304.02623v1.pdf",
+      "objetivo": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 2,
+        "extraidas": 3,
+        "anotadas": 2
+      },
+      "contribuicao": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "trabalho_futuro": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "referencias": {
+        "sistema": 35,
+        "gabarito": 35
+      }
+    }
+  ]
+}

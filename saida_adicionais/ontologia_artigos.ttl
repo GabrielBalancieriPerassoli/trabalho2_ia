@@ -1,0 +1,2464 @@
+@prefix art: <http://www.din.uem.br/iia/artigo#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.din.uem.br/iia/artigo> a owl:Ontology ;
+    rdfs:label "Ontologia de Artigo Científico"@pt ;
+    rdfs:comment "Estrutura de um artigo científico: metadados, seções, elementos retóricos (objetivo, problema, método, contribuição, trabalho futuro), referências e termos."@pt ;
+    rdfs:seeAlso <http://purl.org/spar/deo>,
+        <http://purl.org/spar/doco>,
+        <http://purl.org/spar/fabio> ;
+    owl:versionInfo "1.0" .
+
+art:ano a owl:DatatypeProperty ;
+    rdfs:range xsd:gYear .
+
+art:anoReferencia a owl:DatatypeProperty ;
+    rdfs:domain art:Referencia ;
+    rdfs:range xsd:gYear .
+
+art:baseDados a owl:DatatypeProperty ;
+    rdfs:domain art:Corpus ;
+    rdfs:range xsd:string .
+
+art:citaReferencia a owl:ObjectProperty ;
+    rdfs:domain art:ArtigoCientifico ;
+    rdfs:range art:Referencia .
+
+art:corpus_artigos_adicionais a art:Corpus ;
+    art:baseDados "IEEE Xplore" ;
+    art:temArtigo art:artigo_2203_00130v1,
+        art:artigo_2206_10883v3,
+        art:artigo_2304_02623v1 ;
+    art:tema "Processamento de Linguagem Natural"@pt .
+
+art:doTermo a owl:ObjectProperty ;
+    rdfs:domain art:OcorrenciaTermo ;
+    rdfs:range art:Termo .
+
+art:entreArtigos a owl:ObjectProperty ;
+    rdfs:domain art:Similaridade ;
+    rdfs:range art:ArtigoCientifico .
+
+art:extraidoDe a owl:ObjectProperty ;
+    rdfs:comment "Seção de onde o trecho foi extraído."@pt ;
+    rdfs:domain art:ElementoRetorico ;
+    rdfs:range art:Secao .
+
+art:frequencia a owl:DatatypeProperty ;
+    rdfs:range xsd:integer .
+
+art:lema a owl:DatatypeProperty ;
+    rdfs:domain art:Termo ;
+    rdfs:range xsd:string .
+
+art:mencionaTarefa a owl:ObjectProperty ;
+    rdfs:domain art:ArtigoCientifico ;
+    rdfs:range art:Mencao .
+
+art:mencionaTecnica a owl:ObjectProperty ;
+    rdfs:domain art:ArtigoCientifico ;
+    rdfs:range art:Mencao .
+
+art:nome a owl:DatatypeProperty ;
+    rdfs:domain art:Autor ;
+    rdfs:range xsd:string .
+
+art:nomeArquivo a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+art:numeroPaginas a owl:DatatypeProperty ;
+    rdfs:range xsd:integer .
+
+art:numeroPalavras a owl:DatatypeProperty ;
+    rdfs:domain art:Secao ;
+    rdfs:range xsd:integer .
+
+art:numeroReferencias a owl:DatatypeProperty ;
+    rdfs:range xsd:integer .
+
+art:ordem a owl:DatatypeProperty ;
+    rdfs:range xsd:integer .
+
+art:pontuacao a owl:DatatypeProperty ;
+    rdfs:comment "Pontuação dada pelas regras de extração (confiança)."@pt ;
+    rdfs:domain art:ElementoRetorico ;
+    rdfs:range xsd:integer .
+
+art:posicaoRanking a owl:DatatypeProperty ;
+    rdfs:domain art:OcorrenciaTermo ;
+    rdfs:range xsd:integer .
+
+art:radical a owl:DatatypeProperty ;
+    rdfs:domain art:Termo ;
+    rdfs:range xsd:string .
+
+art:refereSe a owl:ObjectProperty ;
+    rdfs:domain art:Mencao ;
+    rdfs:range art:Termo .
+
+art:sim_artigo_2203_00130v1__artigo_2206_10883v3 a art:Similaridade ;
+    art:entreArtigos art:artigo_2203_00130v1,
+        art:artigo_2206_10883v3 ;
+    art:valor 0.1512 .
+
+art:sim_artigo_2203_00130v1__artigo_2304_02623v1 a art:Similaridade ;
+    art:entreArtigos art:artigo_2203_00130v1,
+        art:artigo_2304_02623v1 ;
+    art:valor 0.1871 .
+
+art:sim_artigo_2206_10883v3__artigo_2304_02623v1 a art:Similaridade ;
+    art:entreArtigos art:artigo_2206_10883v3,
+        art:artigo_2304_02623v1 ;
+    art:valor 0.2615 .
+
+art:similarA a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:comment "Os dois artigos têm similaridade TF-IDF acima do limiar."@pt ;
+    rdfs:domain art:ArtigoCientifico ;
+    rdfs:range art:ArtigoCientifico .
+
+art:temArtigo a owl:ObjectProperty ;
+    rdfs:domain art:Corpus ;
+    rdfs:range art:ArtigoCientifico .
+
+art:temAutor a owl:ObjectProperty ;
+    rdfs:domain art:ArtigoCientifico ;
+    rdfs:range art:Autor .
+
+art:temContribuicao a owl:ObjectProperty ;
+    rdfs:range art:Contribuicao ;
+    rdfs:subPropertyOf art:temElemento .
+
+art:temMetodo a owl:ObjectProperty ;
+    rdfs:range art:Metodo ;
+    rdfs:subPropertyOf art:temElemento .
+
+art:temObjetivo a owl:ObjectProperty ;
+    rdfs:range art:Objetivo ;
+    rdfs:subPropertyOf art:temElemento .
+
+art:temOcorrencia a owl:ObjectProperty ;
+    rdfs:domain art:ArtigoCientifico ;
+    rdfs:range art:OcorrenciaTermo .
+
+art:temProblema a owl:ObjectProperty ;
+    rdfs:range art:Problema ;
+    rdfs:subPropertyOf art:temElemento .
+
+art:temSecao a owl:ObjectProperty ;
+    rdfs:domain art:ArtigoCientifico ;
+    rdfs:range art:Secao .
+
+art:temTrabalhoFuturo a owl:ObjectProperty ;
+    rdfs:range art:TrabalhoFuturo ;
+    rdfs:subPropertyOf art:temElemento .
+
+art:tema a owl:DatatypeProperty ;
+    rdfs:domain art:Corpus ;
+    rdfs:range xsd:string .
+
+art:texto a owl:DatatypeProperty ;
+    rdfs:comment "Texto do trecho extraído ou da referência."@pt ;
+    rdfs:range xsd:string .
+
+art:titulo a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf dcterms:title .
+
+art:tituloSecao a owl:DatatypeProperty ;
+    rdfs:domain art:Secao ;
+    rdfs:range xsd:string .
+
+art:valor a owl:DatatypeProperty ;
+    rdfs:domain art:Similaridade ;
+    rdfs:range xsd:decimal .
+
+art:artigo_2203_00130v1_contribuicao_1 a art:Contribuicao ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_3 ;
+    art:pontuacao 4 ;
+    art:texto "In summary, this paper contributes: (1) A characterization of the barriers readers face when they approach medical research papers."@en .
+
+art:artigo_2203_00130v1_contribuicao_2 a art:Contribuicao ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_3 ;
+    art:pontuacao 6 ;
+    art:texto "(2) Paper Plain, an interactive reading interface for research papers that integrates existing affordances like term definition tooltips with novel affordances like in-situ plain language summaries of paper sections and a collection of key questions that guide readers to answering passages in the paper with paired plain language answers (§4)."@en .
+
+art:artigo_2203_00130v1_contribuicao_3 a art:Contribuicao ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_3 ;
+    art:pontuacao 6 ;
+    art:texto "(3) Evidence from our usability study that these new affordances helped readers quickly find places in a paper that were informative to them."@en .
+
+art:artigo_2203_00130v1_metodo_1 a art:Metodo ;
+    art:pontuacao 5 ;
+    art:texto "To improve access to medical papers, we introduce a novel interactive interface - Paper Plain1 - with four features powered by natural language processing: definitions of unfamiliar terms, in-situ plain language section summaries, a collection of key questions that guide readers to answering passages, and plain language summaries of the answering passages."@en .
+
+art:artigo_2203_00130v1_metodo_2 a art:Metodo ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_3 ;
+    art:pontuacao 5 ;
+    art:texto "To improve access to medical papers, we develop a novel interactive system, Paper Plain, through an iterative design process."@en .
+
+art:artigo_2203_00130v1_metodo_3 a art:Metodo ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_3 ;
+    art:pontuacao 5 ;
+    art:texto "The system is designed to make medical papers accessible with four features (illustrated in Figure 1) that combine to provide support at multiple levels of granularity (e.g., term, paragraph, section) and throughout the reading process."@en .
+
+art:artigo_2203_00130v1_objetivo_1 a art:Objetivo ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_3 ;
+    art:pontuacao 5 ;
+    art:texto "In this paper, we ask how interactive information interfaces can make the research literature approachable to non-expert healthcare consumers that need it - whom we refer to as \"readers\" in this paper."@en .
+
+art:artigo_2203_00130v1_objetivo_2 a art:Objetivo ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_10 ;
+    art:pontuacao 4 ;
+    art:texto "In this paper we ask how interactive interfaces can make medical research papers approachable to healthcare consumers that need it."@en .
+
+art:artigo_2203_00130v1_problema_1 a art:Problema ;
+    art:pontuacao 5 ;
+    art:texto "Reading medical papers, however, can be a challenging experience."@en .
+
+art:artigo_2203_00130v1_problema_2 a art:Problema ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_3 ;
+    art:pontuacao 6 ;
+    art:texto "However, these resources do not cover all medical conditions and treatments [9, 90], especially those which are the focus of emerging research [17, 86]."@en .
+
+art:artigo_2203_00130v1_ref_1 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 1 ;
+    art:texto "2021. Fermat's Library. https://fermatslibrary.com/" .
+
+art:artigo_2203_00130v1_ref_10 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 10 ;
+    art:texto "Douglas M. Bates, Benjamin M. Bolker, and Steven C. Walker. 2014. fitting linear mixed effects models using lme 4 arxiv." .
+
+art:artigo_2203_00130v1_ref_100 a art:Referencia ;
+    art:anoReferencia "2016"^^xsd:gYear ;
+    art:ordem 100 ;
+    art:texto "Jonathan P. Tennant, François Waldner, Damien Christophe Jacques, Paola Masuzzo, Lauren B. Collister, and C.H.J. Hartgerink. 2016. The academic, economic and societal impacts of Open Access: an evidence-based review. F1000Research 5 (2016)." .
+
+art:artigo_2203_00130v1_ref_101 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 101 ;
+    art:texto "Hoang Van, David Kauchak, and Gondy Leroy. 2020. AutoMeTS: The Autocomplete for Medical Text Simplification. InInternational Conference on Computational Linguistics." .
+
+art:artigo_2203_00130v1_ref_102 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 102 ;
+    art:texto "Amir Pouran Ben Veyseh, Franck Dernoncourt, W. Chang, and Thien Huu Nguyen. 2021. MadDog: A Web-based System for Acronym Identification and Disambiguation. In European Chapter of the Association for Computational Linguistics ." .
+
+art:artigo_2203_00130v1_ref_103 a art:Referencia ;
+    art:anoReferencia "2010"^^xsd:gYear ;
+    art:ordem 103 ;
+    art:texto "Esteban Walker and Amy S. Nowacki. 2010. Understanding Equivalence and Noninferiority Testing. Journal of General Internal Medicine 26 (2010), 192-196." .
+
+art:artigo_2203_00130v1_ref_104 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 104 ;
+    art:texto "Benyou Wang, Qianqian Xie, Jiahuan Pei, Prayag Tiwari, Zhao Li, and Jie fu. 2021. Pre-trained Language Models in Biomedical Domain: A Survey from Multiscale Perspective." .
+
+art:artigo_2203_00130v1_ref_105 a art:Referencia ;
+    art:anoReferencia "2015"^^xsd:gYear ;
+    art:ordem 105 ;
+    art:texto "Gerhard Weber and Peter Brusilovsky. 2015. ELM-ART - An Interactive and Intelligent Web-Based Electronic Textbook. International Journal of Artificial Intelligence in Education 26 (2015), 72-81." .
+
+art:artigo_2203_00130v1_ref_106 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 106 ;
+    art:texto "Ryen W. White and Ahmed Hassan Awadallah. 2014. Content Bias in Online Health Search. ACM Trans. Web 8 (2014), 25:1-25:33." .
+
+art:artigo_2203_00130v1_ref_107 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 107 ;
+    art:texto "Ryen W. White and Eric Horvitz. 2014. From health search to healthcare: explorations of intention and utilization via query logs and user surveys. Journal of the American Medical Informatics Association 21 1 (2014), 49-55." .
+
+art:artigo_2203_00130v1_ref_108 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 108 ;
+    art:texto "Wonjin Yoon, Jinhyuk Lee, Donghyeon Kim, Minbyul Jeong, and Jaewoo Kang. 2020. Pre-trained Language Model for Biomedical Question Answering. In Machine Learning and Knowledge Discovery in Databases , Peggy Cellier and Kurt Driessens (Eds.). Springer International Publishing, Cham, 727-740." .
+
+art:artigo_2203_00130v1_ref_109 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 109 ;
+    art:texto "Yan Zhang. 2014. Searching for specific health-related information in MedlinePlus: Behavioral patterns and user experience. Journal of the Association for Information Science and Technology 65 (2014)." .
+
+art:artigo_2203_00130v1_ref_11 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 11 ;
+    art:texto "Joachim Bingel, Gustavo Paetzold, and Anders Søgaard. 2018. Lexi: A tool for adaptive, personalized text simplification. In International Conference on Computational Linguistics." .
+
+art:artigo_2203_00130v1_ref_110 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 110 ;
+    art:texto "Tian Zhao and Kyusong Lee. 2020. Talk to Papers: Bringing Neural Question Answering to Academic Search. ArXiv abs/2004.02002 (2020)." .
+
+art:artigo_2203_00130v1_ref_111 a art:Referencia ;
+    art:anoReferencia "2010"^^xsd:gYear ;
+    art:ordem 111 ;
+    art:texto "Alesia A. Zuccala. 2010. Open access and civic scientific information literacy. Information Research 15 (2010)." .
+
+art:artigo_2203_00130v1_ref_12 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 12 ;
+    art:texto "Tanner A. Bohn and Charles X. Ling. 2021. Hone as You Read: A Practical Type of Interactive Summarization. ArXiv abs/2105.02923 (2021)." .
+
+art:artigo_2203_00130v1_ref_13 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 13 ;
+    art:texto "Anthony C. Breu. 2020. From Tweetstorm to Tweetorials: Threaded Tweets as a Tool for Medical Education and Knowledge Dissemination. Seminars in nephrology 40 3 (2020), 273-278." .
+
+art:artigo_2203_00130v1_ref_14 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 14 ;
+    art:texto "Mary Anne Britt, Tobias Richter, and Jean-François Rouet. 2014. Scientific Literacy: The Role of Goal-Directed Reading and Evaluation in Understanding Scientific Information. Educational Psychologist 49 (2014), 104 - 122." .
+
+art:artigo_2203_00130v1_ref_15 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 15 ;
+    art:texto "Rainer Bromme and Susan R. Goldman. 2014. The Public's Bounded Understanding of Science. Educational Psychologist 49 (2014), 59 - 69." .
+
+art:artigo_2203_00130v1_ref_16 a art:Referencia ;
+    art:anoReferencia "2005"^^xsd:gYear ;
+    art:ordem 16 ;
+    art:texto "Alex Broom. 2005. Virtually He@lthy: The Impact of Internet Use on Disease Experience and the Doctor-Patient Relationship. Qualitative Health Research 15 (2005), 325 - 345." .
+
+art:artigo_2203_00130v1_ref_17 a art:Referencia ;
+    art:anoReferencia "2004"^^xsd:gYear ;
+    art:ordem 17 ;
+    art:texto "Phil Brown, Stephen Zavestoski, Sabrina McCormick, Brian Mayer, Rachel Morello-Frosch, and Rebecca Gasior Altman. 2004. Embodied health movements: new approaches to social movements in health. Sociology of health & illness 26 1 (2004), 50-80." .
+
+art:artigo_2203_00130v1_ref_18 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 18 ;
+    art:texto "Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, T. J. Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeff Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020. Language Models are Few-Shot Learners. ArXiv abs/2005.14165 (2020)." .
+
+art:artigo_2203_00130v1_ref_19 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 19 ;
+    art:texto "Ross C. Brownson, Jonathan E. Fielding, and L. W. Green. 2018. Building Capacity for Evidence-Based Public Health: Reconciling the Pulls of Practice and the Push of Research. Annual review of public health 39 (2018), 27-53." .
+
+art:artigo_2203_00130v1_ref_2 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 2 ;
+    art:texto "2021. Hypothes.is: Annotate the web, with anyone, anywhere. https://web.hypothes.is" .
+
+art:artigo_2203_00130v1_ref_20 a art:Referencia ;
+    art:anoReferencia "1998"^^xsd:gYear ;
+    art:ordem 20 ;
+    art:texto "Peter Brusilovsky and Leonid Pesin. 1998. Adaptive Navigation Support in Educational Hypermedia: An Evaluation of the ISIS-Tutor. In CIT 2015." .
+
+art:artigo_2203_00130v1_ref_21 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 21 ;
+    art:texto "Yixin Cao, Ruihao Shui, Liangming Pan, Min-Yen Kan, Zhiyuan Liu, and Tat-Seng Chua. 2020. Expertise Style Transfer: A New Task Towards Better Communication between Experts and Laymen. In Association for Computational Linguistics ." .
+
+art:artigo_2203_00130v1_ref_22 a art:Referencia ;
+    art:anoReferencia "2011"^^xsd:gYear ;
+    art:ordem 22 ;
+    art:texto "Marc-Allen Cartright, Ryen W. White, and Eric Horvitz. 2011. Intentions and attention in exploratory health search. Proceedings of the 34th international ACM SIGIR conference on Research and development in Information Retrieval (2011)." .
+
+art:artigo_2203_00130v1_ref_23 a art:Referencia ;
+    art:anoReferencia "2013"^^xsd:gYear ;
+    art:ordem 23 ;
+    art:texto "Vinay K. Chaudhri, Britte Haugan Cheng, Adam Overholtzer, Jeremy Roschelle, Aaron Spaulding, Peter E. Clark, Mark T. Greaves, and David Gunning. 2013. Inquire Biology: A Textbook that Answers Questions. AI Magazine 34 (2013), 55-72." .
+
+art:artigo_2203_00130v1_ref_24 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 24 ;
+    art:texto "Munmun De Choudhury, Meredith Ringel Morris, and Ryen W. White. 2014. Seeking and sharing health information online: comparing search engines and social media. Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (2014)." .
+
+art:artigo_2203_00130v1_ref_25 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 25 ;
+    art:texto "Rune Christensen. 2018. Cumulative Link Models for Ordinal Regression with the R Package ordinal." .
+
+art:artigo_2203_00130v1_ref_26 a art:Referencia ;
+    art:anoReferencia "1997"^^xsd:gYear ;
+    art:ordem 26 ;
+    art:texto "Avital Cnaan, Nan M. Laird, and Peter Slasor. 1997. Using the General Linear Mixed Model to Analyse Unbalanced Repeated Measures and Longitudinal Data. Statistics in Medicine 16 (1997), 2349-2380." .
+
+art:artigo_2203_00130v1_ref_27 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 27 ;
+    art:texto "Anthony M Cocco, Rachel D. Zordan, David Taylor, Tracey J Weiland, Stuart J Dilley, Joyce A Kant, Mahesha Hk Dombagolla, Andreas Hendarto, Fiona Wy Lai, and Jennie Hutton. 2018. Dr Google in the ED: searching for online health information by adult emergency department patients. Medical Journal of Australia 209 (2018)." .
+
+art:artigo_2203_00130v1_ref_28 a art:Referencia ;
+    art:anoReferencia "2011"^^xsd:gYear ;
+    art:ordem 28 ;
+    art:texto "Kevyn Collins-Thompson, Paul N. Bennett, Ryen W. White, Sebastian de la Chica, and David A. Sontag. 2011. Personalizing web search results by reading level. In ACM International Conference on Information and Knowledge Management ." .
+
+art:artigo_2203_00130v1_ref_29 a art:Referencia ;
+    art:anoReferencia "1996"^^xsd:gYear ;
+    art:ordem 29 ;
+    art:texto "Robert Cudeck. 1996. Mixed-effects Models in the Study of Individual Differences with Repeated Measures Data. Multivariate behavioral research 31 3 (1996), 371-403." .
+
+art:artigo_2203_00130v1_ref_3 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 3 ;
+    art:texto "2021. New Standards for Plain Language Summaries. https://consumers.cochrane.org/PLEACS" .
+
+art:artigo_2203_00130v1_ref_30 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 30 ;
+    art:texto "Suzanne Day, Stuart Rennie, Danyang Luo, and Joseph D. Tucker. 2020. Open to the public: paywalls and the public rationale for open access medical research publishing. Research Involvement and Engagement 6 (2020)." .
+
+art:artigo_2203_00130v1_ref_31 a art:Referencia ;
+    art:anoReferencia "2016"^^xsd:gYear ;
+    art:ordem 31 ;
+    art:texto "Dina Demner-Fushman and Noémie Elhadad. 2016. Aspiring to Unintended Consequences of Natural Language Processing: A Review of Recent Developments in Clinical and Consumer-Generated Text Processing. Yearbook of medical informatics 1 (2016), 224-233." .
+
+art:artigo_2203_00130v1_ref_32 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 32 ;
+    art:texto "Ashwin Devaraj, Iain James Marshall, Byron C. Wallace, and Junyi Jessy Li. 2021. Paragraph-level Simplification of Medical Texts. ArXiv abs/2104.05767 (2021)." .
+
+art:artigo_2203_00130v1_ref_33 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 33 ;
+    art:texto "Yue Dong, Shuohang Wang, Zhe Gan, Yu Cheng, Jackie Chi Kit Cheung, and Jingjing Liu. 2020. Multi-Fact Correction in Abstractive Text Summarization. In Conference on Empirical Methods in Natural Language Processing ." .
+
+art:artigo_2203_00130v1_ref_34 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 34 ;
+    art:texto "Kristina Dzara and Ariel S Frey-Vogel. 2019. Medical Education Journal Club for the Millennial Resident: An Interactive, No-Prep Approach. Academic pediatrics (2019)." .
+
+art:artigo_2203_00130v1_ref_35 a art:Referencia ;
+    art:anoReferencia "1997"^^xsd:gYear ;
+    art:ordem 35 ;
+    art:texto "Saul Epstein. 1997. Impure Science: AIDS, Activism, and the Politics of Knowledge. Nature Medicine 3 (1997), 242-243." .
+
+art:artigo_2203_00130v1_ref_36 a art:Referencia ;
+    art:anoReferencia "2004"^^xsd:gYear ;
+    art:ordem 36 ;
+    art:texto "Günes Erkan and Dragomir R. Radev. 2004. LexRank: Graph-based Lexical Centrality as Salience in Text Summarization. Journal of Artificial Intelligence Research 22 (2004), 457-479." .
+
+art:artigo_2203_00130v1_ref_37 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 37 ;
+    art:texto "A. R. Fabbri, Wojciech Kryscinski, Bryan McCann, Richard Socher, and Dragomir Radev. 2021. SummEval: Re-evaluating Summarization Evaluation. Transactions of the Association for Computational Linguistics 9 (2021), 391-409." .
+
+art:artigo_2203_00130v1_ref_38 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 38 ;
+    art:texto "Saadia Gabriel, Antoine Bosselut, Jeff Da, Ari Holtzman, Jan Buys, Asli Çelikyilmaz, and Yejin Choi. 2021. Discourse Understanding and Factual Consistency in Abstractive Summarization. In European Chapter of the Association of Computational Linguistics ." .
+
+art:artigo_2203_00130v1_ref_39 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 39 ;
+    art:texto "Saadia Gabriel, Asli Çelikyilmaz, Rahul Jha, Yejin Choi, and Jianfeng Gao. 2021. GO FIGURE: A Meta Evaluation of Factuality in Summarization. In Association for Computational Linguistics FINDINGS ." .
+
+art:artigo_2203_00130v1_ref_4 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 4 ;
+    art:texto "2021. UpToDate: Evidence-based Clinical Decision Support. https://www.wolterskluwer.com/en/solutions/uptodate" .
+
+art:artigo_2203_00130v1_ref_40 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 40 ;
+    art:texto "Wee Chung Gan and Hwee Tou Ng. 2019. Improving the Robustness of Question Answering Systems to Question Paraphrasing. In Association for Computational Linguistics." .
+
+art:artigo_2203_00130v1_ref_41 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 41 ;
+    art:texto "Katy I. Gero, Vivian Liu, and Lydia B. Chilton. 2021. Sparks: Inspiration for Science Writing using Language Models. ArXiv abs/2110.07640 (2021)." .
+
+art:artigo_2203_00130v1_ref_42 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 42 ;
+    art:texto "Yue Guo, Weijian Qiu, Yizhong Wang, and Trevor A. Cohen. 2021. Automated Lay Language Summarization of Biomedical Scientific Reviews. ArXiv abs/2012.12573 (2021)." .
+
+art:artigo_2203_00130v1_ref_43 a art:Referencia ;
+    art:anoReferencia "1992"^^xsd:gYear ;
+    art:ordem 43 ;
+    art:texto "Gordon H. Guyatt, John A. Cairns, David N. Churchill, Deborah J. Cook, Brian R Haynes, Jack Hirsh, Jan Irvine, M. Levine, Mitchell A. H. Levine, Jim Nishikawa, David L. Sackett, Patrick Brill-Edwards, Hertzel C. Gerstein, Jim Gibson, Roman Z. Jaeschke, Anthony T. Kerigan, Alan J. Neville, Akbar A Panju, Allan S. Detsky, Murray W. Enkin, Pamela J Frid, Martha S. Gerrity, Andreas Laupacis, Valerie A. Lawrence, Joël Ménard, Virginia A. Moyer, Cynthia D. Mulrow, Paul S. Links, Andrew David Oxman, Jack Sinclair, and Peter Tugwell. 1992. Evidence-based medicine. A new approach to teaching the practi" .
+
+art:artigo_2203_00130v1_ref_44 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 44 ;
+    art:texto "Andrew Head, Kyle Lo, Dongyeop Kang, Raymond Fok, Sam Skjonsberg, Daniel S. Weld, and Marti A. Hearst. 2021. Augmenting Scientific Papers with Just-in-Time, Position-Sensitive Definitions of Terms and Symbols. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (2021)." .
+
+art:artigo_2203_00130v1_ref_45 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 45 ;
+    art:texto "Marti A. Hearst, Emily Pedersen, Lekha Priya Patil, Elsie Lee, Paul Laskowski, and Steven L. Franconeri. 2020. An Evaluation of Semantically Grouped Word Cloud Designs. IEEE Transactions on Visualization and Computer Graphics 26 (2020), 2748-2761." .
+
+art:artigo_2203_00130v1_ref_46 a art:Referencia ;
+    art:anoReferencia "1979"^^xsd:gYear ;
+    art:ordem 46 ;
+    art:texto "Sture Holm. 1979. A Simple Sequentially Rejective Multiple Test Procedure. Scandinavian Journal of Statistics 6 (1979), 65-70." .
+
+art:artigo_2203_00130v1_ref_47 a art:Referencia ;
+    art:anoReferencia "2017"^^xsd:gYear ;
+    art:ordem 47 ;
+    art:texto "Hossein Hosseini, Sreeram Kannan, Baosen Zhang, and Radha Poovendran. 2017. Deceiving Google's Perspective API Built for Detecting Toxic Comments. ArXiv abs/1702.08138 (2017)." .
+
+art:artigo_2203_00130v1_ref_48 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 48 ;
+    art:texto "Abhinav Jain, Nitin Gupta, Shashank Mujumdar, Sameep Mehta, and Rishi Madhok. 2018. Content Driven Enrichment of Formal Text using Concept Definitions and Applications. Proceedings of the 29th on Hypertext and Social Media (2018)." .
+
+art:artigo_2203_00130v1_ref_49 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 49 ;
+    art:texto "Victoria Johansson, Anna Sigridur Islind, Tomas Lindroth, Eva Angenete, and Martin Gellerstedt. 2021. Online Communities as a Driver for Patient Empowerment: Systematic Review. Journal of Medical Internet Research 23 (2021)." .
+
+art:artigo_2203_00130v1_ref_5 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 5 ;
+    art:texto "Asma Ben Abacha and Dina Demner-Fushman. 2019. A question-entailment approach to question answering. BMC Bioinformatics 20 (2019)." .
+
+art:artigo_2203_00130v1_ref_50 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 50 ;
+    art:texto "Meghana Kalavar, Sasha Hubschman, Julia L Hudson, Ajay E. Kuriyan, and Jayanth Sridhar. 2021. Evaluation of Available Online Information Regarding Treatment for Vitreous Floaters. Seminars in Ophthalmology 36 (2021), 58 - 63." .
+
+art:artigo_2203_00130v1_ref_51 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 51 ;
+    art:texto "Anna Kernder, Elena Elefante, Gamal Chehab, Chiara Tani, Marta Mosca, and Matthias Schneider. 2020. The patient's perspective: are quality of life and disease burden a possible treatment target in systemic lupus erythematosus? Rheumatology (Oxford, England) 59 (2020), 63 - 68." .
+
+art:artigo_2203_00130v1_ref_52 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 52 ;
+    art:texto "Martin Kerwer, Anita Chasiotis, Johannes Stricker, Armin Günther, and Tom Rosman. 2021. Straight From the Scientist's Mouth - Plain Language Summaries Promote Laypeople's Comprehension and Knowledge Acquisition When Reading About Individual Research Findings in Psychology. Collabra: Psychology (2021)." .
+
+art:artigo_2203_00130v1_ref_53 a art:Referencia ;
+    art:anoReferencia "2015"^^xsd:gYear ;
+    art:ordem 53 ;
+    art:texto "Yea-Seul Kim, Jessica R. Hullman, and Eytan Adar. 2015. DeScipher : A Text Simplification Tool for Science Journalism." .
+
+art:artigo_2203_00130v1_ref_54 a art:Referencia ;
+    art:anoReferencia "2011"^^xsd:gYear ;
+    art:ordem 54 ;
+    art:texto "Katrin Kirchhoff, Anne M. Turner, Amittai Axelrod, and Francisco Saavedra. 2011. Application of statistical machine translation to public health information: a feasibility study. Journal of the American Medical Informatics Association 18 4 (2011), 473-8." .
+
+art:artigo_2203_00130v1_ref_55 a art:Referencia ;
+    art:anoReferencia "2006"^^xsd:gYear ;
+    art:ordem 55 ;
+    art:texto "Joëlle Kivits. 2006. Informed Patients and the Internet. Journal of Health Psychology 11 (2006), 269 - 282." .
+
+art:artigo_2203_00130v1_ref_56 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 56 ;
+    art:texto "Wojciech Kryscinski, Bryan McCann, Caiming Xiong, and Richard Socher. 2020. Evaluating the Factual Consistency of Abstractive Text Summarization. ArXiv abs/1910.12840 (2020)." .
+
+art:artigo_2203_00130v1_ref_57 a art:Referencia ;
+    art:anoReferencia "2017"^^xsd:gYear ;
+    art:ordem 57 ;
+    art:texto "Alexandra Kuznetsova, Per Bruun Brockhoff, and Rune Christensen. 2017. lmerTest Package: Tests in Linear Mixed Effects Models. Journal of Statistical Software 82 (2017), 1-26." .
+
+art:artigo_2203_00130v1_ref_58 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 58 ;
+    art:texto "Philippe Laban. 2020. A framework for a text-centric user interface for navigating complex news stories." .
+
+art:artigo_2203_00130v1_ref_59 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 59 ;
+    art:texto "Philippe Laban, Tobias Schnabel, Paul Bennett, and Marti A. Hearst. 2021. Keep It Simple: Unsupervised Simplification of Multi-Paragraph Text. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) . Association for Computational Linguistics, Online, 6365-6378. https://doi.org/10.18653/v1/2021.acl-long.498" .
+
+art:artigo_2203_00130v1_ref_6 a art:Referencia ;
+    art:anoReferencia "2016"^^xsd:gYear ;
+    art:ordem 6 ;
+    art:texto "Takeshi Abekawa and Akiko Aizawa. 2016. SideNoter: Scholarly Paper Browsing System based on PDF Restructuring and Text Annotation. In International Conference on Computational Linguistics ." .
+
+art:artigo_2203_00130v1_ref_60 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 60 ;
+    art:texto "Philippe Laban, Tobias Schnabel, Paul N. Bennett, and Marti A. Hearst. 2021. SummaC: Re-Visiting NLI-based Models for Inconsistency Detection in Summarization. ArXiv abs/2111.09525 (2021)." .
+
+art:artigo_2203_00130v1_ref_61 a art:Referencia ;
+    art:anoReferencia "2013"^^xsd:gYear ;
+    art:ordem 61 ;
+    art:texto "Gondy Leroy, James E. Endicott, David Kauchak, Obay Mouradi, and Melissa Just. 2013. User Evaluation of the Effects of a Text Simplification Algorithm Using Term Familiarity on Perception, Understanding, Learning, and Information Retention. Journal of Medical Internet Research 15 (2013)." .
+
+art:artigo_2203_00130v1_ref_62 a art:Referencia ;
+    art:anoReferencia "2017"^^xsd:gYear ;
+    art:ordem 62 ;
+    art:texto "Julie Letchford, Hazel R. Corradi, and Trevor Day. 2017. A flexible e-learning resource promoting the critical reading of scientific papers for science undergraduates. Biochemistry and Molecular Biology Education 45 (2017)." .
+
+art:artigo_2203_00130v1_ref_63 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 63 ;
+    art:texto "Daniel Li, Thomas Chen, Albert Tung, and Lydia B Chilton. 2021. Hierarchical Summarization for Longform Spoken Dialog. In The 34th Annual ACM Symposium on User Interface Software and Technology . 582-597." .
+
+art:artigo_2203_00130v1_ref_64 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 64 ;
+    art:texto "Jiazhao Li, Corey A. Lester, Xinyan Zhao, Yuting Ding, Yun Jiang, and V. G. Vinod Vydiswaran. 2020. PharmMT: A Neural Machine Translation Approach to Simplify Prescription Directions. In Association for Computational Linguistics FINDINGS ." .
+
+art:artigo_2203_00130v1_ref_65 a art:Referencia ;
+    art:anoReferencia "1990"^^xsd:gYear ;
+    art:ordem 65 ;
+    art:texto "Magnus Lindstrom and Douglas M. Bates. 1990. Nonlinear mixed effects models for repeated measures data. Biometrics 46 3 (1990), 673-87." .
+
+art:artigo_2203_00130v1_ref_66 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 66 ;
+    art:texto "Pengfei Liu, Weizhe Yuan, Jinlan Fu, Zhengbao Jiang, Hiroaki Hayashi, and Graham Neubig. 2021. Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing. ArXiv abs/2107.13586 (2021)." .
+
+art:artigo_2203_00130v1_ref_67 a art:Referencia ;
+    art:anoReferencia "2009"^^xsd:gYear ;
+    art:ordem 67 ;
+    art:texto "Patrice Lopez. 2009. GROBID: Combining Automatic Bibliographic Data Recognition and Term Extraction for Scholarship Publications. In ECDL." .
+
+art:artigo_2203_00130v1_ref_68 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 68 ;
+    art:texto "Sean MacAvaney, Hao-Ren Yao, Eugene Yang, Katina Russell, Nazli Goharian, and Ophir Frieder. 2019. Hate speech detection: Challenges and solutions. PLoS ONE 14 (2019)." .
+
+art:artigo_2203_00130v1_ref_69 a art:Referencia ;
+    art:anoReferencia "2016"^^xsd:gYear ;
+    art:ordem 69 ;
+    art:texto "Iain James Marshall, Joël Kuiper, and Byron C. Wallace. 2016. RobotReviewer: evaluation of a system for automatically assessing bias in clinical trials. Journal of the American Medical Informatics Association 23 (2016), 193 - 201." .
+
+art:artigo_2203_00130v1_ref_7 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 7 ;
+    art:texto "Sriram Karthik Badam, Zhicheng Liu, and Niklas Elmqvist. 2019. Elastic Documents: Coupling Text and Tables through Contextual Visualizations for Enhanced Document Reading. IEEE Transactions on Visualization and Computer Graphics 25 (2019), 661-671." .
+
+art:artigo_2203_00130v1_ref_70 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 70 ;
+    art:texto "Alejandro Martínez and Stefano Mammola. 2021. Specialized terminology reduces the number of citations of scientific papers. Proceedings of the Royal Society B 288 (2021)." .
+
+art:artigo_2203_00130v1_ref_71 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 71 ;
+    art:texto "Joshua Maynez, Shashi Narayan, Bernd Bohnet, and Ryan T. McDonald. 2020. On Faithfulness and Factuality in Abstractive Summarization. ArXiv abs/2005.00661 (2020)." .
+
+art:artigo_2203_00130v1_ref_72 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 72 ;
+    art:texto "Lisa McCorkell, Gina S. Assaf, Hannah E. Davis, Hannah Wei, and Athena Akrami. 2021. Patient-Led Research Collaborative: embedding patients in the Long COVID narrative. Pain Reports 6 (2021)." .
+
+art:artigo_2203_00130v1_ref_73 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 73 ;
+    art:texto "Khalil Mrini, Franck Dernoncourt, Seunghyun Yoon, Trung H. Bui, Walter Chang, Emilia Farcas, and Ndapandula Nakashole. 2021. A Gradually Soft Multi-Task and Data-Augmented Approach to Medical Question Understanding. InAssociation for Computational Linguistics ." .
+
+art:artigo_2203_00130v1_ref_74 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 74 ;
+    art:texto "H. Münchow, T. Richter, and S. Schmid. 2020. What Does It Take to Deal with Academic Literature? Springer Fachmedien Wiesbaden, Wiesbaden, 241-260." .
+
+art:artigo_2203_00130v1_ref_75 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 75 ;
+    art:texto "Sonia Krishna Murthy, Daniel King, Tom Hope, Daniel Weld, and Doug Downey. 2021. Towards Personalized Descriptions of Scientific Concepts. In Proceedings of The Fifth Widening Natural Language Processing Workshop . Association for Computational Linguistics, Punta Cana, Dominican Republic." .
+
+art:artigo_2203_00130v1_ref_76 a art:Referencia ;
+    art:anoReferencia "2012"^^xsd:gYear ;
+    art:ordem 76 ;
+    art:texto "Vinay Nair, Shahab Khan, and Kenar D. Jhaveri. 2012. Interactive journals and the future of medical publications. The American journal of medicine 125 10 (2012), 1038-42." .
+
+art:artigo_2203_00130v1_ref_77 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 77 ;
+    art:texto "Feng Nan, Cícero Nogueira dos Santos, Henghui Zhu, Patrick Ng, Kathleen McKeown, Ramesh Nallapati, Dejiao Zhang, Zhiguo Wang, Andrew O. Arnold, and Bing Xiang. 2021. Improving Factual Consistency of Abstractive Summarization via Question Answering.ArXiv abs/2105.04623 (2021)." .
+
+art:artigo_2203_00130v1_ref_78 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 78 ;
+    art:texto "Engineering National Academies of Sciences and Medicine. 2018. Returning Individual Research Results to Participants: Guidance for a New Research Paradigm. The National Academies Press, Washington, DC." .
+
+art:artigo_2203_00130v1_ref_79 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 79 ;
+    art:texto "Mark Neumann, Daniel King, Iz Beltagy, and Waleed Ammar. 2019. ScispaCy: Fast and Robust Models for Biomedical Natural Language Processing. In Proceedings of the 18th BioNLP Workshop and Shared Task . Association for Computational Linguistics, Florence, Italy, 319-327." .
+
+art:artigo_2203_00130v1_ref_8 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 8 ;
+    art:texto "Xiaoliang Bai, Yong sheng Lian, Jie Wang, Hongxing Zhang, Meichao Jiang, Hao Zhang, Bo Pei, Changqing Hu, and Qiang Yang. 2021. Percutaneous endoscopic lumbar discectomy compared with other surgeries for lumbar disc herniation. Medicine 100 (2021)." .
+
+art:artigo_2203_00130v1_ref_80 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 80 ;
+    art:texto "Emily Nunn and Stephen Pinfield. 2014. Lay summaries of open access journal articles: engaging with the general public on medical research. Learned Publishing 27 (2014)." .
+
+art:artigo_2203_00130v1_ref_81 a art:Referencia ;
+    art:anoReferencia "2005"^^xsd:gYear ;
+    art:ordem 81 ;
+    art:texto "National Institutes of Health et al. 2005. Policy on enhancing public access to archived publications resulting from NIH-funded research. Bethesda, MA: National Institutes of Health;(Notice Number: NOT-OD-05-022)." .
+
+art:artigo_2203_00130v1_ref_82 a art:Referencia ;
+    art:anoReferencia "2016"^^xsd:gYear ;
+    art:ordem 82 ;
+    art:texto "Gustavo Paetzold and Lucia Specia. 2016. Anita: An Intelligent Text Adaptation Tool. In International Conference on Computational Linguistics ." .
+
+art:artigo_2203_00130v1_ref_83 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 83 ;
+    art:texto "Artidoro Pagnoni, Vidhisha Balachandran, and Yulia Tsvetkov. 2021. Understanding Factuality in Abstractive Summarization with FRANK: A Benchmark for Factuality Metrics. ArXiv abs/2104.13346 (2021)." .
+
+art:artigo_2203_00130v1_ref_84 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 84 ;
+    art:texto "George Philipp and Ryen W. White. 2014. Interactions between health searchers and search engines. Proceedings of the 37th international ACM SIGIR conference on Research & development in information retrieval (2014)." .
+
+art:artigo_2203_00130v1_ref_85 a art:Referencia ;
+    art:anoReferencia "2017"^^xsd:gYear ;
+    art:ordem 85 ;
+    art:texto "Basel Qenam, Tae Youn Kim, Mark J Carroll, and Michael A. Hogarth. 2017. Text Simplification Using Consumer Health Vocabulary to Generate Patient-Centered Radiology Reporting: Translation and Evaluation. Journal of Medical Internet Research 19 (2017)." .
+
+art:artigo_2203_00130v1_ref_86 a art:Referencia ;
+    art:anoReferencia "2013"^^xsd:gYear ;
+    art:ordem 86 ;
+    art:texto "Vololona Rabeharisoa, Tiago Moreira, and Madeleine Akrich. 2013. Evidence-based activism: Patients', users' and activists' groups in knowledge society. BioSocieties 9 (2013), 111-128." .
+
+art:artigo_2203_00130v1_ref_87 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 87 ;
+    art:texto "Tessa Richards and Fiona Godlee. 2014. The BMJ's own patient journey. BMJ 348 (2014)." .
+
+art:artigo_2203_00130v1_ref_88 a art:Referencia ;
+    art:anoReferencia "1995"^^xsd:gYear ;
+    art:ordem 88 ;
+    art:texto "W. Scott Richardson, M. C. Wilson, Jim Nishikawa, and Robert S. Hayward. 1995. The well-built clinical question: a key to evidence-based decisions. ACP journal club 123 3 (1995), A12-3." .
+
+art:artigo_2203_00130v1_ref_89 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 89 ;
+    art:texto "Kirk Roberts, Halil Kilicoglu, Marcelo Fiszman, and Dina Demner-Fushman. 2014. Automatically Classifying Question Types for Consumer Health Questions. American Medical Informatics Association Annual Symposium proceedings 2014 (2014), 1018-27." .
+
+art:artigo_2203_00130v1_ref_9 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 9 ;
+    art:texto "Alison S. Baskin, Ton Wang, Nicole M Mott, Sarah T. Hawley, Reshma Jagsi, and Lesly Dossett. 2020. Gaps in Online Breast Cancer Treatment Information for Older Women. Annals of Surgical Oncology 28 (2020), 950-957." .
+
+art:artigo_2203_00130v1_ref_90 a art:Referencia ;
+    art:anoReferencia "2017"^^xsd:gYear ;
+    art:ordem 90 ;
+    art:texto "Mary A M Rogers, Kelsey Lemmen, Rachel Kramer, Jason Mann, and Vineet Chopra. 2017. Internet-Delivered Health Interventions That Work: Systematic Review of Meta-Analyses and Evaluation of Website Availability. Journal of Medical Internet Research 19 (2017)." .
+
+art:artigo_2203_00130v1_ref_91 a art:Referencia ;
+    art:anoReferencia "2017"^^xsd:gYear ;
+    art:ordem 91 ;
+    art:texto "Lisa Scharrer, Yvonne Rupieper, Marc Stadtler, and Rainer Bromme. 2017. When science becomes too easy: Science popularization inclines laypeople to underrate their dependence on experts. Public Understanding of Science 26 (2017), 1003 - 1018." .
+
+art:artigo_2203_00130v1_ref_92 a art:Referencia ;
+    art:anoReferencia "2010"^^xsd:gYear ;
+    art:ordem 92 ;
+    art:texto "Skipper Seabold and Josef Perktold. 2010. statsmodels: Econometric and statistical modeling with python. In 9th Python in Science Conference ." .
+
+art:artigo_2203_00130v1_ref_93 a art:Referencia ;
+    art:anoReferencia "2011"^^xsd:gYear ;
+    art:ordem 93 ;
+    art:texto "Cynthia Shanahan, Timothy Shanahan, and Cynthia Misischia. 2011. Analysis of Expert Readers in Three Disciplines. Journal of Literacy Research 43 (2011), 393 - 429." .
+
+art:artigo_2203_00130v1_ref_94 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 94 ;
+    art:texto "Zejiang Shen, Kyle Lo, Lucy Lu Wang, Bailey Kuehl, Daniel S. Weld, and Doug Downey. 2021. Incorporating Visual Layout Structures for Scientific Text Classification. ArXiv abs/2106.00676 (2021)." .
+
+art:artigo_2203_00130v1_ref_95 a art:Referencia ;
+    art:anoReferencia "2009"^^xsd:gYear ;
+    art:ordem 95 ;
+    art:texto "Kathrin Sommerhalder, A Abraham, Maria Caiata Zufferey, Jürgen Barth, and Thomas Abel. 2009. Internet information and medical consultations: experiences from patients' and physicians' perspectives. Patient education and counseling 77 2 (2009), 266-71." .
+
+art:artigo_2203_00130v1_ref_96 a art:Referencia ;
+    art:anoReferencia "2016"^^xsd:gYear ;
+    art:ordem 96 ;
+    art:texto "Alessandra Storino, Manuel Castillo-Angeles, Ammara A Watkins, Christina R. Vargas, Joseph D. Mancias, Andrea J Bullock, Aram N. Demirjian, A J Moser, and Tara S. Kent. 2016. Assessing the Accuracy and Readability of Online Health Information for Patients With Pancreatic Cancer. Journal of the American Medical Association surgery 151 9 (2016), 831-7." .
+
+art:artigo_2203_00130v1_ref_97 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 97 ;
+    art:texto "Petroc Sumner, Solveiga Vivian-Griffiths, Jacky Boivin, Andy Williams, Christos A Venetis, Aimée Davies, Jack Ogden, Leanne Whelan, Bethan Hughes, Bethan Dalton, Fred Boy, and Christopher D. Chambers. 2014. The association between exaggeration in health related science news and academic press releases: retrospective observational study. The BMJ 349 (2014)." .
+
+art:artigo_2203_00130v1_ref_98 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 98 ;
+    art:texto "Rossella Talotta, Fabiola Atzeni, and Magdalena Janina Laska. 2020. Therapeutic peptides for the treatment of systemic lupus erythematosus: a place in therapy. Expert Opinion on Investigational Drugs 29 (2020), 845 - 867." .
+
+art:artigo_2203_00130v1_ref_99 a art:Referencia ;
+    art:anoReferencia "2017"^^xsd:gYear ;
+    art:ordem 99 ;
+    art:texto "Sharon Swee-Lin Tan and Nadee Goonawardene. 2017. Internet Health Information Seeking and the Patient-Physician Relationship: A Systematic Review. Journal of Medical Internet Research 19 (2017)." .
+
+art:artigo_2203_00130v1_secao_1 a art:OutraSecao ;
+    art:numeroPalavras 16 ;
+    art:ordem 1 ;
+    art:tituloSecao "Keywords" .
+
+art:artigo_2203_00130v1_secao_11 a art:Conclusao ;
+    art:numeroPalavras 158 ;
+    art:ordem 11 ;
+    art:tituloSecao "9 CONCLUSION" .
+
+art:artigo_2203_00130v1_secao_12 a art:Agradecimentos ;
+    art:numeroPalavras 103 ;
+    art:ordem 12 ;
+    art:tituloSecao "ACKNOWLEDGMENTS" .
+
+art:artigo_2203_00130v1_secao_13 a art:SecaoReferencias ;
+    art:numeroPalavras 3271 ;
+    art:ordem 13 ;
+    art:tituloSecao "REFERENCES" .
+
+art:artigo_2203_00130v1_secao_14 a art:Apendice ;
+    art:numeroPalavras 2331 ;
+    art:ordem 14 ;
+    art:tituloSecao "Appendix: A INTERVIEWS WITH HEALTHCARE CONSUMERS AND PROVIDERS" .
+
+art:artigo_2203_00130v1_secao_2 a art:OutraSecao ;
+    art:numeroPalavras 9 ;
+    art:ordem 2 ;
+    art:tituloSecao "Keywords" .
+
+art:artigo_2203_00130v1_secao_4 a art:TrabalhosRelacionados ;
+    art:numeroPalavras 1554 ;
+    art:ordem 4 ;
+    art:tituloSecao "2 BACKGROUND AND RELATED WORK" .
+
+art:artigo_2203_00130v1_secao_5 a art:OutraSecao ;
+    art:numeroPalavras 2916 ;
+    art:ordem 5 ;
+    art:tituloSecao "3 OBSERVATIONS OF NON-EXPERT READERS" .
+
+art:artigo_2203_00130v1_secao_6 a art:OutraSecao ;
+    art:numeroPalavras 2161 ;
+    art:ordem 6 ;
+    art:tituloSecao "4 PAPER PLAIN: READING SUPPORT FOR MEDICAL RESEARCH PAPERS" .
+
+art:artigo_2203_00130v1_secao_7 a art:Metodologia ;
+    art:numeroPalavras 782 ;
+    art:ordem 7 ;
+    art:tituloSecao "5 IMPLEMENTATION" .
+
+art:artigo_2203_00130v1_secao_8 a art:OutraSecao ;
+    art:numeroPalavras 1569 ;
+    art:ordem 8 ;
+    art:tituloSecao "6 USABILITY STUDY" .
+
+art:artigo_2203_00130v1_secao_9 a art:Resultados ;
+    art:numeroPalavras 2845 ;
+    art:ordem 9 ;
+    art:tituloSecao "7 RESULTS" .
+
+art:artigo_2203_00130v1_tarefa_Analise_de_sentimentos a art:Mencao ;
+    art:frequencia 3 ;
+    art:refereSe art:tarefa_Analise_de_sentimentos .
+
+art:artigo_2203_00130v1_tarefa_Analise_sintatica_parsing a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tarefa_Analise_sintatica_parsing .
+
+art:artigo_2203_00130v1_tarefa_Geracao_de_texto_parafrase a art:Mencao ;
+    art:frequencia 2 ;
+    art:refereSe art:tarefa_Geracao_de_texto_parafrase .
+
+art:artigo_2203_00130v1_tarefa_Perguntas_e_respostas a art:Mencao ;
+    art:frequencia 17 ;
+    art:refereSe art:tarefa_Perguntas_e_respostas .
+
+art:artigo_2203_00130v1_tarefa_Recomendacao a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tarefa_Recomendacao .
+
+art:artigo_2203_00130v1_tarefa_Reconhecimento_de_entidades_NER a art:Mencao ;
+    art:frequencia 2 ;
+    art:refereSe art:tarefa_Reconhecimento_de_entidades_NER .
+
+art:artigo_2203_00130v1_tarefa_Recuperacao_de_informacao_busca a art:Mencao ;
+    art:frequencia 3 ;
+    art:refereSe art:tarefa_Recuperacao_de_informacao_busca .
+
+art:artigo_2203_00130v1_tarefa_Sumarizacao a art:Mencao ;
+    art:frequencia 6 ;
+    art:refereSe art:tarefa_Sumarizacao .
+
+art:artigo_2203_00130v1_tarefa_Traducao_automatica a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tarefa_Traducao_automatica .
+
+art:artigo_2203_00130v1_tecnica_LLM_GPT a art:Mencao ;
+    art:frequencia 6 ;
+    art:refereSe art:tecnica_LLM_GPT .
+
+art:artigo_2203_00130v1_tecnica_Questionario_entrevista_estudo_com_usuarios a art:Mencao ;
+    art:frequencia 27 ;
+    art:refereSe art:tecnica_Questionario_entrevista_estudo_com_usuarios .
+
+art:artigo_2203_00130v1_termo_1 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_read ;
+    art:frequencia 237 ;
+    art:posicaoRanking 1 .
+
+art:artigo_2203_00130v1_termo_10 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_research ;
+    art:frequencia 110 ;
+    art:posicaoRanking 10 .
+
+art:artigo_2203_00130v1_termo_2 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_plain ;
+    art:frequencia 189 ;
+    art:posicaoRanking 2 .
+
+art:artigo_2203_00130v1_termo_3 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_participant ;
+    art:frequencia 176 ;
+    art:posicaoRanking 3 .
+
+art:artigo_2203_00130v1_termo_4 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_question ;
+    art:frequencia 161 ;
+    art:posicaoRanking 4 .
+
+art:artigo_2203_00130v1_termo_5 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_answer ;
+    art:frequencia 138 ;
+    art:posicaoRanking 5 .
+
+art:artigo_2203_00130v1_termo_6 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_reader ;
+    art:frequencia 137 ;
+    art:posicaoRanking 6 .
+
+art:artigo_2203_00130v1_termo_7 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_gist ;
+    art:frequencia 136 ;
+    art:posicaoRanking 7 .
+
+art:artigo_2203_00130v1_termo_8 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_information ;
+    art:frequencia 135 ;
+    art:posicaoRanking 8 .
+
+art:artigo_2203_00130v1_termo_9 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_medical ;
+    art:frequencia 119 ;
+    art:posicaoRanking 9 .
+
+art:artigo_2203_00130v1_trabalho_futuro_1 a art:TrabalhoFuturo ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_10 ;
+    art:pontuacao 7 ;
+    art:texto "We offer the following guidance for developing such future systems: Provide reading guidance Interactive reading systems for non-experts can provide more active support for guiding readers."@en .
+
+art:artigo_2203_00130v1_trabalho_futuro_2 a art:TrabalhoFuturo ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_10 ;
+    art:pontuacao 7 ;
+    art:texto "Future systems could go further by reporting factuality measures along with generated text [83] or integrating a feedback mechanism for reporting inconsistent information in order to crowd-source these factuality checks."@en .
+
+art:artigo_2203_00130v1_trabalho_futuro_3 a art:TrabalhoFuturo ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_10 ;
+    art:pontuacao 7 ;
+    art:texto "We are excited to integrate new advances for measuring and ensuring factuality in generations (e.g., [33, 60, 77]) into Paper Plain to help realize the promise of such models in real-world settings."@en .
+
+art:artigo_2203_00130v1_trabalho_futuro_4 a art:TrabalhoFuturo ;
+    art:extraidoDe art:artigo_2203_00130v1_secao_10 ;
+    art:pontuacao 13 ;
+    art:texto "In future work we are excited to observe the use of Paper Plain in more naturalistic settings."@en .
+
+art:artigo_2206_10883v3_contribuicao_1 a art:Contribuicao ;
+    art:extraidoDe art:artigo_2206_10883v3_secao_2 ;
+    art:pontuacao 4 ;
+    art:texto "But to our knowledge, Multi-LexSum is the first dataset to provide summaries at multiple levels of granularity."@en .
+
+art:artigo_2206_10883v3_metodo_1 a art:Metodo ;
+    art:extraidoDe art:artigo_2206_10883v3_secao_2 ;
+    art:pontuacao 5 ;
+    art:texto "We conduct a series of experiments on Multi-LexSum, and find that existing summarization models perform poorly."@en .
+
+art:artigo_2206_10883v3_objetivo_1 a art:Objetivo ;
+    art:extraidoDe art:artigo_2206_10883v3_secao_1 ;
+    art:pontuacao 5 ;
+    art:texto "We present extensive analysis demonstrating that despite the high-quality summaries in the training data (adhering to strict content and style guidelines), state-of-the-art summarization models perform poorly on this task."@en .
+
+art:artigo_2206_10883v3_objetivo_2 a art:Objetivo ;
+    art:extraidoDe art:artigo_2206_10883v3_secao_2 ;
+    art:pontuacao 5 ;
+    art:texto "In this paper, we present a new dataset, Multi-LexSum, for studying automatic summarization in an important real-world application setting found in the Civil Rights Litigation Clearinghouse (CRLC)."@en .
+
+art:artigo_2206_10883v3_problema_1 a art:Problema ;
+    art:extraidoDe art:artigo_2206_10883v3_secao_1 ;
+    art:pontuacao 4 ;
+    art:texto "With the advent of large language models, methods for abstractive summarization have made great strides, creating potential for use in applications to aid knowledge workers processing unwieldy document collections."@en .
+
+art:artigo_2206_10883v3_problema_2 a art:Problema ;
+    art:extraidoDe art:artigo_2206_10883v3_secao_1 ;
+    art:pontuacao 4 ;
+    art:texto "Multi-LexSum presents a challenging multi-document summarization task given the length of the source documents, often exceeding two hundred pages per case."@en .
+
+art:artigo_2206_10883v3_ref_1 a art:Referencia ;
+    art:anoReferencia "2004"^^xsd:gYear ;
+    art:ordem 1 ;
+    art:texto "Iz Beltagy, Matthew E Peters, and Arman Cohan. Longformer: The long-document transformer. arXiv preprint arXiv:2004.05150, 2020." .
+
+art:artigo_2206_10883v3_ref_10 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 10 ;
+    art:texto "Civil Rights Litigation Clearinghouse. Mission. https://clearinghouse.net/about, 2022. Last accessed June 5, 2022." .
+
+art:artigo_2206_10883v3_ref_11 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 11 ;
+    art:texto "Arman Cohan, Franck Dernoncourt, Doo Soon Kim, Trung Bui, Seokhwan Kim, Walter Chang, and Nazli Goharian. A Discourse-Aware Attention Model for Abstractive Summarization of Long Documents. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers), pages 615-621, New Orleans, Louisiana, 2018. Association for Computational Linguistics. doi: 10.18653/v1/N18-2097. URL http://aclweb.org/anthology/N18-2097." .
+
+art:artigo_2206_10883v3_ref_12 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 12 ;
+    art:texto "U.S. Courts. Civil cases. https://www.uscourts.gov/about-federal-courts/ types-cases/civil-cases, 2022. Last accessed April 17, 2022." .
+
+art:artigo_2206_10883v3_ref_13 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 13 ;
+    art:texto "U.S. Courts. Covering civil cases - journalist's guide. https://www.uscourts.gov/ statistics-reports/covering-civil-cases-journalists-guide , 2022. Last accessed April 17, 2022." .
+
+art:artigo_2206_10883v3_ref_14 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 14 ;
+    art:texto "Jay DeYoung, Iz Beltagy, Madeleine van Zuylen, Bailey Kuehl, and Lucy Lu Wang. MS2: Multi-Document Summarization of Medical Studies. arXiv:2104.06486 [cs], November 2021. URL http://arxiv.org/abs/2104.06486. arXiv: 2104.06486." .
+
+art:artigo_2206_10883v3_ref_15 a art:Referencia ;
+    art:anoReferencia "1906"^^xsd:gYear ;
+    art:ordem 15 ;
+    art:texto "Alexander R Fabbri, Irene Li, Tianwei She, Suyi Li, and Dragomir R Radev. Multi-news: A large-scale multi-document summarization dataset and abstractive hierarchical model. arXiv preprint arXiv:1906.01749, 2019." .
+
+art:artigo_2206_10883v3_ref_16 a art:Referencia ;
+    art:anoReferencia "1906"^^xsd:gYear ;
+    art:ordem 16 ;
+    art:texto "Alexander R. Fabbri, Irene Li, Tianwei She, Suyi Li, and Dragomir R. Radev. Multi-News: a Large-Scale Multi-Document Summarization Dataset and Abstractive Hierarchical Model. arXiv:1906.01749 [cs], June 2019. URL http://arxiv.org/abs/1906.01749. arXiv: 1906.01749." .
+
+art:artigo_2206_10883v3_ref_17 a art:Referencia ;
+    art:anoReferencia "2004"^^xsd:gYear ;
+    art:ordem 17 ;
+    art:texto "Atefeh Farzindar and Guy Lapalme. Letsum, an automatic legal text summarizing. In Legal Knowledge and Information Systems: JURIX 2004, the Seventeenth Annual Conference, volume 120, page 11. IOS Press, 2004." .
+
+art:artigo_2206_10883v3_ref_18 a art:Referencia ;
+    art:anoReferencia "2014"^^xsd:gYear ;
+    art:ordem 18 ;
+    art:texto "Filippo Galgani, Paul Compton, and Achim Hoffmann. Hauss: Incrementally building a summarizer combining multiple techniques. International journal of human-computer studies, 72(7):584-605, 2014." .
+
+art:artigo_2206_10883v3_ref_19 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 19 ;
+    art:texto "Timnit Gebru, Jamie Morgenstern, Briana Vecchione, Jennifer Wortman Vaughan, Hanna Wallach, Hal Daumé Iii, and Kate Crawford. Datasheets for datasets. Communications of the ACM, 64(12):86-92, 2021." .
+
+art:artigo_2206_10883v3_ref_2 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 2 ;
+    art:texto "Michael J. Bommarito II, Daniel Martin Katz, and Eric M. Detterman. LexNLP: Natural language processing and information extraction for legal and regulatory texts.arXiv:1806.03688 [cs, stat], June 2018. URL http://arxiv.org/abs/1806.03688. arXiv: 1806.03688." .
+
+art:artigo_2206_10883v3_ref_20 a art:Referencia ;
+    art:anoReferencia "1995"^^xsd:gYear ;
+    art:ordem 20 ;
+    art:texto "Graham Greenleaf et al. Public access to law via internet: the australasian legal information institute.-paper presented at the asian pacific specials, health and law librarians conference (6th: 1995: Sydney)-. Journal of Law and Information Science, 6(1):49-69, 1995." .
+
+art:artigo_2206_10883v3_ref_21 a art:Referencia ;
+    art:anoReferencia "2004"^^xsd:gYear ;
+    art:ordem 21 ;
+    art:texto "Claire Grover, Ben Hachey, and Ian Hughson. The HOLJ corpus. supporting summarisation of legal texts. In Proceedings of the 5th International Workshop on Linguistically Interpreted Corpora, pages 47-54, Geneva, Switzerland, aug 29 2004. COLING. URL https://aclanthology.org/W04-1907." .
+
+art:artigo_2206_10883v3_ref_22 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 22 ;
+    art:texto "Max Grusky, Mor Naaman, and Yoav Artzi. Newsroom: A Dataset of 1.3 Million Summaries with Diverse Extractive Strategies. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers) , pages 708-719, New Orleans, Louisiana, 2018. Association for Computational Linguistics. doi: 10.18653/v1/N18-1065. URL http://aclweb.org/anthology/N18-1065." .
+
+art:artigo_2206_10883v3_ref_23 a art:Referencia ;
+    art:anoReferencia "2006"^^xsd:gYear ;
+    art:ordem 23 ;
+    art:texto "Ben Hachey and Claire Grover. Extractive summarisation of legal texts. Artificial Intelligence and Law, 14(4):305-345, 2006." .
+
+art:artigo_2206_10883v3_ref_24 a art:Referencia ;
+    art:anoReferencia "2006"^^xsd:gYear ;
+    art:ordem 24 ;
+    art:texto "Pengcheng He, Xiaodong Liu, Jianfeng Gao, and Weizhu Chen. Deberta: Decoding-enhanced bert with disentangled attention. arXiv preprint arXiv:2006.03654, 2020." .
+
+art:artigo_2206_10883v3_ref_25 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 25 ;
+    art:texto "Dan Hendrycks, Collin Burns, Anya Chen, and Spencer Ball. Cuad: An expert-annotated nlp dataset for legal contract review. arXiv preprint arXiv:2103.06268, 2021." .
+
+art:artigo_2206_10883v3_ref_26 a art:Referencia ;
+    art:anoReferencia "2015"^^xsd:gYear ;
+    art:ordem 26 ;
+    art:texto "Karl Moritz Hermann, Tomáš Koˇciský, Edward Grefenstette, Lasse Espeholt, Will Kay, Mustafa Suleyman, and Phil Blunsom. Teaching Machines to Read and Comprehend. arXiv:1506.03340 [cs], November 2015. URL http://arxiv.org/abs/1506.03340. arXiv: 1506.03340." .
+
+art:artigo_2206_10883v3_ref_27 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 27 ;
+    art:texto "Matthew Honnibal, Ines Montani, Sofie Van Landeghem, and Adriane Boyd. spaCy: Industrialstrength Natural Language Processing in Python. 2020. doi: 10.5281/zenodo.1212303." .
+
+art:artigo_2206_10883v3_ref_28 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 28 ;
+    art:texto "Luyang Huang, Shuyang Cao, Nikolaus Parulian, Heng Ji, and Lu Wang. Efficient Attentions for Long Document Summarization. arXiv:2104.02112 [cs], April 2021. URL http://arxiv. org/abs/2104.02112. arXiv: 2104.02112." .
+
+art:artigo_2206_10883v3_ref_29 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 29 ;
+    art:texto "Deepali Jain, Malaya Dutta Borah, and Anupam Biswas. Summarization of legal documents: Where are we now and the way forward. Computer Science Review, 40:100388, 2021." .
+
+art:artigo_2206_10883v3_ref_3 a art:Referencia ;
+    art:ordem 3 ;
+    art:texto "Rishi Bommasani, Drew A. Hudson, Ehsan Adeli, Russ Altman, Simran Arora, Sydney von Arx, Michael S. Bernstein, Jeannette Bohg, Antoine Bosselut, Emma Brunskill, Erik Brynjolfsson, Shyamal Buch, Dallas Card, Rodrigo Castellon, Niladri Chatterji, Annie Chen, Kathleen Creel, Jared Quincy Davis, Dora Demszky, Chris Donahue, Moussa Doumbouya, Esin Durmus, Stefano Ermon, John Etchemendy, Kawin Ethayarajh, Li Fei-Fei, Chelsea Finn, Trevor Gale, Lauren Gillespie, Karan Goel, Noah Goodman, Shelby Grossman, Neel Guha, Tatsunori Hashimoto, Peter Henderson, John Hewitt, Daniel E. Ho, Jenny Hong, Kyle Hsu," .
+
+art:artigo_2206_10883v3_ref_30 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 30 ;
+    art:texto "Phi Manh Kien, Ha-Thanh Nguyen, Ngo Xuan Bach, Vu Tran, Minh Le Nguyen, and Tu Minh Phuong. Answering legal questions by learning neural attentive text representation. In Proceedings of the 28th International Conference on Computational Linguistics, pages 988-998, Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. doi: 10.18653/v1/2020.coling-main.86. URL https: //aclanthology.org/2020.coling-main.86." .
+
+art:artigo_2206_10883v3_ref_31 a art:Referencia ;
+    art:anoReferencia "2012"^^xsd:gYear ;
+    art:ordem 31 ;
+    art:texto "Mi-Young Kim, Ying Xu, and Randy Goebel. Summarization of legal texts with high cohesion and automatic compression rate. In JSAI International Symposium on Artificial Intelligence, pages 190-204. Springer, 2012." .
+
+art:artigo_2206_10883v3_ref_32 a art:Referencia ;
+    art:anoReferencia "2015"^^xsd:gYear ;
+    art:ordem 32 ;
+    art:texto "Mi-Young Kim, Ying Xu, and Randy Goebel. A convolutional neural network in legal question answering. In JURISIN Workshop, 2015." .
+
+art:artigo_2206_10883v3_ref_33 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 33 ;
+    art:texto "Daniel King, Zejiang Shen, Nishant Subramani, Daniel S Weld, Iz Beltagy, and Doug Downey. Don't say what you don't know: Improving the consistency of abstractive summarization by constraining beam search. arXiv preprint arXiv:2203.08436, 2022." .
+
+art:artigo_2206_10883v3_ref_34 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 34 ;
+    art:texto "Anastassia Kornilova and Vlad Eidelman. BillSum: A Corpus for Automatic Summarization of US Legislation. Proceedings of the 2nd Workshop on New Frontiers in Summarization, pages 48-56, 2019. doi: 10.18653/v1/D19-5406. URL http://arxiv.org/abs/1910.00523. arXiv: 1910.00523." .
+
+art:artigo_2206_10883v3_ref_35 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 35 ;
+    art:texto "Wojciech Kry ́sci ́nski, Nazneen Rajani, Divyansh Agarwal, Caiming Xiong, and Dragomir Radev. BookSum: A Collection of Datasets for Long-form Narrative Summarization.arXiv:2105.08209 [cs], May 2021. URL http://arxiv.org/abs/2105.08209. arXiv: 2105.08209." .
+
+art:artigo_2206_10883v3_ref_36 a art:Referencia ;
+    art:anoReferencia "1910"^^xsd:gYear ;
+    art:ordem 36 ;
+    art:texto "Mike Lewis, Yinhan Liu, Naman Goyal, Marjan Ghazvininejad, Abdelrahman Mohamed, Omer Levy, Ves Stoyanov, and Luke Zettlemoyer. Bart: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension. arXiv preprint arXiv:1910.13461, 2019." .
+
+art:artigo_2206_10883v3_ref_37 a art:Referencia ;
+    art:anoReferencia "2004"^^xsd:gYear ;
+    art:ordem 37 ;
+    art:texto "Chin-Yew Lin. ROUGE: A package for automatic evaluation of summaries. In Text Summarization Branches Out, pages 74-81, Barcelona, Spain, July 2004. Association for Computational Linguistics. URL https://aclanthology.org/W04-1013." .
+
+art:artigo_2206_10883v3_ref_38 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 38 ;
+    art:texto "Marco Lippi, Przemysław Pałka, Giuseppe Contissa, Francesca Lagioia, Hans-Wolfgang Micklitz, Giovanni Sartor, and Paolo Torroni. Claudette: an automated detector of potentially unfair clauses in online terms of service. Artificial Intelligence and Law, 27(2):117-139, 2019." .
+
+art:artigo_2206_10883v3_ref_39 a art:Referencia ;
+    art:anoReferencia "2010"^^xsd:gYear ;
+    art:ordem 39 ;
+    art:texto "Yao Lu, Yue Dong, and Laurent Charlin. Multi-xscience: A large-scale dataset for extreme multi-document summarization of scientific articles. arXiv preprint arXiv:2010.14235, 2020." .
+
+art:artigo_2206_10883v3_ref_4 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 4 ;
+    art:texto "Ilias Chalkidis, Ion Androutsopoulos, and Achilleas Michos. Obligation and prohibition extraction using hierarchical RNNs. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pages 254-259, Melbourne, Australia, July 2018. Association for Computational Linguistics. doi: 10.18653/v1/P18-2041. URL https://aclanthology.org/P18-2041." .
+
+art:artigo_2206_10883v3_ref_40 a art:Referencia ;
+    art:anoReferencia "2005"^^xsd:gYear ;
+    art:ordem 40 ;
+    art:texto "Joshua Maynez, Shashi Narayan, Bernd Bohnet, and Ryan McDonald. On faithfulness and factuality in abstractive summarization. arXiv preprint arXiv:2005.00661, 2020." .
+
+art:artigo_2206_10883v3_ref_41 a art:Referencia ;
+    art:anoReferencia "1906"^^xsd:gYear ;
+    art:ordem 41 ;
+    art:texto "Derek Miller. Leveraging bert for extractive text summarization on lectures. arXiv preprint arXiv:1906.04165, 2019." .
+
+art:artigo_2206_10883v3_ref_42 a art:Referencia ;
+    art:ordem 42 ;
+    art:texto "Ramesh Nallapati and Christopher D Manning. Legal Docket-Entry Classification: Where Machine Learning stumbles. page 9." .
+
+art:artigo_2206_10883v3_ref_43 a art:Referencia ;
+    art:anoReferencia "2016"^^xsd:gYear ;
+    art:ordem 43 ;
+    art:texto "Ramesh Nallapati, Bowen Zhou, Cicero Nogueira dos santos, Caglar Gulcehre, and Bing Xiang. Abstractive Text Summarization Using Sequence-to-Sequence RNNs and Beyond. arXiv:1602.06023 [cs], August 2016. URL http://arxiv.org/abs/1602.06023. arXiv: 1602.06023." .
+
+art:artigo_2206_10883v3_ref_44 a art:Referencia ;
+    art:anoReferencia "2018"^^xsd:gYear ;
+    art:ordem 44 ;
+    art:texto "Shashi Narayan, Shay B. Cohen, and Mirella Lapata. Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization. arXiv:1808.08745 [cs], August 2018. URL http://arxiv.org/abs/1808.08745. arXiv: 1808.08745." .
+
+art:artigo_2206_10883v3_ref_45 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 45 ;
+    art:texto "Adam R Pah, David L Schwartz, Sarath Sanga, Zachary D Clopton, Peter DiCola, Rachel Davis Mersey, Charlotte S Alexander, Kristian J Hammond, and Luís A Nunes Amaral. How to build a more open justice system. Science, 369(6500):134-136, 2020." .
+
+art:artigo_2206_10883v3_ref_46 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 46 ;
+    art:texto "Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et al. Pytorch: An imperative style, high-performance deep learning library. Advances in neural information processing systems, 32, 2019." .
+
+art:artigo_2206_10883v3_ref_47 a art:Referencia ;
+    art:ordem 47 ;
+    art:texto "Seth Polsley, Pooja Jhunjhunwala, and Ruihong Huang. CaseSummarizer: A System for Automated Summarization of Legal Texts. page 5." .
+
+art:artigo_2206_10883v3_ref_48 a art:Referencia ;
+    art:anoReferencia "1910"^^xsd:gYear ;
+    art:ordem 48 ;
+    art:texto "Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter J Liu. Exploring the limits of transfer learning with a unified text-to-text transformer. arXiv preprint arXiv:1910.10683, 2019." .
+
+art:artigo_2206_10883v3_ref_49 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 49 ;
+    art:texto "Abhilasha Ravichander, Alan W Black, Shomir Wilson, Thomas Norton, and Norman Sadeh. Question answering for privacy policies: Combining computational and legal perspectives. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), pages 4947-4958, Hong Kong, China, November 2019. Association for Computational Linguistics. doi: 10.18653/v1/D19-1500. URL https://aclanthology.org/D19-1500." .
+
+art:artigo_2206_10883v3_ref_5 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 5 ;
+    art:texto "Ilias Chalkidis, Ion Androutsopoulos, and Nikolaos Aletras. Neural legal judgment prediction in English. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pages 4317-4323, Florence, Italy, July 2019. Association for Computational Linguistics. doi: 10.18653/v1/P19-1424. URL https://aclanthology.org/P19-1424." .
+
+art:artigo_2206_10883v3_ref_50 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 50 ;
+    art:texto "Nils Reimers and Iryna Gurevych. Sentence-bert: Sentence embeddings using siamese bertnetworks. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, 11 2019. URL https://arxiv.org/ abs/1908.10084." .
+
+art:artigo_2206_10883v3_ref_51 a art:Referencia ;
+    art:anoReferencia "2017"^^xsd:gYear ;
+    art:ordem 51 ;
+    art:texto "Abigail See, Peter J. Liu, and Christopher D. Manning. Get To The Point: Summarization with Pointer-Generator Networks. arXiv:1704.04368 [cs], April 2017. URL http://arxiv.org/ abs/1704.04368. arXiv: 1704.04368." .
+
+art:artigo_2206_10883v3_ref_52 a art:Referencia ;
+    art:anoReferencia "1906"^^xsd:gYear ;
+    art:ordem 52 ;
+    art:texto "Eva Sharma, Chen Li, and Lu Wang. BIGPATENT: A Large-Scale Dataset for Abstractive and Coherent Summarization. arXiv:1906.03741 [cs], June 2019. URL http://arxiv.org/abs/ 1906.03741. arXiv: 1906.03741." .
+
+art:artigo_2206_10883v3_ref_53 a art:Referencia ;
+    art:anoReferencia "2010"^^xsd:gYear ;
+    art:ordem 53 ;
+    art:texto "Sam Shleifer and Alexander M Rush. Pre-trained summarization distillation. arXiv preprint arXiv:2010.13002, 2020." .
+
+art:artigo_2206_10883v3_ref_54 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 54 ;
+    art:texto "Don Tuggener, Pius von Däniken, Thomas Peetz, and Mark Cieliebak. LEDGAR: A large-scale multi-label corpus for text classification of legal provisions in contracts. In Proceedings of the 12th Language Resources and Evaluation Conference, pages 1235-1241, Marseille, France, May 2020. European Language Resources Association. ISBN 979-10-95546-34-4. URL https://aclanthology.org/2020.lrec-1.155." .
+
+art:artigo_2206_10883v3_ref_55 a art:Referencia ;
+    art:anoReferencia "2017"^^xsd:gYear ;
+    art:ordem 55 ;
+    art:texto "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. Advances in neural information processing systems, 30, 2017." .
+
+art:artigo_2206_10883v3_ref_56 a art:Referencia ;
+    art:anoReferencia "1910"^^xsd:gYear ;
+    art:ordem 56 ;
+    art:texto "Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony Moi, Pierric Cistac, Tim Rault, Rémi Louf, Morgan Funtowicz, et al. Huggingface's transformers: State-of-the-art natural language processing. arXiv preprint arXiv:1910.03771, 2019." .
+
+art:artigo_2206_10883v3_ref_57 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 57 ;
+    art:texto "Chaojun Xiao, Xueyu Hu, Zhiyuan Liu, Cunchao Tu, and Maosong Sun. Lawformer: A Pre-trained Language Model for Chinese Legal Long Documents. arXiv:2105.03887 [cs], May 2021. URL http://arxiv.org/abs/2105.03887. arXiv: 2105.03887." .
+
+art:artigo_2206_10883v3_ref_58 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 58 ;
+    art:texto "Wen Xiao, Iz Beltagy, Giuseppe Carenini, and Arman Cohan. Primer: Pyramid-based masked sentence pre-training for multi-document summarization. arXiv preprint arXiv:2110.08499, 2021." .
+
+art:artigo_2206_10883v3_ref_59 a art:Referencia ;
+    art:anoReferencia "2010"^^xsd:gYear ;
+    art:ordem 59 ;
+    art:texto "Mehdi Yousfi-Monod, Atefeh Farzindar, and Guy Lapalme. Supervised machine learning for summarizing legal documents. In Canadian Conference on Artificial Intelligence, pages 51-62. Springer, 2010." .
+
+art:artigo_2206_10883v3_ref_6 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 6 ;
+    art:texto "Ilias Chalkidis, Manos Fergadiotis, Prodromos Malakasiotis, Nikolaos Aletras, and Ion Androutsopoulos. LEGAL-BERT: The Muppets straight out of Law School. In Findings of the Association for Computational Linguistics: EMNLP 2020 , pages 2898-2904, Online, 2020. Association for Computational Linguistics. doi: 10.18653/v1/2020.findings-emnlp.261. URL https://www.aclweb.org/anthology/2020.findings-emnlp.261." .
+
+art:artigo_2206_10883v3_ref_60 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 60 ;
+    art:texto "Jingqing Zhang, Yao Zhao, Mohammad Saleh, and Peter Liu. Pegasus: Pre-training with extracted gap-sentences for abstractive summarization. In International Conference on Machine Learning, pages 11328-11339. PMLR, 2020." .
+
+art:artigo_2206_10883v3_ref_61 a art:Referencia ;
+    art:anoReferencia "1904"^^xsd:gYear ;
+    art:ordem 61 ;
+    art:texto "Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q Weinberger, and Yoav Artzi. Bertscore: Evaluating text generation with bert. arXiv preprint arXiv:1904.09675, 2019." .
+
+art:artigo_2206_10883v3_ref_62 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 62 ;
+    art:texto "Lucia Zheng, Neel Guha, Brandon R. Anderson, Peter Henderson, and Daniel E. Ho. When Does Pretraining Help? Assessing Self-Supervised Learning for Law and the CaseHOLD Dataset. arXiv:2104.08671 [cs], July 2021. URL http://arxiv.org/abs/2104.08671. arXiv: 2104.08671." .
+
+art:artigo_2206_10883v3_ref_63 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 63 ;
+    art:texto "Haoxi Zhong, Chaojun Xiao, Cunchao Tu, Tianyang Zhang, Zhiyuan Liu, and Maosong Sun. Jec-qa: A legal-domain question answering dataset. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 34, pages 9701-9708, 2020." .
+
+art:artigo_2206_10883v3_ref_64 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 64 ;
+    art:texto "Linwu Zhong, Ziyi Zhong, Zinian Zhao, Siyuan Wang, Kevin D Ashley, and Matthias Grabmair. Automatic summarization of legal decisions using iterative masking of predictive sentences. In Proceedings of the seventeenth international conference on artificial intelligence and law, pages 163-172, 2019." .
+
+art:artigo_2206_10883v3_ref_7 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 7 ;
+    art:texto "Ilias Chalkidis, Manos Fergadiotis, and Ion Androutsopoulos. Multieurlex-a multi-lingual and multi-label legal document classification dataset for zero-shot cross-lingual transfer. arXiv preprint arXiv:2109.00904, 2021." .
+
+art:artigo_2206_10883v3_ref_8 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 8 ;
+    art:texto "Ilias Chalkidis, Abhik Jana, Dirk Hartung, Michael Bommarito, Ion Androutsopoulos, Daniel Martin Katz, and Nikolaos Aletras. LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. arXiv:2110.00976 [cs] , March 2022. URL http: //arxiv.org/abs/2110.00976. arXiv: 2110.00976." .
+
+art:artigo_2206_10883v3_ref_9 a art:Referencia ;
+    art:anoReferencia "2016"^^xsd:gYear ;
+    art:ordem 9 ;
+    art:texto "Tianqi Chen, Bing Xu, Chiyuan Zhang, and Carlos Guestrin. Training deep nets with sublinear memory cost. arXiv preprint arXiv:1604.06174, 2016." .
+
+art:artigo_2206_10883v3_secao_10 a art:Apendice ;
+    art:numeroPalavras 8093 ;
+    art:ordem 10 ;
+    art:tituloSecao "Appendix: A Multi-LexSum release" .
+
+art:artigo_2206_10883v3_secao_3 a art:TrabalhosRelacionados ;
+    art:numeroPalavras 1359 ;
+    art:ordem 3 ;
+    art:tituloSecao "2 Related work" .
+
+art:artigo_2206_10883v3_secao_4 a art:OutraSecao ;
+    art:numeroPalavras 1326 ;
+    art:ordem 4 ;
+    art:tituloSecao "3 Multi-LexSum" .
+
+art:artigo_2206_10883v3_secao_5 a art:Resultados ;
+    art:numeroPalavras 1705 ;
+    art:ordem 5 ;
+    art:tituloSecao "4 Experiments" .
+
+art:artigo_2206_10883v3_secao_6 a art:Resultados ;
+    art:numeroPalavras 422 ;
+    art:ordem 6 ;
+    art:tituloSecao "5 Human evaluation" .
+
+art:artigo_2206_10883v3_secao_7 a art:Conclusao ;
+    art:numeroPalavras 236 ;
+    art:ordem 7 ;
+    art:tituloSecao "6 Conclusion" .
+
+art:artigo_2206_10883v3_secao_8 a art:Agradecimentos ;
+    art:numeroPalavras 153 ;
+    art:ordem 8 ;
+    art:tituloSecao "Acknowledgements" .
+
+art:artigo_2206_10883v3_secao_9 a art:SecaoReferencias ;
+    art:numeroPalavras 2179 ;
+    art:ordem 9 ;
+    art:tituloSecao "References" .
+
+art:artigo_2206_10883v3_tarefa_Geracao_de_texto_parafrase a art:Mencao ;
+    art:frequencia 2 ;
+    art:refereSe art:tarefa_Geracao_de_texto_parafrase .
+
+art:artigo_2206_10883v3_tarefa_Perguntas_e_respostas a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tarefa_Perguntas_e_respostas .
+
+art:artigo_2206_10883v3_tarefa_Recomendacao a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tarefa_Recomendacao .
+
+art:artigo_2206_10883v3_tarefa_Sumarizacao a art:Mencao ;
+    art:frequencia 43 ;
+    art:refereSe art:tarefa_Sumarizacao .
+
+art:artigo_2206_10883v3_tecnica_Agrupamento_clustering a art:Mencao ;
+    art:frequencia 2 ;
+    art:refereSe art:tecnica_Agrupamento_clustering .
+
+art:artigo_2206_10883v3_tecnica_BERT_modelos_pre_treinados a art:Mencao ;
+    art:frequencia 7 ;
+    art:refereSe art:tecnica_BERT_modelos_pre_treinados .
+
+art:artigo_2206_10883v3_tecnica_Beam_search a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tecnica_Beam_search .
+
+art:artigo_2206_10883v3_tecnica_CNN a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tecnica_CNN .
+
+art:artigo_2206_10883v3_tecnica_Fine_tuning_transfer_learning a art:Mencao ;
+    art:frequencia 5 ;
+    art:refereSe art:tecnica_Fine_tuning_transfer_learning .
+
+art:artigo_2206_10883v3_tecnica_LLM_GPT a art:Mencao ;
+    art:frequencia 2 ;
+    art:refereSe art:tecnica_LLM_GPT .
+
+art:artigo_2206_10883v3_tecnica_Modelo_de_linguagem a art:Mencao ;
+    art:frequencia 3 ;
+    art:refereSe art:tecnica_Modelo_de_linguagem .
+
+art:artigo_2206_10883v3_tecnica_N_gramas a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tecnica_N_gramas .
+
+art:artigo_2206_10883v3_tecnica_Naive_Bayes a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tecnica_Naive_Bayes .
+
+art:artigo_2206_10883v3_tecnica_Questionario_entrevista_estudo_com_usuarios a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tecnica_Questionario_entrevista_estudo_com_usuarios .
+
+art:artigo_2206_10883v3_tecnica_Transformer_atencao a art:Mencao ;
+    art:frequencia 2 ;
+    art:refereSe art:tecnica_Transformer_atencao .
+
+art:artigo_2206_10883v3_tecnica_Word_embeddings a art:Mencao ;
+    art:frequencia 2 ;
+    art:refereSe art:tecnica_Word_embeddings .
+
+art:artigo_2206_10883v3_termo_1 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_summary ;
+    art:frequencia 126 ;
+    art:posicaoRanking 1 .
+
+art:artigo_2206_10883v3_termo_10 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_generate ;
+    art:frequencia 28 ;
+    art:posicaoRanking 10 .
+
+art:artigo_2206_10883v3_termo_2 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_summarization ;
+    art:frequencia 58 ;
+    art:posicaoRanking 2 .
+
+art:artigo_2206_10883v3_termo_3 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_model ;
+    art:frequencia 53 ;
+    art:posicaoRanking 3 .
+
+art:artigo_2206_10883v3_termo_4 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_document ;
+    art:frequencia 47 ;
+    art:posicaoRanking 4 .
+
+art:artigo_2206_10883v3_termo_5 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_multi_lexsum ;
+    art:frequencia 43 ;
+    art:posicaoRanking 5 .
+
+art:artigo_2206_10883v3_termo_6 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_source ;
+    art:frequencia 41 ;
+    art:posicaoRanking 6 .
+
+art:artigo_2206_10883v3_termo_7 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_task ;
+    art:frequencia 31 ;
+    art:posicaoRanking 7 .
+
+art:artigo_2206_10883v3_termo_8 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_train ;
+    art:frequencia 29 ;
+    art:posicaoRanking 8 .
+
+art:artigo_2206_10883v3_termo_9 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_long ;
+    art:frequencia 29 ;
+    art:posicaoRanking 9 .
+
+art:artigo_2304_02623v1_metodo_1 a art:Metodo ;
+    art:extraidoDe art:artigo_2304_02623v1_secao_1 ;
+    art:pontuacao 4 ;
+    art:texto "We characterize expository writing as evidence-based and knowledge-generating: it contains summaries of external documents as well as new information or knowledge."@en .
+
+art:artigo_2304_02623v1_metodo_2 a art:Metodo ;
+    art:extraidoDe art:artigo_2304_02623v1_secao_1 ;
+    art:pontuacao 4 ;
+    art:texto "We sketch three components for AI support design and discuss considerations for future research."@en .
+
+art:artigo_2304_02623v1_metodo_3 a art:Metodo ;
+    art:extraidoDe art:artigo_2304_02623v1_secao_3 ;
+    art:pontuacao 3 ;
+    art:texto "For example, when starting writing a survey paper, the authors come up with the query to find relevant papers first, and AI helps execute the search and discover related documents; after authors read the retrieved papers and come up with ideas for the writing, AI can help generate the writing text based on authors' ideas, and the writers only need to proofread model output."@en .
+
+art:artigo_2304_02623v1_objetivo_1 a art:Objetivo ;
+    art:extraidoDe art:artigo_2304_02623v1_secao_1 ;
+    art:pontuacao 5 ;
+    art:texto "In this position paper, we argue that developing AI supports for expository writing has unique and exciting research challenges and can lead to high real-world impacts."@en .
+
+art:artigo_2304_02623v1_objetivo_2 a art:Objetivo ;
+    art:extraidoDe art:artigo_2304_02623v1_secao_6 ;
+    art:pontuacao 4 ;
+    art:texto "In this paper, we argue that the unique characteristics in expository writing open up new opportunities for designing AI support."@en .
+
+art:artigo_2304_02623v1_problema_1 a art:Problema ;
+    art:extraidoDe art:artigo_2304_02623v1_secao_1 ;
+    art:pontuacao 8 ;
+    art:texto "However, AI-supported expository writing - including real-world tasks like scholars writing literature reviews or doctors writing progress notes - is relatively understudied."@en .
+
+art:artigo_2304_02623v1_problema_2 a art:Problema ;
+    art:extraidoDe art:artigo_2304_02623v1_secao_3 ;
+    art:pontuacao 8 ;
+    art:texto "While prior work has explored many exciting applications for LLMs, we argue thatexpository writing is a task that is understudied in existing work on AI augmented writing."@en .
+
+art:artigo_2304_02623v1_ref_1 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 1 ;
+    art:texto "Griffin Adams, Emily Alsentzer, Mert Ketenci, Jason Zucker, and Noémie Elhadad. 2021. What's in a Summary? Laying the Groundwork for Advances in Hospital-Course Summarization. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. Association for Computational Linguistics, Online, 4794-4811. https://doi.org/10.18653/v1/2021.naacl-main.382" .
+
+art:artigo_2304_02623v1_ref_10 a art:Referencia ;
+    art:anoReferencia "1981"^^xsd:gYear ;
+    art:ordem 10 ;
+    art:texto "Linda Flower and John R Hayes. 1981. A cognitive process theory of writing. College composition and communication 32, 4 (1981), 365-387." .
+
+art:artigo_2304_02623v1_ref_11 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 11 ;
+    art:texto "K. Gero, Vivian Liu, and Lydia B. Chilton. 2021. Sparks: Inspiration for Science Writing using Language Models. Designing Interactive Systems Conference (2021)." .
+
+art:artigo_2304_02623v1_ref_12 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 12 ;
+    art:texto "Han L. Han, Junhang Yu, Raphael Bournet, Alexandre Ciorascu, Wendy E. Mackay, and Michel Beaudouin-Lafon. 2022. Passages: Interacting with Text Across Documents. Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems (2022)." .
+
+art:artigo_2304_02623v1_ref_13 a art:Referencia ;
+    art:anoReferencia "2000"^^xsd:gYear ;
+    art:ordem 13 ;
+    art:texto "John R Hayes. 2000. A new framework for understanding cognition and affect in writing. Perspectives on writing: Research, theory, and practice (2000), 6-44." .
+
+art:artigo_2304_02623v1_ref_14 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 14 ;
+    art:texto "Andrew Head, Kyle Lo, Dongyeop Kang, Raymond Fok, Sam Skjonsberg, Daniel S. Weld, and Marti A. Hearst. 2020. Augmenting Scientific Papers with Just-in-Time, Shen, et al. Position-Sensitive Definitions of Terms and Symbols. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (2020)." .
+
+art:artigo_2304_02623v1_ref_15 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 15 ;
+    art:texto "Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Yejin Bang, Andrea Madotto, and Pascale Fung. 2022. Survey of hallucination in natural language generation. Comput. Surveys (2022)." .
+
+art:artigo_2304_02623v1_ref_16 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 16 ;
+    art:texto "Hyeonsu B Kang, Joseph Chee Chang, Yongsung Kim, and Aniket Kittur. 2022. Threddy: An Interactive System for Personalized Thread-based Exploration and Organization of Scientific Literature. arXiv preprint arXiv:2208.03455 (2022)." .
+
+art:artigo_2304_02623v1_ref_17 a art:Referencia ;
+    art:anoReferencia "2023"^^xsd:gYear ;
+    art:ordem 17 ;
+    art:texto "Hyeonsu B Kang, Nouran Soliman, Matt Latzke, Joseph Chee Chang, and Joseph Chee Chang. 2023. ComLittee: Literature Discovery with Personal Elected Author Committees. ArXiv abs/2302.06780 (2023)." .
+
+art:artigo_2304_02623v1_ref_18 a art:Referencia ;
+    art:anoReferencia "2008"^^xsd:gYear ;
+    art:ordem 18 ;
+    art:texto "Amy JH Kind and Maureen A Smith. 2008. Documentation of mandated discharge summary components in transitions from acute to subacute care. Advances in patient safety: new directions and alternative approaches (Vol. 2: culture and redesign) (2008)." .
+
+art:artigo_2304_02623v1_ref_19 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 19 ;
+    art:texto "Daniel King, Zejiang Shen, Nishant Subramani, Daniel S. Weld, Iz Beltagy, and Doug Downey. 2022. Don't Say What You Don't Know: Improving the Consistency of Abstractive Summarization by Constraining Beam Search. ArXiv abs/2203.08436 (2022)." .
+
+art:artigo_2304_02623v1_ref_2 a art:Referencia ;
+    art:anoReferencia "1992"^^xsd:gYear ;
+    art:ordem 2 ;
+    art:texto "Alan Baddeley. 1992. Working memory. Science 255, 5044 (1992), 556-559." .
+
+art:artigo_2304_02623v1_ref_20 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 20 ;
+    art:texto "Takeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa. 2022. Large language models are zero-shot reasoners. arXiv preprint arXiv:2205.11916 (2022)." .
+
+art:artigo_2304_02623v1_ref_21 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 21 ;
+    art:texto "Mina Lee, Percy Liang, and Qian Yang. 2022. Coauthor: Designing a human-ai collaborative writing dataset for exploring language model capabilities. In Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems . 1-19." .
+
+art:artigo_2304_02623v1_ref_22 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 22 ;
+    art:texto "Piotr Mirowski, Kory W Mathewson, Jaylen Pittman, and Richard Evans. 2022. Co-writing screenplays and theatre scripts with language models: An evaluation by industry professionals. arXiv preprint arXiv:2209.14958 (2022)." .
+
+art:artigo_2304_02623v1_ref_23 a art:Referencia ;
+    art:anoReferencia "2023"^^xsd:gYear ;
+    art:ordem 23 ;
+    art:texto "Srishti Palani, Aakanksha Naik, Doug Downey, Amy X Zhang, Jonathan Bragg, and Joseph Chee Chang. 2023. Relatedly: Scaffolding Literature Reviews with Existing Related Work Sections. arXiv preprint arXiv:2302.06754 (2023)." .
+
+art:artigo_2304_02623v1_ref_24 a art:Referencia ;
+    art:anoReferencia "2007"^^xsd:gYear ;
+    art:ordem 24 ;
+    art:texto "Peter Pirolli. 2007. The Sensemaking Process and Leverage Points for Analyst Technology as Identified Through Cognitive Task Analysis." .
+
+art:artigo_2304_02623v1_ref_25 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 25 ;
+    art:texto "Napol Rachatasumrit, Jonathan Bragg, Amy X. Zhang, and Daniel S. Weld. 2022. CiteRead: Integrating Localized Citation Contexts into Scientific Paper Reading. 27th International Conference on Intelligent User Interfaces (2022)." .
+
+art:artigo_2304_02623v1_ref_26 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 26 ;
+    art:texto "Napol Rachatasumrit, Gonzalo A. Ramos, Jina Suh, Rachel Ng, and Christopher Meek. 2021. ForSense: Accelerating Online Research Through Sensemaking Integration and Machine Research Support. 26th International Conference on Intelligent User Interfaces (2021)." .
+
+art:artigo_2304_02623v1_ref_27 a art:Referencia ;
+    art:ordem 27 ;
+    art:texto "Jack W. Rae, Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, Sarah Henderson, Roman Ring, Susannah Young, Eliza Rutherford, Tom Hennigan, Jacob Menick, Albin Cassirer, Richard Powell, George van den Driessche, Lisa Anne Hendricks, Maribeth Rauh, Po-Sen Huang, Amelia Glaese, Johannes Welbl, Sumanth Dathathri, Saffron Huang, Jonathan Uesato, John F. J. Mellor, Irina Higgins, Antonia Creswell, Nathan McAleese, Amy Wu, Erich Elsen, Siddhant M. Jayakumar, Elena Buchatskaya, David Budden, Esme Sutherland, Karen Simonyan, Michela Paganini, L. Sifre, Lena" .
+
+art:artigo_2304_02623v1_ref_28 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 28 ;
+    art:texto "Nils Reimers and Iryna Gurevych. 2019. Sentence-bert: Sentence embeddings using siamese bert-networks. arXiv preprint arXiv:1908.10084 (2019)." .
+
+art:artigo_2304_02623v1_ref_29 a art:Referencia ;
+    art:anoReferencia "1993"^^xsd:gYear ;
+    art:ordem 29 ;
+    art:texto "Daniel M Russell, Mark J Stefik, Peter Pirolli, and Stuart K Card. 1993. The cost structure of sensemaking. In Proceedings of the INTERACT'93 and CHI'93 conference on Human factors in computing systems . 269-276." .
+
+art:artigo_2304_02623v1_ref_3 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 3 ;
+    art:texto "Sigall K Bell, Tom Delbanco, Joann G Elmore, Patricia S Fitzgerald, Alan Fossa, Kendall Harcourt, Suzanne G Leveille, Thomas H Payne, Rebecca A Stametz, Jan Walker, et al. 2020. Frequency and types of patient-reported errors in electronic health record ambulatory care notes. JAMA network open 3, 6 (2020), e205867- e205867." .
+
+art:artigo_2304_02623v1_ref_30 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 30 ;
+    art:texto "Zejiang Shen, Kyle Lo, Lauren Yu, Nathan Dahlberg, Margo Schlanger, and Doug Downey. 2022. Multi-LexSum: Real-World Summaries of Civil Rights Lawsuits at Multiple Granularities. arXiv preprint arXiv:2206.10883 (2022)." .
+
+art:artigo_2304_02623v1_ref_31 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 31 ;
+    art:texto "Nikhil Singh, Guillermo Bernal, Daria Savchenko, and Elena L Glassman. 2022. Where to hide a stolen elephant: Leaps in creative writing with multimodal machine intelligence. ACM Transactions on Computer-Human Interaction (2022)." .
+
+art:artigo_2304_02623v1_ref_32 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 32 ;
+    art:texto "Shaden Smith, Mostofa Patwary, Brandon Norick, Patrick LeGresley, Samyam Rajbhandari, Jared Casper, Zhun Liu, Shrimai Prabhumoye, George Zerveas, Vijay Anand Korthikanti, Elton Zhang, Rewon Child, Reza Yazdani Aminabadi, Julie Bernauer, Xia Song, Mohammad Shoeybi, Yuxiong He, Michael Houston, Saurabh Tiwary, and Bryan Catanzaro. 2022. Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model. ArXiv abs/2201.11990 (2022)." .
+
+art:artigo_2304_02623v1_ref_33 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 33 ;
+    art:texto "Kevin Yang, Nanyun Peng, Yuandong Tian, and Dan Klein. 2022. Re3: Generating longer stories with recursive reprompting and revision. arXiv preprint arXiv:2210.06774 (2022)." .
+
+art:artigo_2304_02623v1_ref_34 a art:Referencia ;
+    art:anoReferencia "2023"^^xsd:gYear ;
+    art:ordem 34 ;
+    art:texto "Tianyi Zhang, Faisal Ladhak, Esin Durmus, Percy Liang, Kathleen McKeown, and Tatsunori B. Hashimoto. 2023. Benchmarking Large Language Models for News Summarization. CoRR (2023). arXiv:2301.13848 [cs.CL] http://arxiv.org/ abs/2301.13848v1" .
+
+art:artigo_2304_02623v1_ref_35 a art:Referencia ;
+    art:anoReferencia "2019"^^xsd:gYear ;
+    art:ordem 35 ;
+    art:texto "Daniel M Ziegler, Nisan Stiennon, Jeffrey Wu, Tom B Brown, Alec Radford, Dario Amodei, Paul Christiano, and Geoffrey Irving. 2019. Fine-tuning language models from human preferences. arXiv preprint arXiv:1909.08593 (2019)." .
+
+art:artigo_2304_02623v1_ref_4 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 4 ;
+    art:texto "Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel Ziegler, Jeffrey Wu, Clemens Winter, Chris Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020. Language Models are Few-Shot Learners. In Advances in Neural Information Processing Systems, H. Larochelle, M. Ranzato, R" .
+
+art:artigo_2304_02623v1_ref_5 a art:Referencia ;
+    art:anoReferencia "2021"^^xsd:gYear ;
+    art:ordem 5 ;
+    art:texto "Arie Cattan, Sophie Johnson, Daniel Weld, Ido Dagan, Iz Beltagy, Doug Downey, and Tom Hope. 2021. Scico: Hierarchical cross-document coreference for scientific concepts. arXiv preprint arXiv:2104.08809 (2021)." .
+
+art:artigo_2304_02623v1_ref_6 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 6 ;
+    art:texto "Ruijia Cheng, Alison Smith-Renner, Ke Zhang, Joel R Tetreault, and Alejandro Jaimes. 2022. Mapping the design space of human-ai interaction in text summarization. arXiv preprint arXiv:2206.14863 (2022)." .
+
+art:artigo_2304_02623v1_ref_7 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 7 ;
+    art:texto "John Joon Young Chung, Wooseok Kim, Kang Min Yoo, Hwaran Lee, Eytan Adar, and Minsuk Chang. 2022. TaleBrush: sketching stories with generative pretrained language models. In Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems. 1-19." .
+
+art:artigo_2304_02623v1_ref_8 a art:Referencia ;
+    art:anoReferencia "2020"^^xsd:gYear ;
+    art:ordem 8 ;
+    art:texto "Arman Cohan, Sergey Feldman, Iz Beltagy, Doug Downey, and Daniel S. Weld. 2020. SPECTER: Document-level Representation Learning using Citationinformed Transformers. In Annual Meeting of the Association for Computational Linguistics." .
+
+art:artigo_2304_02623v1_ref_9 a art:Referencia ;
+    art:anoReferencia "2022"^^xsd:gYear ;
+    art:ordem 9 ;
+    art:texto "Joseph Chee Chang et al. 2022. CiteSee: Augmenting Citations in Scientific Papers with Persistent and Personalized Historical Context.ArXiv abs/2022.99999 (2022)." .
+
+art:artigo_2304_02623v1_secao_2 a art:OutraSecao ;
+    art:numeroPalavras 9 ;
+    art:ordem 2 ;
+    art:tituloSecao "KEYWORDS" .
+
+art:artigo_2304_02623v1_secao_4 a art:OutraSecao ;
+    art:numeroPalavras 202 ;
+    art:ordem 4 ;
+    art:tituloSecao "2 CHARACTERIZING EXPOSITORY" .
+
+art:artigo_2304_02623v1_secao_5 a art:Metodologia ;
+    art:numeroPalavras 862 ;
+    art:ordem 5 ;
+    art:tituloSecao "3 DESIGNING AI SUPPORTS FOR" .
+
+art:artigo_2304_02623v1_secao_7 a art:Agradecimentos ;
+    art:numeroPalavras 36 ;
+    art:ordem 7 ;
+    art:tituloSecao "ACKNOWLEDGMENTS" .
+
+art:artigo_2304_02623v1_secao_8 a art:SecaoReferencias ;
+    art:numeroPalavras 1324 ;
+    art:ordem 8 ;
+    art:tituloSecao "REFERENCES" .
+
+art:artigo_2304_02623v1_tarefa_Extracao_de_informacao_relacoes a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tarefa_Extracao_de_informacao_relacoes .
+
+art:artigo_2304_02623v1_tarefa_Geracao_de_texto_parafrase a art:Mencao ;
+    art:frequencia 2 ;
+    art:refereSe art:tarefa_Geracao_de_texto_parafrase .
+
+art:artigo_2304_02623v1_tarefa_Sumarizacao a art:Mencao ;
+    art:frequencia 8 ;
+    art:refereSe art:tarefa_Sumarizacao .
+
+art:artigo_2304_02623v1_tecnica_BERT_modelos_pre_treinados a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tecnica_BERT_modelos_pre_treinados .
+
+art:artigo_2304_02623v1_tecnica_Fine_tuning_transfer_learning a art:Mencao ;
+    art:frequencia 1 ;
+    art:refereSe art:tecnica_Fine_tuning_transfer_learning .
+
+art:artigo_2304_02623v1_tecnica_LLM_GPT a art:Mencao ;
+    art:frequencia 11 ;
+    art:refereSe art:tecnica_LLM_GPT .
+
+art:artigo_2304_02623v1_tecnica_Modelo_de_linguagem a art:Mencao ;
+    art:frequencia 7 ;
+    art:refereSe art:tecnica_Modelo_de_linguagem .
+
+art:artigo_2304_02623v1_tecnica_Questionario_entrevista_estudo_com_usuarios a art:Mencao ;
+    art:frequencia 2 ;
+    art:refereSe art:tecnica_Questionario_entrevista_estudo_com_usuarios .
+
+art:artigo_2304_02623v1_termo_1 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_write ;
+    art:frequencia 77 ;
+    art:posicaoRanking 1 .
+
+art:artigo_2304_02623v1_termo_10 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_model ;
+    art:frequencia 16 ;
+    art:posicaoRanking 10 .
+
+art:artigo_2304_02623v1_termo_2 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_author ;
+    art:frequencia 27 ;
+    art:posicaoRanking 2 .
+
+art:artigo_2304_02623v1_termo_3 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_support ;
+    art:frequencia 23 ;
+    art:posicaoRanking 3 .
+
+art:artigo_2304_02623v1_termo_4 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_expository ;
+    art:frequencia 23 ;
+    art:posicaoRanking 4 .
+
+art:artigo_2304_02623v1_termo_5 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_new ;
+    art:frequencia 22 ;
+    art:posicaoRanking 5 .
+
+art:artigo_2304_02623v1_termo_6 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_document ;
+    art:frequencia 22 ;
+    art:posicaoRanking 6 .
+
+art:artigo_2304_02623v1_termo_7 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_generation ;
+    art:frequencia 19 ;
+    art:posicaoRanking 7 .
+
+art:artigo_2304_02623v1_termo_8 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_source ;
+    art:frequencia 18 ;
+    art:posicaoRanking 8 .
+
+art:artigo_2304_02623v1_termo_9 a art:OcorrenciaTermo ;
+    art:doTermo art:termo_read ;
+    art:frequencia 17 ;
+    art:posicaoRanking 9 .
+
+art:tarefa_Analise_de_sentimentos a art:Tarefa ;
+    rdfs:label "Análise de sentimentos"@pt .
+
+art:tarefa_Analise_sintatica_parsing a art:Tarefa ;
+    rdfs:label "Análise sintática (parsing)"@pt .
+
+art:tarefa_Extracao_de_informacao_relacoes a art:Tarefa ;
+    rdfs:label "Extração de informação / relações"@pt .
+
+art:tarefa_Reconhecimento_de_entidades_NER a art:Tarefa ;
+    rdfs:label "Reconhecimento de entidades (NER)"@pt .
+
+art:tarefa_Recuperacao_de_informacao_busca a art:Tarefa ;
+    rdfs:label "Recuperação de informação / busca"@pt .
+
+art:tarefa_Traducao_automatica a art:Tarefa ;
+    rdfs:label "Tradução automática"@pt .
+
+art:tecnica_Agrupamento_clustering a art:Tecnica ;
+    rdfs:label "Agrupamento (clustering)"@pt .
+
+art:tecnica_Beam_search a art:Tecnica ;
+    rdfs:label "Beam search"@pt .
+
+art:tecnica_CNN a art:Tecnica ;
+    rdfs:label "CNN"@pt .
+
+art:tecnica_N_gramas a art:Tecnica ;
+    rdfs:label "N-gramas"@pt .
+
+art:tecnica_Naive_Bayes a art:Tecnica ;
+    rdfs:label "Naive Bayes"@pt .
+
+art:tecnica_Transformer_atencao a art:Tecnica ;
+    rdfs:label "Transformer / atenção"@pt .
+
+art:tecnica_Word_embeddings a art:Tecnica ;
+    rdfs:label "Word embeddings"@pt .
+
+art:termo_answer a art:Termo ;
+    art:lema "answer" ;
+    art:radical "answer" .
+
+art:termo_author a art:Termo ;
+    art:lema "author" ;
+    art:radical "author" .
+
+art:termo_expository a art:Termo ;
+    art:lema "expository" ;
+    art:radical "expositori" .
+
+art:termo_generate a art:Termo ;
+    art:lema "generate" ;
+    art:radical "gener" .
+
+art:termo_generation a art:Termo ;
+    art:lema "generation" ;
+    art:radical "gener" .
+
+art:termo_gist a art:Termo ;
+    art:lema "gist" ;
+    art:radical "gist" .
+
+art:termo_information a art:Termo ;
+    art:lema "information" ;
+    art:radical "inform" .
+
+art:termo_long a art:Termo ;
+    art:lema "long" ;
+    art:radical "long" .
+
+art:termo_medical a art:Termo ;
+    art:lema "medical" ;
+    art:radical "medic" .
+
+art:termo_multi_lexsum a art:Termo ;
+    art:lema "multi-lexsum" ;
+    art:radical "multi-lexsum" .
+
+art:termo_new a art:Termo ;
+    art:lema "new" ;
+    art:radical "new" .
+
+art:termo_participant a art:Termo ;
+    art:lema "participant" ;
+    art:radical "particip" .
+
+art:termo_plain a art:Termo ;
+    art:lema "plain" ;
+    art:radical "plain" .
+
+art:termo_question a art:Termo ;
+    art:lema "question" ;
+    art:radical "question" .
+
+art:termo_reader a art:Termo ;
+    art:lema "reader" ;
+    art:radical "reader" .
+
+art:termo_research a art:Termo ;
+    art:lema "research" ;
+    art:radical "research" .
+
+art:termo_summarization a art:Termo ;
+    art:lema "summarization" ;
+    art:radical "summar" .
+
+art:termo_summary a art:Termo ;
+    art:lema "summary" ;
+    art:radical "summari" .
+
+art:termo_support a art:Termo ;
+    art:lema "support" ;
+    art:radical "support" .
+
+art:termo_task a art:Termo ;
+    art:lema "task" ;
+    art:radical "task" .
+
+art:termo_train a art:Termo ;
+    art:lema "train" ;
+    art:radical "train" .
+
+art:termo_write a art:Termo ;
+    art:lema "write" ;
+    art:radical "write" .
+
+art:Apendice a owl:Class ;
+    rdfs:label "Apêndice"@pt ;
+    rdfs:subClassOf art:Secao .
+
+art:Autor a owl:Class ;
+    rdfs:label "Autor"@pt .
+
+art:Metodologia a owl:Class ;
+    rdfs:label "Metodologia"@pt ;
+    rdfs:subClassOf art:Secao .
+
+art:Resumo a owl:Class ;
+    rdfs:label "Resumo (Abstract)"@pt ;
+    rdfs:subClassOf art:Secao .
+
+art:TrabalhosRelacionados a owl:Class ;
+    rdfs:label "Trabalhos relacionados"@pt ;
+    rdfs:subClassOf art:Secao .
+
+art:artigo_2304_02623v1_secao_6 a art:Conclusao ;
+    art:numeroPalavras 51 ;
+    art:ordem 6 ;
+    art:tituloSecao "4 CONCLUSION" .
+
+art:tarefa_Perguntas_e_respostas a art:Tarefa ;
+    rdfs:label "Perguntas e respostas"@pt .
+
+art:tarefa_Recomendacao a art:Tarefa ;
+    rdfs:label "Recomendação"@pt .
+
+art:tecnica_BERT_modelos_pre_treinados a art:Tecnica ;
+    rdfs:label "BERT / modelos pré-treinados"@pt .
+
+art:tecnica_Fine_tuning_transfer_learning a art:Tecnica ;
+    rdfs:label "Fine-tuning / transfer learning"@pt .
+
+art:tecnica_Modelo_de_linguagem a art:Tecnica ;
+    rdfs:label "Modelo de linguagem"@pt .
+
+art:termo_document a art:Termo ;
+    art:lema "document" ;
+    art:radical "document" .
+
+art:termo_model a art:Termo ;
+    art:lema "model" ;
+    art:radical "model" .
+
+art:termo_read a art:Termo ;
+    art:lema "read" ;
+    art:radical "read" .
+
+art:termo_source a art:Termo ;
+    art:lema "source" ;
+    art:radical "sourc" .
+
+art:Agradecimentos a owl:Class ;
+    rdfs:label "Agradecimentos"@pt ;
+    rdfs:subClassOf art:Secao .
+
+art:Introducao a owl:Class ;
+    rdfs:label "Introdução"@pt ;
+    rdfs:subClassOf art:Secao .
+
+art:Resultados a owl:Class ;
+    rdfs:label "Resultados / Experimentos"@pt ;
+    rdfs:subClassOf art:Secao .
+
+art:SecaoReferencias a owl:Class ;
+    rdfs:label "Referências"@pt ;
+    rdfs:subClassOf art:Secao .
+
+art:artigo_2304_02623v1_secao_3 a art:Introducao ;
+    art:numeroPalavras 1005 ;
+    art:ordem 3 ;
+    art:tituloSecao "1 INTRODUCTION" .
+
+art:tarefa_Geracao_de_texto_parafrase a art:Tarefa ;
+    rdfs:label "Geração de texto / paráfrase"@pt .
+
+art:tarefa_Sumarizacao a art:Tarefa ;
+    rdfs:label "Sumarização"@pt .
+
+art:tecnica_LLM_GPT a art:Tecnica ;
+    rdfs:label "LLM / GPT"@pt .
+
+art:tecnica_Questionario_entrevista_estudo_com_usuarios a art:Tecnica ;
+    rdfs:label "Questionário / entrevista / estudo com usuários"@pt .
+
+art:Conclusao a owl:Class ;
+    rdfs:label "Conclusão"@pt ;
+    rdfs:subClassOf art:Secao .
+
+art:Corpus a owl:Class ;
+    rdfs:label "Corpus"@pt ;
+    rdfs:comment "Conjunto de artigos analisados sobre um mesmo tema."@pt .
+
+art:artigo_2206_10883v3_secao_1 a art:Resumo ;
+    art:numeroPalavras 212 ;
+    art:ordem 1 ;
+    art:tituloSecao "Abstract" .
+
+art:artigo_2206_10883v3_secao_2 a art:Introducao ;
+    art:numeroPalavras 630 ;
+    art:ordem 2 ;
+    art:tituloSecao "1 Introduction" .
+
+art:Similaridade a owl:Class ;
+    rdfs:label "Similaridade entre artigos"@pt ;
+    rdfs:comment "Valor do cosseno TF-IDF entre dois artigos."@pt .
+
+art:artigo_2203_00130v1 a art:ArtigoCientifico ;
+    rdfs:label "Paper Plain: Making Medical Research Papers Approachable to Healthcare Consumers with Natural Language Processing" ;
+    art:ano "2022"^^xsd:gYear ;
+    art:citaReferencia art:artigo_2203_00130v1_ref_1,
+        art:artigo_2203_00130v1_ref_10,
+        art:artigo_2203_00130v1_ref_100,
+        art:artigo_2203_00130v1_ref_101,
+        art:artigo_2203_00130v1_ref_102,
+        art:artigo_2203_00130v1_ref_103,
+        art:artigo_2203_00130v1_ref_104,
+        art:artigo_2203_00130v1_ref_105,
+        art:artigo_2203_00130v1_ref_106,
+        art:artigo_2203_00130v1_ref_107,
+        art:artigo_2203_00130v1_ref_108,
+        art:artigo_2203_00130v1_ref_109,
+        art:artigo_2203_00130v1_ref_11,
+        art:artigo_2203_00130v1_ref_110,
+        art:artigo_2203_00130v1_ref_111,
+        art:artigo_2203_00130v1_ref_12,
+        art:artigo_2203_00130v1_ref_13,
+        art:artigo_2203_00130v1_ref_14,
+        art:artigo_2203_00130v1_ref_15,
+        art:artigo_2203_00130v1_ref_16,
+        art:artigo_2203_00130v1_ref_17,
+        art:artigo_2203_00130v1_ref_18,
+        art:artigo_2203_00130v1_ref_19,
+        art:artigo_2203_00130v1_ref_2,
+        art:artigo_2203_00130v1_ref_20,
+        art:artigo_2203_00130v1_ref_21,
+        art:artigo_2203_00130v1_ref_22,
+        art:artigo_2203_00130v1_ref_23,
+        art:artigo_2203_00130v1_ref_24,
+        art:artigo_2203_00130v1_ref_25,
+        art:artigo_2203_00130v1_ref_26,
+        art:artigo_2203_00130v1_ref_27,
+        art:artigo_2203_00130v1_ref_28,
+        art:artigo_2203_00130v1_ref_29,
+        art:artigo_2203_00130v1_ref_3,
+        art:artigo_2203_00130v1_ref_30,
+        art:artigo_2203_00130v1_ref_31,
+        art:artigo_2203_00130v1_ref_32,
+        art:artigo_2203_00130v1_ref_33,
+        art:artigo_2203_00130v1_ref_34,
+        art:artigo_2203_00130v1_ref_35,
+        art:artigo_2203_00130v1_ref_36,
+        art:artigo_2203_00130v1_ref_37,
+        art:artigo_2203_00130v1_ref_38,
+        art:artigo_2203_00130v1_ref_39,
+        art:artigo_2203_00130v1_ref_4,
+        art:artigo_2203_00130v1_ref_40,
+        art:artigo_2203_00130v1_ref_41,
+        art:artigo_2203_00130v1_ref_42,
+        art:artigo_2203_00130v1_ref_43,
+        art:artigo_2203_00130v1_ref_44,
+        art:artigo_2203_00130v1_ref_45,
+        art:artigo_2203_00130v1_ref_46,
+        art:artigo_2203_00130v1_ref_47,
+        art:artigo_2203_00130v1_ref_48,
+        art:artigo_2203_00130v1_ref_49,
+        art:artigo_2203_00130v1_ref_5,
+        art:artigo_2203_00130v1_ref_50,
+        art:artigo_2203_00130v1_ref_51,
+        art:artigo_2203_00130v1_ref_52,
+        art:artigo_2203_00130v1_ref_53,
+        art:artigo_2203_00130v1_ref_54,
+        art:artigo_2203_00130v1_ref_55,
+        art:artigo_2203_00130v1_ref_56,
+        art:artigo_2203_00130v1_ref_57,
+        art:artigo_2203_00130v1_ref_58,
+        art:artigo_2203_00130v1_ref_59,
+        art:artigo_2203_00130v1_ref_6,
+        art:artigo_2203_00130v1_ref_60,
+        art:artigo_2203_00130v1_ref_61,
+        art:artigo_2203_00130v1_ref_62,
+        art:artigo_2203_00130v1_ref_63,
+        art:artigo_2203_00130v1_ref_64,
+        art:artigo_2203_00130v1_ref_65,
+        art:artigo_2203_00130v1_ref_66,
+        art:artigo_2203_00130v1_ref_67,
+        art:artigo_2203_00130v1_ref_68,
+        art:artigo_2203_00130v1_ref_69,
+        art:artigo_2203_00130v1_ref_7,
+        art:artigo_2203_00130v1_ref_70,
+        art:artigo_2203_00130v1_ref_71,
+        art:artigo_2203_00130v1_ref_72,
+        art:artigo_2203_00130v1_ref_73,
+        art:artigo_2203_00130v1_ref_74,
+        art:artigo_2203_00130v1_ref_75,
+        art:artigo_2203_00130v1_ref_76,
+        art:artigo_2203_00130v1_ref_77,
+        art:artigo_2203_00130v1_ref_78,
+        art:artigo_2203_00130v1_ref_79,
+        art:artigo_2203_00130v1_ref_8,
+        art:artigo_2203_00130v1_ref_80,
+        art:artigo_2203_00130v1_ref_81,
+        art:artigo_2203_00130v1_ref_82,
+        art:artigo_2203_00130v1_ref_83,
+        art:artigo_2203_00130v1_ref_84,
+        art:artigo_2203_00130v1_ref_85,
+        art:artigo_2203_00130v1_ref_86,
+        art:artigo_2203_00130v1_ref_87,
+        art:artigo_2203_00130v1_ref_88,
+        art:artigo_2203_00130v1_ref_89,
+        art:artigo_2203_00130v1_ref_9,
+        art:artigo_2203_00130v1_ref_90,
+        art:artigo_2203_00130v1_ref_91,
+        art:artigo_2203_00130v1_ref_92,
+        art:artigo_2203_00130v1_ref_93,
+        art:artigo_2203_00130v1_ref_94,
+        art:artigo_2203_00130v1_ref_95,
+        art:artigo_2203_00130v1_ref_96,
+        art:artigo_2203_00130v1_ref_97,
+        art:artigo_2203_00130v1_ref_98,
+        art:artigo_2203_00130v1_ref_99 ;
+    art:mencionaTarefa art:artigo_2203_00130v1_tarefa_Analise_de_sentimentos,
+        art:artigo_2203_00130v1_tarefa_Analise_sintatica_parsing,
+        art:artigo_2203_00130v1_tarefa_Geracao_de_texto_parafrase,
+        art:artigo_2203_00130v1_tarefa_Perguntas_e_respostas,
+        art:artigo_2203_00130v1_tarefa_Recomendacao,
+        art:artigo_2203_00130v1_tarefa_Reconhecimento_de_entidades_NER,
+        art:artigo_2203_00130v1_tarefa_Recuperacao_de_informacao_busca,
+        art:artigo_2203_00130v1_tarefa_Sumarizacao,
+        art:artigo_2203_00130v1_tarefa_Traducao_automatica ;
+    art:mencionaTecnica art:artigo_2203_00130v1_tecnica_LLM_GPT,
+        art:artigo_2203_00130v1_tecnica_Questionario_entrevista_estudo_com_usuarios ;
+    art:nomeArquivo "2203.00130v1.pdf" ;
+    art:numeroPaginas 39 ;
+    art:numeroReferencias 111 ;
+    art:similarA art:artigo_2206_10883v3,
+        art:artigo_2304_02623v1 ;
+    art:temContribuicao art:artigo_2203_00130v1_contribuicao_1,
+        art:artigo_2203_00130v1_contribuicao_2,
+        art:artigo_2203_00130v1_contribuicao_3 ;
+    art:temMetodo art:artigo_2203_00130v1_metodo_1,
+        art:artigo_2203_00130v1_metodo_2,
+        art:artigo_2203_00130v1_metodo_3 ;
+    art:temObjetivo art:artigo_2203_00130v1_objetivo_1,
+        art:artigo_2203_00130v1_objetivo_2 ;
+    art:temOcorrencia art:artigo_2203_00130v1_termo_1,
+        art:artigo_2203_00130v1_termo_10,
+        art:artigo_2203_00130v1_termo_2,
+        art:artigo_2203_00130v1_termo_3,
+        art:artigo_2203_00130v1_termo_4,
+        art:artigo_2203_00130v1_termo_5,
+        art:artigo_2203_00130v1_termo_6,
+        art:artigo_2203_00130v1_termo_7,
+        art:artigo_2203_00130v1_termo_8,
+        art:artigo_2203_00130v1_termo_9 ;
+    art:temProblema art:artigo_2203_00130v1_problema_1,
+        art:artigo_2203_00130v1_problema_2 ;
+    art:temSecao art:artigo_2203_00130v1_secao_1,
+        art:artigo_2203_00130v1_secao_10,
+        art:artigo_2203_00130v1_secao_11,
+        art:artigo_2203_00130v1_secao_12,
+        art:artigo_2203_00130v1_secao_13,
+        art:artigo_2203_00130v1_secao_14,
+        art:artigo_2203_00130v1_secao_2,
+        art:artigo_2203_00130v1_secao_3,
+        art:artigo_2203_00130v1_secao_4,
+        art:artigo_2203_00130v1_secao_5,
+        art:artigo_2203_00130v1_secao_6,
+        art:artigo_2203_00130v1_secao_7,
+        art:artigo_2203_00130v1_secao_8,
+        art:artigo_2203_00130v1_secao_9 ;
+    art:temTrabalhoFuturo art:artigo_2203_00130v1_trabalho_futuro_1,
+        art:artigo_2203_00130v1_trabalho_futuro_2,
+        art:artigo_2203_00130v1_trabalho_futuro_3,
+        art:artigo_2203_00130v1_trabalho_futuro_4 ;
+    art:titulo "Paper Plain: Making Medical Research Papers Approachable to Healthcare Consumers with Natural Language Processing"@en .
+
+art:artigo_2206_10883v3 a art:ArtigoCientifico ;
+    rdfs:label "Multi-LexSum: Real-World Summaries of Civil Rights Lawsuits at Multiple Granularities" ;
+    art:ano "2022"^^xsd:gYear ;
+    art:citaReferencia art:artigo_2206_10883v3_ref_1,
+        art:artigo_2206_10883v3_ref_10,
+        art:artigo_2206_10883v3_ref_11,
+        art:artigo_2206_10883v3_ref_12,
+        art:artigo_2206_10883v3_ref_13,
+        art:artigo_2206_10883v3_ref_14,
+        art:artigo_2206_10883v3_ref_15,
+        art:artigo_2206_10883v3_ref_16,
+        art:artigo_2206_10883v3_ref_17,
+        art:artigo_2206_10883v3_ref_18,
+        art:artigo_2206_10883v3_ref_19,
+        art:artigo_2206_10883v3_ref_2,
+        art:artigo_2206_10883v3_ref_20,
+        art:artigo_2206_10883v3_ref_21,
+        art:artigo_2206_10883v3_ref_22,
+        art:artigo_2206_10883v3_ref_23,
+        art:artigo_2206_10883v3_ref_24,
+        art:artigo_2206_10883v3_ref_25,
+        art:artigo_2206_10883v3_ref_26,
+        art:artigo_2206_10883v3_ref_27,
+        art:artigo_2206_10883v3_ref_28,
+        art:artigo_2206_10883v3_ref_29,
+        art:artigo_2206_10883v3_ref_3,
+        art:artigo_2206_10883v3_ref_30,
+        art:artigo_2206_10883v3_ref_31,
+        art:artigo_2206_10883v3_ref_32,
+        art:artigo_2206_10883v3_ref_33,
+        art:artigo_2206_10883v3_ref_34,
+        art:artigo_2206_10883v3_ref_35,
+        art:artigo_2206_10883v3_ref_36,
+        art:artigo_2206_10883v3_ref_37,
+        art:artigo_2206_10883v3_ref_38,
+        art:artigo_2206_10883v3_ref_39,
+        art:artigo_2206_10883v3_ref_4,
+        art:artigo_2206_10883v3_ref_40,
+        art:artigo_2206_10883v3_ref_41,
+        art:artigo_2206_10883v3_ref_42,
+        art:artigo_2206_10883v3_ref_43,
+        art:artigo_2206_10883v3_ref_44,
+        art:artigo_2206_10883v3_ref_45,
+        art:artigo_2206_10883v3_ref_46,
+        art:artigo_2206_10883v3_ref_47,
+        art:artigo_2206_10883v3_ref_48,
+        art:artigo_2206_10883v3_ref_49,
+        art:artigo_2206_10883v3_ref_5,
+        art:artigo_2206_10883v3_ref_50,
+        art:artigo_2206_10883v3_ref_51,
+        art:artigo_2206_10883v3_ref_52,
+        art:artigo_2206_10883v3_ref_53,
+        art:artigo_2206_10883v3_ref_54,
+        art:artigo_2206_10883v3_ref_55,
+        art:artigo_2206_10883v3_ref_56,
+        art:artigo_2206_10883v3_ref_57,
+        art:artigo_2206_10883v3_ref_58,
+        art:artigo_2206_10883v3_ref_59,
+        art:artigo_2206_10883v3_ref_6,
+        art:artigo_2206_10883v3_ref_60,
+        art:artigo_2206_10883v3_ref_61,
+        art:artigo_2206_10883v3_ref_62,
+        art:artigo_2206_10883v3_ref_63,
+        art:artigo_2206_10883v3_ref_64,
+        art:artigo_2206_10883v3_ref_7,
+        art:artigo_2206_10883v3_ref_8,
+        art:artigo_2206_10883v3_ref_9 ;
+    art:mencionaTarefa art:artigo_2206_10883v3_tarefa_Geracao_de_texto_parafrase,
+        art:artigo_2206_10883v3_tarefa_Perguntas_e_respostas,
+        art:artigo_2206_10883v3_tarefa_Recomendacao,
+        art:artigo_2206_10883v3_tarefa_Sumarizacao ;
+    art:mencionaTecnica art:artigo_2206_10883v3_tecnica_Agrupamento_clustering,
+        art:artigo_2206_10883v3_tecnica_BERT_modelos_pre_treinados,
+        art:artigo_2206_10883v3_tecnica_Beam_search,
+        art:artigo_2206_10883v3_tecnica_CNN,
+        art:artigo_2206_10883v3_tecnica_Fine_tuning_transfer_learning,
+        art:artigo_2206_10883v3_tecnica_LLM_GPT,
+        art:artigo_2206_10883v3_tecnica_Modelo_de_linguagem,
+        art:artigo_2206_10883v3_tecnica_N_gramas,
+        art:artigo_2206_10883v3_tecnica_Naive_Bayes,
+        art:artigo_2206_10883v3_tecnica_Questionario_entrevista_estudo_com_usuarios,
+        art:artigo_2206_10883v3_tecnica_Transformer_atencao,
+        art:artigo_2206_10883v3_tecnica_Word_embeddings ;
+    art:nomeArquivo "2206.10883v3.pdf" ;
+    art:numeroPaginas 37 ;
+    art:numeroReferencias 64 ;
+    art:similarA art:artigo_2203_00130v1,
+        art:artigo_2304_02623v1 ;
+    art:temContribuicao art:artigo_2206_10883v3_contribuicao_1 ;
+    art:temMetodo art:artigo_2206_10883v3_metodo_1 ;
+    art:temObjetivo art:artigo_2206_10883v3_objetivo_1,
+        art:artigo_2206_10883v3_objetivo_2 ;
+    art:temOcorrencia art:artigo_2206_10883v3_termo_1,
+        art:artigo_2206_10883v3_termo_10,
+        art:artigo_2206_10883v3_termo_2,
+        art:artigo_2206_10883v3_termo_3,
+        art:artigo_2206_10883v3_termo_4,
+        art:artigo_2206_10883v3_termo_5,
+        art:artigo_2206_10883v3_termo_6,
+        art:artigo_2206_10883v3_termo_7,
+        art:artigo_2206_10883v3_termo_8,
+        art:artigo_2206_10883v3_termo_9 ;
+    art:temProblema art:artigo_2206_10883v3_problema_1,
+        art:artigo_2206_10883v3_problema_2 ;
+    art:temSecao art:artigo_2206_10883v3_secao_1,
+        art:artigo_2206_10883v3_secao_10,
+        art:artigo_2206_10883v3_secao_2,
+        art:artigo_2206_10883v3_secao_3,
+        art:artigo_2206_10883v3_secao_4,
+        art:artigo_2206_10883v3_secao_5,
+        art:artigo_2206_10883v3_secao_6,
+        art:artigo_2206_10883v3_secao_7,
+        art:artigo_2206_10883v3_secao_8,
+        art:artigo_2206_10883v3_secao_9 ;
+    art:titulo "Multi-LexSum: Real-World Summaries of Civil Rights Lawsuits at Multiple Granularities"@en .
+
+art:artigo_2304_02623v1 a art:ArtigoCientifico ;
+    rdfs:label "Beyond Summarization: Designing AI Support for Real-World Expository Writing Tasks" ;
+    art:ano "2023"^^xsd:gYear ;
+    art:citaReferencia art:artigo_2304_02623v1_ref_1,
+        art:artigo_2304_02623v1_ref_10,
+        art:artigo_2304_02623v1_ref_11,
+        art:artigo_2304_02623v1_ref_12,
+        art:artigo_2304_02623v1_ref_13,
+        art:artigo_2304_02623v1_ref_14,
+        art:artigo_2304_02623v1_ref_15,
+        art:artigo_2304_02623v1_ref_16,
+        art:artigo_2304_02623v1_ref_17,
+        art:artigo_2304_02623v1_ref_18,
+        art:artigo_2304_02623v1_ref_19,
+        art:artigo_2304_02623v1_ref_2,
+        art:artigo_2304_02623v1_ref_20,
+        art:artigo_2304_02623v1_ref_21,
+        art:artigo_2304_02623v1_ref_22,
+        art:artigo_2304_02623v1_ref_23,
+        art:artigo_2304_02623v1_ref_24,
+        art:artigo_2304_02623v1_ref_25,
+        art:artigo_2304_02623v1_ref_26,
+        art:artigo_2304_02623v1_ref_27,
+        art:artigo_2304_02623v1_ref_28,
+        art:artigo_2304_02623v1_ref_29,
+        art:artigo_2304_02623v1_ref_3,
+        art:artigo_2304_02623v1_ref_30,
+        art:artigo_2304_02623v1_ref_31,
+        art:artigo_2304_02623v1_ref_32,
+        art:artigo_2304_02623v1_ref_33,
+        art:artigo_2304_02623v1_ref_34,
+        art:artigo_2304_02623v1_ref_35,
+        art:artigo_2304_02623v1_ref_4,
+        art:artigo_2304_02623v1_ref_5,
+        art:artigo_2304_02623v1_ref_6,
+        art:artigo_2304_02623v1_ref_7,
+        art:artigo_2304_02623v1_ref_8,
+        art:artigo_2304_02623v1_ref_9 ;
+    art:mencionaTarefa art:artigo_2304_02623v1_tarefa_Extracao_de_informacao_relacoes,
+        art:artigo_2304_02623v1_tarefa_Geracao_de_texto_parafrase,
+        art:artigo_2304_02623v1_tarefa_Sumarizacao ;
+    art:mencionaTecnica art:artigo_2304_02623v1_tecnica_BERT_modelos_pre_treinados,
+        art:artigo_2304_02623v1_tecnica_Fine_tuning_transfer_learning,
+        art:artigo_2304_02623v1_tecnica_LLM_GPT,
+        art:artigo_2304_02623v1_tecnica_Modelo_de_linguagem,
+        art:artigo_2304_02623v1_tecnica_Questionario_entrevista_estudo_com_usuarios ;
+    art:nomeArquivo "2304.02623v1.pdf" ;
+    art:numeroPaginas 4 ;
+    art:numeroReferencias 35 ;
+    art:similarA art:artigo_2203_00130v1,
+        art:artigo_2206_10883v3 ;
+    art:temMetodo art:artigo_2304_02623v1_metodo_1,
+        art:artigo_2304_02623v1_metodo_2,
+        art:artigo_2304_02623v1_metodo_3 ;
+    art:temObjetivo art:artigo_2304_02623v1_objetivo_1,
+        art:artigo_2304_02623v1_objetivo_2 ;
+    art:temOcorrencia art:artigo_2304_02623v1_termo_1,
+        art:artigo_2304_02623v1_termo_10,
+        art:artigo_2304_02623v1_termo_2,
+        art:artigo_2304_02623v1_termo_3,
+        art:artigo_2304_02623v1_termo_4,
+        art:artigo_2304_02623v1_termo_5,
+        art:artigo_2304_02623v1_termo_6,
+        art:artigo_2304_02623v1_termo_7,
+        art:artigo_2304_02623v1_termo_8,
+        art:artigo_2304_02623v1_termo_9 ;
+    art:temProblema art:artigo_2304_02623v1_problema_1,
+        art:artigo_2304_02623v1_problema_2 ;
+    art:temSecao art:artigo_2304_02623v1_secao_1,
+        art:artigo_2304_02623v1_secao_2,
+        art:artigo_2304_02623v1_secao_3,
+        art:artigo_2304_02623v1_secao_4,
+        art:artigo_2304_02623v1_secao_5,
+        art:artigo_2304_02623v1_secao_6,
+        art:artigo_2304_02623v1_secao_7,
+        art:artigo_2304_02623v1_secao_8 ;
+    art:titulo "Beyond Summarization: Designing AI Support for Real-World Expository Writing Tasks"@en .
+
+art:artigo_2304_02623v1_secao_1 a art:Resumo ;
+    art:numeroPalavras 160 ;
+    art:ordem 1 ;
+    art:tituloSecao "ABSTRACT" .
+
+art:temElemento a owl:ObjectProperty ;
+    rdfs:domain art:ArtigoCientifico ;
+    rdfs:range art:ElementoRetorico .
+
+art:Contribuicao a owl:Class ;
+    rdfs:label "Contribuição"@pt ;
+    rdfs:comment "O que o artigo acrescenta à área (resultado entregue), diferente do objetivo."@pt ;
+    rdfs:subClassOf art:ElementoRetorico .
+
+art:TrabalhoFuturo a owl:Class ;
+    rdfs:label "Trabalho futuro"@pt ;
+    rdfs:subClassOf art:ElementoRetorico .
+
+art:artigo_2203_00130v1_secao_10 a art:Conclusao ;
+    art:numeroPalavras 2011 ;
+    art:ordem 10 ;
+    art:tituloSecao "8 DISCUSSION & FUTURE WORK" .
+
+art:ElementoRetorico a owl:Class ;
+    rdfs:label "Elemento retórico"@pt ;
+    rdfs:comment "Trecho do artigo que cumpre um papel no discurso científico."@pt ;
+    rdfs:seeAlso <http://purl.org/spar/deo/DiscourseElement> .
+
+art:Metodo a owl:Class ;
+    rdfs:label "Método"@pt ;
+    rdfs:comment "Como o trabalho foi feito: técnica, modelo, dados, experimento, survey, entrevistas."@pt ;
+    rdfs:subClassOf art:ElementoRetorico .
+
+art:Objetivo a owl:Class ;
+    rdfs:label "Objetivo"@pt ;
+    rdfs:comment "O que o artigo pretende fazer (intenção)."@pt ;
+    rdfs:subClassOf art:ElementoRetorico .
+
+art:OutraSecao a owl:Class ;
+    rdfs:label "Outra seção"@pt ;
+    rdfs:subClassOf art:Secao .
+
+art:Problema a owl:Class ;
+    rdfs:label "Problema"@pt ;
+    rdfs:comment "Lacuna, dificuldade ou limitação que motiva o trabalho."@pt ;
+    rdfs:subClassOf art:ElementoRetorico .
+
+art:artigo_2203_00130v1_secao_3 a art:Introducao ;
+    art:numeroPalavras 1894 ;
+    art:ordem 3 ;
+    art:tituloSecao "1 INTRODUCTION" .
+
+art:Tarefa a owl:Class ;
+    rdfs:label "Tarefa de PLN"@pt ;
+    rdfs:comment "Problema/tarefa da área (ex.: tradução automática, sumarização)."@pt ;
+    rdfs:subClassOf art:Termo .
+
+art:Tecnica a owl:Class ;
+    rdfs:label "Técnica"@pt ;
+    rdfs:comment "Técnica ou modelo da área (ex.: CRF, SVM, Transformer)."@pt ;
+    rdfs:subClassOf art:Termo .
+
+art:ArtigoCientifico a owl:Class ;
+    rdfs:label "Research paper"@en,
+        "Artigo científico"@pt ;
+    rdfs:seeAlso <http://purl.org/spar/fabio/ResearchPaper> .
+
+art:Secao a owl:Class ;
+    rdfs:label "Seção"@pt ;
+    rdfs:seeAlso <http://purl.org/spar/doco/Section> .
+
+art:Termo a owl:Class ;
+    rdfs:label "Termo"@pt ;
+    rdfs:comment "Palavra (lema) do vocabulário do corpus."@pt .
+
+art:OcorrenciaTermo a owl:Class ;
+    rdfs:label "Ocorrência de termo"@pt ;
+    rdfs:comment "Liga um artigo a um termo com a sua frequência (relação n-ária)."@pt .
+
+art:Mencao a owl:Class ;
+    rdfs:label "Menção"@pt ;
+    rdfs:comment "Quantas vezes um artigo menciona uma técnica ou tarefa."@pt .
+
+art:Referencia a owl:Class ;
+    rdfs:label "Referência bibliográfica"@pt ;
+    rdfs:seeAlso <http://purl.org/spar/biro/BibliographicReference> .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( art:Objetivo art:Contribuicao art:Problema art:TrabalhoFuturo ) .
+

@@ -1,0 +1,181 @@
+@prefix art:  <http://www.din.uem.br/iia/artigo#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# =====================================================================
+# Ontologia da estrutura de um artigo científico
+# Trabalho 2 - Introdução à Inteligência Artificial - DIN/UEM
+#
+# Modelagem (TBox). As instâncias (ABox) são geradas pelo programa e
+# gravadas em saida/ontologia_artigos.ttl e saida/ontologia_artigos.jsonld.
+# Inspirada nas ontologias SPAR (FaBiO, DoCO e DEO), mas simplificada.
+# =====================================================================
+
+<http://www.din.uem.br/iia/artigo> a owl:Ontology ;
+    rdfs:label "Ontologia de Artigo Científico"@pt ;
+    rdfs:comment "Estrutura de um artigo científico: metadados, seções, elementos retóricos (objetivo, problema, método, contribuição, trabalho futuro), referências e termos."@pt ;
+    rdfs:seeAlso <http://purl.org/spar/fabio>, <http://purl.org/spar/doco>, <http://purl.org/spar/deo> ;
+    owl:versionInfo "1.0" .
+
+# ---------------------------------------------------------------------
+# Classes
+# ---------------------------------------------------------------------
+
+art:Corpus a owl:Class ;
+    rdfs:label "Corpus"@pt ;
+    rdfs:comment "Conjunto de artigos analisados sobre um mesmo tema."@pt .
+
+art:ArtigoCientifico a owl:Class ;
+    rdfs:label "Artigo científico"@pt , "Research paper"@en ;
+    rdfs:seeAlso <http://purl.org/spar/fabio/ResearchPaper> .
+
+art:Autor a owl:Class ;
+    rdfs:label "Autor"@pt .
+
+# --- seções -----------------------------------------------------------
+art:Secao a owl:Class ;
+    rdfs:label "Seção"@pt ;
+    rdfs:seeAlso <http://purl.org/spar/doco/Section> .
+
+art:Resumo a owl:Class ; rdfs:subClassOf art:Secao ; rdfs:label "Resumo (Abstract)"@pt .
+art:Introducao a owl:Class ; rdfs:subClassOf art:Secao ; rdfs:label "Introdução"@pt .
+art:TrabalhosRelacionados a owl:Class ; rdfs:subClassOf art:Secao ; rdfs:label "Trabalhos relacionados"@pt .
+art:Metodologia a owl:Class ; rdfs:subClassOf art:Secao ; rdfs:label "Metodologia"@pt .
+art:Resultados a owl:Class ; rdfs:subClassOf art:Secao ; rdfs:label "Resultados / Experimentos"@pt .
+art:Conclusao a owl:Class ; rdfs:subClassOf art:Secao ; rdfs:label "Conclusão"@pt .
+art:Agradecimentos a owl:Class ; rdfs:subClassOf art:Secao ; rdfs:label "Agradecimentos"@pt .
+art:SecaoReferencias a owl:Class ; rdfs:subClassOf art:Secao ; rdfs:label "Referências"@pt .
+art:Apendice a owl:Class ; rdfs:subClassOf art:Secao ; rdfs:label "Apêndice"@pt .
+art:OutraSecao a owl:Class ; rdfs:subClassOf art:Secao ; rdfs:label "Outra seção"@pt .
+
+# --- elementos retóricos (trechos extraídos do texto) -----------------
+art:ElementoRetorico a owl:Class ;
+    rdfs:label "Elemento retórico"@pt ;
+    rdfs:comment "Trecho do artigo que cumpre um papel no discurso científico."@pt ;
+    rdfs:seeAlso <http://purl.org/spar/deo/DiscourseElement> .
+
+art:Objetivo a owl:Class ;
+    rdfs:subClassOf art:ElementoRetorico ;
+    rdfs:label "Objetivo"@pt ;
+    rdfs:comment "O que o artigo pretende fazer (intenção)."@pt .
+
+art:Problema a owl:Class ;
+    rdfs:subClassOf art:ElementoRetorico ;
+    rdfs:label "Problema"@pt ;
+    rdfs:comment "Lacuna, dificuldade ou limitação que motiva o trabalho."@pt .
+
+art:Metodo a owl:Class ;
+    rdfs:subClassOf art:ElementoRetorico ;
+    rdfs:label "Método"@pt ;
+    rdfs:comment "Como o trabalho foi feito: técnica, modelo, dados, experimento, survey, entrevistas."@pt .
+
+art:Contribuicao a owl:Class ;
+    rdfs:subClassOf art:ElementoRetorico ;
+    rdfs:label "Contribuição"@pt ;
+    rdfs:comment "O que o artigo acrescenta à área (resultado entregue), diferente do objetivo."@pt .
+
+art:TrabalhoFuturo a owl:Class ;
+    rdfs:subClassOf art:ElementoRetorico ;
+    rdfs:label "Trabalho futuro"@pt .
+
+# objetivo e contribuição são coisas diferentes: um trecho não pode ser os dois
+[] a owl:AllDisjointClasses ;
+    owl:members ( art:Objetivo art:Contribuicao art:Problema art:TrabalhoFuturo ) .
+
+# --- referências, termos e técnicas -----------------------------------
+art:Referencia a owl:Class ;
+    rdfs:label "Referência bibliográfica"@pt ;
+    rdfs:seeAlso <http://purl.org/spar/biro/BibliographicReference> .
+
+art:Termo a owl:Class ;
+    rdfs:label "Termo"@pt ;
+    rdfs:comment "Palavra (lema) do vocabulário do corpus."@pt .
+
+art:Tecnica a owl:Class ;
+    rdfs:subClassOf art:Termo ;
+    rdfs:label "Técnica"@pt ;
+    rdfs:comment "Técnica ou modelo da área (ex.: CRF, SVM, Transformer)."@pt .
+
+art:Tarefa a owl:Class ;
+    rdfs:subClassOf art:Termo ;
+    rdfs:label "Tarefa de PLN"@pt ;
+    rdfs:comment "Problema/tarefa da área (ex.: tradução automática, sumarização)."@pt .
+
+art:OcorrenciaTermo a owl:Class ;
+    rdfs:label "Ocorrência de termo"@pt ;
+    rdfs:comment "Liga um artigo a um termo com a sua frequência (relação n-ária)."@pt .
+
+art:Mencao a owl:Class ;
+    rdfs:label "Menção"@pt ;
+    rdfs:comment "Quantas vezes um artigo menciona uma técnica ou tarefa."@pt .
+
+art:Similaridade a owl:Class ;
+    rdfs:label "Similaridade entre artigos"@pt ;
+    rdfs:comment "Valor do cosseno TF-IDF entre dois artigos."@pt .
+
+# ---------------------------------------------------------------------
+# Propriedades de objeto
+# ---------------------------------------------------------------------
+
+art:temArtigo a owl:ObjectProperty ; rdfs:domain art:Corpus ; rdfs:range art:ArtigoCientifico .
+art:temAutor a owl:ObjectProperty ; rdfs:domain art:ArtigoCientifico ; rdfs:range art:Autor .
+art:temSecao a owl:ObjectProperty ; rdfs:domain art:ArtigoCientifico ; rdfs:range art:Secao .
+
+art:temElemento a owl:ObjectProperty ;
+    rdfs:domain art:ArtigoCientifico ; rdfs:range art:ElementoRetorico .
+art:temObjetivo a owl:ObjectProperty ; rdfs:subPropertyOf art:temElemento ; rdfs:range art:Objetivo .
+art:temProblema a owl:ObjectProperty ; rdfs:subPropertyOf art:temElemento ; rdfs:range art:Problema .
+art:temMetodo a owl:ObjectProperty ; rdfs:subPropertyOf art:temElemento ; rdfs:range art:Metodo .
+art:temContribuicao a owl:ObjectProperty ; rdfs:subPropertyOf art:temElemento ; rdfs:range art:Contribuicao .
+art:temTrabalhoFuturo a owl:ObjectProperty ; rdfs:subPropertyOf art:temElemento ; rdfs:range art:TrabalhoFuturo .
+
+art:extraidoDe a owl:ObjectProperty ;
+    rdfs:comment "Seção de onde o trecho foi extraído."@pt ;
+    rdfs:domain art:ElementoRetorico ; rdfs:range art:Secao .
+
+art:citaReferencia a owl:ObjectProperty ; rdfs:domain art:ArtigoCientifico ; rdfs:range art:Referencia .
+
+art:temOcorrencia a owl:ObjectProperty ; rdfs:domain art:ArtigoCientifico ; rdfs:range art:OcorrenciaTermo .
+art:doTermo a owl:ObjectProperty ; rdfs:domain art:OcorrenciaTermo ; rdfs:range art:Termo .
+
+art:mencionaTecnica a owl:ObjectProperty ; rdfs:domain art:ArtigoCientifico ; rdfs:range art:Mencao .
+art:mencionaTarefa a owl:ObjectProperty ; rdfs:domain art:ArtigoCientifico ; rdfs:range art:Mencao .
+art:refereSe a owl:ObjectProperty ; rdfs:domain art:Mencao ; rdfs:range art:Termo .
+
+art:entreArtigos a owl:ObjectProperty ; rdfs:domain art:Similaridade ; rdfs:range art:ArtigoCientifico .
+
+art:similarA a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:comment "Os dois artigos têm similaridade TF-IDF acima do limiar."@pt ;
+    rdfs:domain art:ArtigoCientifico ; rdfs:range art:ArtigoCientifico .
+
+# ---------------------------------------------------------------------
+# Propriedades de dados
+# ---------------------------------------------------------------------
+
+art:titulo a owl:DatatypeProperty ; rdfs:subPropertyOf dcterms:title ; rdfs:range xsd:string .
+art:ano a owl:DatatypeProperty ; rdfs:range xsd:gYear .
+art:nomeArquivo a owl:DatatypeProperty ; rdfs:range xsd:string .
+art:numeroPaginas a owl:DatatypeProperty ; rdfs:range xsd:integer .
+art:numeroReferencias a owl:DatatypeProperty ; rdfs:range xsd:integer .
+art:nome a owl:DatatypeProperty ; rdfs:domain art:Autor ; rdfs:range xsd:string .
+art:tema a owl:DatatypeProperty ; rdfs:domain art:Corpus ; rdfs:range xsd:string .
+art:baseDados a owl:DatatypeProperty ; rdfs:domain art:Corpus ; rdfs:range xsd:string .
+
+art:tituloSecao a owl:DatatypeProperty ; rdfs:domain art:Secao ; rdfs:range xsd:string .
+art:ordem a owl:DatatypeProperty ; rdfs:range xsd:integer .
+art:numeroPalavras a owl:DatatypeProperty ; rdfs:domain art:Secao ; rdfs:range xsd:integer .
+
+art:texto a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:comment "Texto do trecho extraído ou da referência."@pt .
+art:pontuacao a owl:DatatypeProperty ; rdfs:domain art:ElementoRetorico ; rdfs:range xsd:integer ;
+    rdfs:comment "Pontuação dada pelas regras de extração (confiança)."@pt .
+art:anoReferencia a owl:DatatypeProperty ; rdfs:domain art:Referencia ; rdfs:range xsd:gYear .
+
+art:lema a owl:DatatypeProperty ; rdfs:domain art:Termo ; rdfs:range xsd:string .
+art:radical a owl:DatatypeProperty ; rdfs:domain art:Termo ; rdfs:range xsd:string .
+art:frequencia a owl:DatatypeProperty ; rdfs:range xsd:integer .
+art:posicaoRanking a owl:DatatypeProperty ; rdfs:domain art:OcorrenciaTermo ; rdfs:range xsd:integer .
+art:valor a owl:DatatypeProperty ; rdfs:domain art:Similaridade ; rdfs:range xsd:decimal .

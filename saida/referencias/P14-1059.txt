@@ -1,0 +1,34 @@
+Referências de: How to make words with vectors: Phrase generation in distributional semantics (32)
+
+[1] Alexandr Andoni and Piotr Indyk. 2008. Near-optimal hashing algorithms for approximate nearest neighbor in high dimensions. Commun. ACM, 51(1):117- 122, January.
+[2] Jacob Andreas and Zoubin Ghahramani. 2013. A generative model of vector space semantics. In Proceedings of the Workshop on Continuous Vector Space Models and their Compositionality, pages 91- 99, Sofia, Bulgaria.
+[3] Marco Baroni and Roberto Zamparelli. 2010. Nouns are vectors, adjectives are matrices: Representing adjective-noun constructions in semantic space. In Proceedings of EMNLP, pages 1183-1193, Boston, MA.
+[4] Marco Baroni, Georgiana Dinu, and Germ ́an Kruszewski. 2014. Don't count, predict! A systematic comparison of context-counting vs. context-predicting semantic vectors. In Proceedings of ACL, To appear, Baltimore, MD.
+[5] Marco Baroni. 2013. Composition in distributional semantics. Language and Linguistics Compass , 7(10):511-522.
+[6] William Blacoe and Mirella Lapata. 2012. A comparison of vector-based representations for semantic composition. In Proceedings of EMNLP, pages 546-556, Jeju Island, Korea.
+[7] Elia Bruni, Gemma Boleda, Marco Baroni, and Nam Khanh Tran. 2012. Distributional semantics in Technicolor. In Proceedings of ACL, pages 136- 145, Jeju Island, Korea.
+[8] Georgiana Dinu, Nghia The Pham, and Marco Baroni. 2013. General estimation and evaluation of compositional distributional semantic models. In Proceedings of ACL Workshop on Continuous Vector Space Models and their Compositionality, pages 50- 58, Sofia, Bulgaria.
+[9] Katrin Erk. 2012. Vector space models of word meaning and phrase meaning: A survey. Language and Linguistics Compass, 6(10):635-653.
+[10] Andrea Frome, Greg Corrado, Jon Shlens, Samy Bengio, Jeff Dean, Marc'Aurelio Ranzato, and Tomas Mikolov. 2013. DeViSE: A deep visual-semantic embedding model. In Proceedings of NIPS , pages 2121-2129, Lake Tahoe, Nevada.
+[11] Emiliano Guevara. 2010. A regression model of adjective-noun compositionality in distributional semantics. In Proceedings of GEMS , pages 33-37, Uppsala, Sweden.
+[12] Aria Haghighi, Percy Liang, Taylor Berg-Kirkpatrick, and Dan Klein. 2008. Learning bilingual lexicons from monolingual corpora. In Proceedings of ACL, pages 771-779, Columbus, OH, USA, June.
+[13] James Haxby, Ida Gobbini, Maura Furey, Alumit Ishai, Jennifer Schouten, and Pietro Pietrini. 2001. Distributed and overlapping representations of faces and objects in ventral temporal cortex. Science, 293:2425-2430.
+[14] Alexander Huth, Shinji Nishimoto, An Vu, and Jack Gallant. 2012. A continuous semantic space describes the representation of thousands of object and action categories across the human brain. Neuron, 76(6):1210-1224.
+[15] Nal Kalchbrenner and Phil Blunsom. 2013. Recurrent continuous translation models. In Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing, Seattle, October. Association for Computational Linguistics.
+[16] Colin Kelly, Barry Devereux, and Anna Korhonen. 2012. Semi-supervised learning for automatic conceptual property extraction. In Proceedings of the 3rd Workshop on Cognitive Modeling and Computational Linguistics, pages 11-20, Montreal, Canada.
+[17] Alexandre Klementiev, Ann Irvine, Chris Callison- Burch, and David Yarowsky. 2012. Toward statistical machine translation without parallel corpora. In Proceedings of EACL, pages 130-140, Avignon, France.
+[18] Philipp Koehn and Kevin Knight. 2002. Learning a translation lexicon from monolingual corpora. In In Proceedings of ACL Workshop on Unsupervised Lexical Acquisition, pages 9-16, Philadelphia, PA, USA.
+[19] Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. 2013a. Efficient estimation of word representations in vector space. http://arxiv.org/ abs/1301.3781/.
+[20] Tomas Mikolov, Quoc Le, and Ilya Sutskever. 2013b. Exploiting similarities among languages for Machine Translation. http://arxiv.org/abs/ 1309.4168.
+[21] Jeff Mitchell and Mirella Lapata. 2008. Vector-based models of semantic composition. In Proceedings of ACL, pages 236-244, Columbus, OH.
+[22] Jeff Mitchell and Mirella Lapata. 2010. Composition in distributional models of semantics. Cognitive Science, 34(8):1388-1429.
+[23] Tom Mitchell, Svetlana Shinkareva, Andrew Carlson, Kai-Min Chang, Vincente Malave, Robert Mason, and Marcel Just. 2008. Predicting human brain activity associated with the meanings of nouns. Science, 320:1191-1195.
+[24] Brian Murphy, Partha Talukdar, and Tom Mitchell. 2012. Selecting corpus-semantic models for neurolinguistic decoding. In Proceedings of *SEM , pages 114-123, Montreal, Canada.
+[25] Reinhard Rapp. 1999. Automatic identification of word translations from unrelated english and german corpora. In Proceedings of the 37th annual meeting of the Association for Computational Linguistics on Computational Linguistics, ACL '99, pages 519- 526. Association for Computational Linguistics.
+[26] Richard Socher, Eric Huang, Jeffrey Pennin, Andrew Ng, and Christopher Manning. 2011. Dynamic pooling and unfolding recursive autoencoders for paraphrase detection. In Proceedings of NIPS, pages 801-809, Granada, Spain.
+[27] Richard Socher, Milind Ganjoo, Christopher Manning, and Andrew Ng. 2013. Zero-shot learning through cross-modal transfer. In Proceedings of NIPS, pages 935-943, Lake Tahoe, Nevada.
+[28] Richard Socher, Quoc Le, Christopher Manning, and Andrew Ng. 2014. Grounded compositional semantics for finding and describing images with sentences. Transactions of the Association for Computational Linguistics. In press.
+[29] J ̈org Tiedemann. 2012. Parallel data, tools and interfaces in opus. In Proceedings of the Eight International Conference on Language Resources and Evaluation (LREC'12), Istanbul, Turkey.
+[30] Peter Turney and Patrick Pantel. 2010. From frequency to meaning: Vector space models of semantics. Journal of Artificial Intelligence Research, 37:141-188.
+[31] Peter Turney. 2012. Domain and function: A dualspace model of semantic relations and compositions. Journal of Artificial Intelligence Research, 44:533- 585.
+[32] Fabio Zanzotto, Ioannis Korkontzelos, Francesca Falucchi, and Suresh Manandhar. 2010. Estimating linear models for compositional distributional semantics. In Proceedings of COLING, pages 1263- 1271, Beijing, China.

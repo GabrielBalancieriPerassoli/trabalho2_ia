@@ -1,0 +1,17 @@
+Referências de: Sparse Information Extraction: Unsupervised Language Models to the Rescue (15)
+
+[1] E. Agichtein. 2005. Extracting Relations From Large Text Collections. Ph.D. thesis, Department of Computer Science, Columbia University.
+[2] E. Agichtein. 2006. Confidence estimation methods for partially supervised relation extraction. In SDM 2006.
+[3] M. Banko, M. Cararella, S. Soderland, M. Broadhead, and O. Etzioni. 2007. Open information extraction from the web. In Procs. of IJCAI 2007 .
+[4] D. Downey, O. Etzioni, and S. Soderland. 2005. A Probabilistic Model of Redundancy in Information Extraction. In Procs. of IJCAI 2005 .
+[5] D. Downey, M. Broadhead, and O. Etzioni. 2007. Locating complex named entities in web text. In Procs. of IJCAI 2007.
+[6] O. Etzioni, M. Cafarella, D. Downey, S. Kok, A. Popescu, T. Shaked, S. Soderland, D. Weld, and A. Y ates. 2005. Unsupervised named-entity extraction from the web: An experimental study. Artificial Intelligence , 165(1):91-134.
+[7] R. Feldman, B. Rosenfeld, S. Soderland, and O. Etzioni. 2006. Self-supervised relation extraction from the web. In ISMIS, pages 755-764.
+[8] Z. Harris. 1985. Distributional structure. In J. J. Katz, editor, The Philosophy of Linguistics , pages 26-47. New Y ork: Oxford University Press.
+[9] C. D. Manning and H. Sch ̈utze. 1999. F oundations of Statistical Natural Language Processing.
+[10] M. Pas ̧ca, D. Lin, J. Bigham, A. Lifchits, and A. Jain. 2006. Names and similarities on the web: Fact extraction in the fast lane. In Procs. of ACL/COLING 2006.
+[11] L. R. Rabiner. 1989. A tutorial on hidden markov models and selected applications in speech recognition. Proceedings of the IEEE , 77(2):257-286.
+[12] D. Ravichandran, P . Pantel, and E. H. Hovy. 2005. Randomized Algorithms and NLP: Using Locality Sensitive Hash Functions for High Speed Noun Clustering. In Procs. of ACL 2005.
+[13] M. Richardson and P . Domingos. 2006. Markov Logic Networks. Machine Learning, 62(1-2):107-136.
+[14] E. Riloff and R. Jones. 1999. Learning Dictionaries for Information Extraction by Multi-level Boot-strapping. In Procs. of AAAI-99, pages 1044-1049.
+[15] S. E. Robertson, S. Walker, M. Hancock-Beaulieu, A. Gull, and M. Lau. 1992. Okapi at TREC-3. In Text REtrieval Conference, pages 21-30.

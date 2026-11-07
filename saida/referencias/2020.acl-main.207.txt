@@ -1,0 +1,59 @@
+Referências de: SPECTER: Document-level Representation Learning using Citation-informed Transformers (57)
+
+[1] Anant K. Agarwal, Ivan Zaitsev, Xuanhui Wang, Cheng Yen Li, Marc Najork, and Thorsten Joachims. 2019. Estimating position bias without intrusive interventions. In WSDM.
+[2] Waleed Ammar, Dirk Groeneveld, Chandra Bhagavatula, Iz Beltagy, Miles Crawford, Doug Downey, Jason Dunkelberger, Ahmed Elgohary, Sergey Feldman, Vu Ha, Rodney Kinney, Sebastian Kohlmeier, Kyle Lo, Tyler C. Murray, Hsu- Han Ooi, Matthew E. Peters, Joanna Power, Sam Skjonsberg, Lucy Lu Wang, Christopher Wilhelm, Zheng Yuan, Madeleine van Zuylen, and Oren Etzioni. 2018. Construction of the literature graph in semantic scholar. In NAACL-HLT.
+[3] Sanjeev Arora, Yingyu Liang, and Tengyu Ma. 2017. A simple but tough-to-beat baseline for sentence embeddings. In ICLR.
+[4] Iz Beltagy, Kyle Lo, and Arman Cohan. 2019. SciB- ERT: A Pretrained Language Model for Scientific Text. In EMNLP.
+[5] Chandra Bhagavatula, Sergey Feldman, Russell Power, and Waleed Ammar. 2018. Content-Based Citation Recommendation. In NAACL-HLT.
+[6] Piotr Bojanowski, Edouard Grave, Armand Joulin, and Tomas Mikolov. 2017. Enriching word vectors with subword information. TACL.
+[7] Joan Bruna, Wojciech Zaremba, Arthur Szlam, and Yann LeCun. 2014. Spectral networks and locally connected networks on graphs. ICLR.
+[8] Liqun Chen, Guoyin Wang, Chenyang Tao, Dinghan Shen, Pengyu Cheng, Xinyuan Zhang, Wenlin Wang, Yizhe Zhang, and Lawrence Carin. 2019. Improving textual network embedding with global attention via optimal transport. In ACL.
+[9] Tsung Teng Chen and Maria Lee. 2018. Research Paper Recommender Systems on Big Scholarly Data. In Knowledge Management and Acquisition for Intelligent Systems.
+[10] K. Bretonnel Cohen, Helen L. Johnson, Karin M. Verspoor, Christophe Roeder, and Lawrence Hunter. 2010. The structural and content aspects of abstracts versus bodies of full text journal articles are different. BMC Bioinformatics, 11:492-492.
+[11] Alexis Conneau, Douwe Kiela, Holger Schwenk, Lo ̈ıc Barrault, and Antoine Bordes. 2017. Supervised Learning of Universal Sentence Representations from Natural Language Inference Data. In EMNLP.
+[12] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. BERT: Pre-training of deep bidirectional transformers for language understanding. In NAACL-HLT.
+[13] Martin Ester, Hans-Peter Kriegel, J ̈org Sander, Xiaowei Xu, et al. 1996. A Density-based Algorithm for Discovering Clusters in Large Spatial Databases with Noise. In KDD.
+[14] Sergey Feldman, Waleed Ammar, Kyle Lo, Elly Trepman, Madeleine van Zuylen, and Oren Etzioni. 2019. Quantifying Sex Bias in Clinical Studies at Scale With Automated Data Extraction. JAMA.
+[15] J Ganesh, Manish Gupta, and Vijay K. Varma. 2016. Doc2sent2vec: A novel two-phase approach for learning document representation. In SIGIR.
+[16] Matt Gardner, Joel Grus, Mark Neumann, Oyvind Tafjord, Pradeep Dasigi, Nelson F. Liu, Matthew Peters, Michael Schmitz, and Luke Zettlemoyer. 2018. AllenNLP: A Deep Semantic Natural Language Processing Platform. In Proceedings of Workshop for NLP Open Source Software (NLP-OSS) .
+[17] Christophe Van Gysel, Maarten de Rijke, and Evangelos Kanoulas. 2017. Neural Vector Spaces for Unsupervised Information Retrieval. ACM Trans. Inf. Syst.
+[18] Will Hamilton, Zhitao Ying, and Jure Leskovec. 2017a. Inductive Representation Learning on Large Graphs. In NIPS.
+[19] William L. Hamilton, Zhitao Ying, and Jure Leskovec. 2017b. Inductive representation learning on large graphs. In NIPS.
+[20] Erik Holmer and Andreas Marfurt. 2018. Explaining away syntactic structure in semantic document representations. ArXiv, abs/1806.01620.
+[21] Jeremy Howard and Sebastian Ruder. 2018. Universal Language Model Fine-tuning for Text Classification. In ACL.
+[22] Chanwoo Jeong, Sion Jang, Hyuna Shin, Eunjeong Lucy Park, and Sungchul Choi. 2019. A context-aware citation recommendation model with bert and graph convolutional networks. ArXiv, abs/1903.06464.
+[23] Anshul Kanakia, Zhihong Shen, Darrin Eide, and Kuansan Wang. 2019. A Scalable Hybrid Research Paper Recommender System for Microsoft Academic. In WWW.
+[24] Diederik P. Kingma and Jimmy Ba. 2014. Adam: A Method for Stochastic Optimization. ArXiv, abs/1412.6980.
+[25] Thomas N Kipf and Max Welling. 2017. Semisupervised classification with graph convolutional networks. ICLR.
+[26] Ryan Kiros, Yukun Zhu, Ruslan Salakhutdinov, Richard S. Zemel, Antonio Torralba, Raquel Urtasun, and Sanja Fidler. 2015. Skip-thought vectors. In NIPS.
+[27] Richard Klavans and Kevin W. Boyack. 2006. Identifying a better measure of relatedness for mapping science. Journal of the Association for Information Science and Technology, 57:251-263.
+[28] Jey Han Lau and Timothy Baldwin. 2016. An empirical evaluation of doc2vec with practical insights into document embedding generation. In Rep4NLP@ACL.
+[29] Quoc Le and Tomas Mikolov. 2014. Distributed Representations of Sentences and Documents. In ICML.
+[30] Jimmy J. Lin. 2008. Is searching full text more effective than searching abstracts? BMC Bioinformatics, 10:46-46.
+[31] Carolyn E Lipscomb. 2000. Medical Subject Headings (MeSH). Bulletin of the Medical Library Association.
+[32] Chundi Liu, Shunan Zhao, and Maksims V olkovs. 2018. Unsupervised Document Embedding with CNNs. ArXiv, abs/1711.04168v3.
+[33] Pengfei Liu, King Keung Wu, and Helen M. Meng. 2017. A Model of Extended Paragraph Vector for Document Categorization and Trend Analysis. IJCNN.
+[34] Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar S. Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke S. Zettlemoyer, and Veselin Stoyanov. 2019. RoBERTa: A Robustly Optimized BERT Pretraining Approach. ArXiv, abs/1907.11692.
+[35] Laurens van der Maaten. 2014. Accelerating t-SNE Using Tree-based Algorithms. Journal of Machine Learning Research.
+[36] Allen Nie, Erin Bennett, and Noah Goodman. 2019. DisSent: Learning Sentence Representations from Explicit Discourse Relations. In ACL.
+[37] F. Pedregosa, G. Varoquaux, A. Gramfort, V . Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V . Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay. 2011. Scikit-learn: Machine learning in Python. Journal of Machine Learning Research , 12:2825-2830.
+[38] Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, and Luke Zettlemoyer. 2018. Deep Contextualized Word Representations.
+[39] Alec Radford, Karthik Narasimhan, Tim Salimans, and Ilya Sutskever. 2018. Improving language understanding by generative pre-training. arXiv.
+[40] Radim ˇReh ̊uˇrek and Petr Sojka. 2010. Software Framework for Topic Modelling with Large Corpora. In LREC.
+[41] Nils Reimers and Iryna Gurevych. 2019. Sentence- BERT: Sentence Embeddings using Siamese BERT- Networks. In EMNLP.
+[42] Andrew Rosenberg and Julia Hirschberg. 2007. Vmeasure: A Conditional Entropy-based External Cluster Evaluation Measure. In EMNLP.
+[43] J Ben Schafer, Dan Frankowski, Jon Herlocker, and Shilad Sen. 2007. Collaborative filtering recommender systems. In The adaptive web. Springer.
+[44] Martijn J. Schuemie, Marc Weeber, Bob J. A. Schijvenaars, Erik M. van Mulligen, C. Christiaan van der Eijk, Rob Jelier, Barend Mons, and Jan A. Kors. 2004. Distribution of information in biomedical abstracts and full-text publications. Bioinformatics, 20(16):2597-604.
+[45] Dinghan Shen, Xinyuan Zhang, Ricardo Henao, and Lawrence Carin. 2018. Improved semantic-aware network embedding with fine-grained word alignment. In EMNLP.
+[46] Arnab Sinha, Zhihong Shen, Yang Song, Hao Ma, Darrin Eide, Bo-June Paul Hsu, and Kuansan Wang. 2015. An Overview of Microsoft Academic Service (MAS) and Applications. In WWW.
+[47] Cunchao Tu, Han Liu, Zhiyuan Liu, and Maosong Sun. 2017. Cane: Context-aware network embedding for relation modeling. In ACL.
+[48] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017. Attention Is All You Need. In NIPS.
+[49] Wenlin Wang, Chenyang Tao, Zhe Gan, Guoyin Wang, Liqun Chen, Xinyuan Zhang, Ruiyi Zhang, Qian Yang, Ricardo Henao, and Lawrence Carin. 2019. Improving textual network learning with variational homophilic embeddings. In Advances in Neural Information Processing Systems, pages 2074-2085.
+[50] Adina Williams, Nikita Nangia, and Samuel Bowman. 2018. A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference. In NAACL- HLT.
+[51] Felix Wu, Amauri H. Souza, Tianyi Zhang, Christopher Fifty, Tao Yu, and Kilian Q. Weinberger. 2019a. Simplifying graph convolutional networks. In ICML.
+[52] Lingfei Wu, Ian En-Hsu Yen, Kun Xu, Fangli Xu, Avinash Balakrishnan, Pin-Yu Chen, Pradeep Ravikumar, and Michael J Witbrock. 2018. Word Mover's Embedding: From Word2Vec to Document Embedding. In EMNLP.
+[53] Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc V Le, Mohammad Norouzi, Wolfgang Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, et al. 2016. Google's neural machine translation system: Bridging the gap between human and machine translation. ArXiv, abs/1609.08144.
+[54] Zonghan Wu, Shirui Pan, Fengwen Chen, Guodong Long, Chengqi Zhang, and Philip S Yu. 2019b. A Comprehensive Survey on Graph Neural Networks. ArXiv, abs/1901.00596.
+[55] Zhilin Yang, Zihang Dai, Yiming Yang, Jaime G. Carbonell, Ruslan Salakhutdinov, and Quoc V . Le. 2019. Xlnet: Generalized autoregressive pretraining for language understanding. ArXiv, abs/1906.08237.
+[56] Hamed Zamani, Mostafa Dehghani, W. Bruce Croft, Erik G. Learned-Miller, and Jaap Kamps. 2018. From neural re-ranking to neural ranking: Learning a sparse representation for inverted indexing. In CIKM.
+[57] Xinyuan Zhang, Yitong Li, Dinghan Shen, and Lawrence Carin. 2018. Diffusion maps for textual network embedding. In NeurIPS.

@@ -1,0 +1,353 @@
+{
+  "_instrucoes": "Gabarito anotado manualmente lendo resumo, introdução e conclusão de cada artigo. Cada campo é uma lista de trechos do próprio artigo. Contribuição = só quando o artigo declara explicitamente o que contribui (contribute/contribution, lista de contribuições, 'to our knowledge ... first', 'fills a gap'). Lista vazia = o artigo não tem esse elemento de forma explícita. Quando o artigo não tem seção de conclusão (ex.: dyer12), a última seção (Discussion) foi usada no lugar dela.",
+  "mooney05.pdf": {
+    "titulo": "A Statistical Semantic Parser that Integrates Syntax and Semantics",
+    "ano": 2005,
+    "num_referencias": 17,
+    "objetivo": [
+      "In this paper, we address the more ambitious task of learning to map sentences to a complete formal meaning representation language (MRL).",
+      "We introduce a learning semantic parser, SCISSOR, that maps natural-language sentences to a detailed, formal, meaning representation language."
+    ],
+    "problema": [
+      "Most recent work in learning for semantic parsing has focused on \"shallow\" analysis such as semantic role labeling (Gildea and Jurafsky, 2002)."
+    ],
+    "metodo": [
+      "We present an approach based on a statistical parser that generates a semantically augmented parse tree (SAPT), in which each internal node includes both a syntactic and semantic label.",
+      "We augment Collins' head-driven model 2 (Collins, 1997) to incorporate a semantic label on each internal node.",
+      "It first uses an integrated statistical parser to produce a semantically augmented parse tree, in which each non-terminal node has both a syntactic and a semantic label."
+    ],
+    "contribuicao": [],
+    "trabalho_futuro": []
+  },
+  "P07-1088.pdf": {
+    "titulo": "Sparse Information Extraction: Unsupervised Language Models to the Rescue",
+    "ano": 2007,
+    "num_referencias": 15,
+    "objetivo": [
+      "This paper shows how to assess the correctness of sparse extractions by utilizing unsupervised language models.",
+      "This paper introduces the idea that language modeling techniques such as n-gram statistics (Manning and Schutze, 1999) and HMMs (Rabiner, 1989) can be used to effectively assess sparse extractions."
+    ],
+    "problema": [
+      "Even in a massive corpus such as the Web, a substantial fraction of extractions appear infrequently.",
+      "As a result, Downey et al.'s model, and related methods, had no way of assessing which extraction is more likely to be correct for fully half of the extractions."
+    ],
+    "metodo": [
+      "The REALM system, which combines HMM-based and n-gram-based language models, ranks candidate extractions by the likelihood that they are correct.",
+      "We assess sparse extractions by comparing the contexts in which they appear to those of more common extractions."
+    ],
+    "contribuicao": [
+      "The paper introduces the insight that the subfield of language modeling provides unsupervised methods that can be leveraged to assess sparse extractions.",
+      "The paper introduces an HMM-based technique for checking whether two arguments are of the proper type for a relation.",
+      "The paper introduces a relational n-gram model for the purpose of determining whether a sentence that mentions multiple arguments actually expresses a particular relationship between them.",
+      "The paper introduces a novel language modeling system called REALM that combines both HMM-based models and relational n-gram models, and shows that REALM reduces error by an average of 39% over previous methods, when applied to sparse extraction data."
+    ],
+    "trabalho_futuro": [
+      "In future work, we plan to develop a probabilistic model of the information computed by REALM.",
+      "We also plan to evaluate the use of non-local context for IE Assessment by integrating document-level modeling techniques (e.g., Latent Dirichlet Allocation)."
+    ]
+  },
+  "bunescu-acl07.pdf": {
+    "titulo": "Learning to Extract Relations from the Web using Minimal Supervision",
+    "ano": 2007,
+    "num_referencias": 16,
+    "objetivo": [
+      "In this paper, we introduce a supervised learning approach to RE that requires only a handful of training examples and uses the web as a corpus.",
+      "We present a new approach to relation extraction that requires only a handful of training examples."
+    ],
+    "problema": [
+      "Supervised learning has been shown to be effective for RE (Zelenko et al., 2003; Culotta and Sorensen, 2004; Bunescu and Mooney, 2006); however, annotating large corpora with examples of the relations to be extracted is expensive and tedious.",
+      "This approach can sometimes be misled by textual features correlated with the specific entities in the few training pairs provided."
+    ],
+    "metodo": [
+      "We have extended an existing approach to relation extraction using support vector machines and string kernels (Bunescu and Mooney, 2006) to handle this weaker form of MIL supervision.",
+      "Therefore, we also describe a method for weighting features in order to focus on those correlated with the target relation rather than with the individual entities.",
+      "Given a few pairs of named entities known to exhibit or not exhibit a particular relation, bags of sentences containing the pairs are extracted from the web."
+    ],
+    "contribuicao": [],
+    "trabalho_futuro": [
+      "An interesting potential application of our approach is a web relation-extraction system similar to Google Sets, in which the user provides only a handful of pairs of entities known to exhibit or not to exhibit a particular relation, and the system is used to find other pairs of entities exhibiting the same relation.",
+      "We are also investigating methods for reducing Type II bias, either by modifying the word weights, or by integrating an appropriate measure of word distribution across positive bags directly in the objective function for the MIL problem."
+    ]
+  },
+  "bohnet09.pdf": {
+    "titulo": "Efficient Parsing of Syntactic and Semantic Dependency Structures",
+    "ano": 2009,
+    "num_referencias": 20,
+    "objetivo": [
+      "In this paper, we describe our system for the 2009 CoNLL shared task for joint parsing of syntactic and semantic dependency structures of multiple languages."
+    ],
+    "problema": [
+      "For the applications of syntactic and semantic parsing, the parsing time and memory footprint are very important."
+    ],
+    "metodo": [
+      "Our system combines and implements efficient parsing techniques to get a high accuracy as well as very good parsing and training time.",
+      "Our system uses the first approach since we saw better chance to improve the parsing speed and additionally, the MST had so far slightly better parsing results.",
+      "For the task of semantic role labeling, we adopted a pipeline architecture where we used for each step the same learning technique (SVM) since we opted for the possibility to build a synchronous combined parser with one score function."
+    ],
+    "contribuicao": [],
+    "trabalho_futuro": [
+      "Therefore, a possible further accuracy and parsing speed improvement would be to select different features sets for different languages or to leave out some features."
+    ]
+  },
+  "fader11.pdf": {
+    "titulo": "Identifying Relations for Open Information Extraction",
+    "ano": 2011,
+    "num_referencias": 30,
+    "objetivo": [
+      "In summary, this paper articulates two simple but surprisingly powerful constraints on how binary relationships are expressed via verbs in English sentences, and implements them in the REVERB Open IE system.",
+      "To overcome these problems, we introduce two simple syntactic and lexical constraints on binary relations expressed by verbs."
+    ],
+    "problema": [
+      "This paper shows that the output of state-of-the-art Open IE systems is rife with uninformative and incoherent extractions.",
+      "We have observed that two types of errors are frequent in the output of Open IE systems such as TEXTRUNNER and WOE: incoherent extractions and uninformative extractions."
+    ],
+    "metodo": [
+      "To solve this problem, we introduce a syntactic constraint: every multi-word relation phrase must begin with a verb, end with a preposition, and be a contiguous sequence of words in the sentence.",
+      "To avoid overly-specific relation phrases, we introduce an intuitive lexical constraint: a binary relation phrase ought to appear with at least a minimal number of distinct argument pairs in a large corpus.",
+      "We implemented the constraints in the REVERB Open IE system, which more than doubles the area under the precision-recall curve relative to previous extractors such as TEXTRUNNER and WOE pos."
+    ],
+    "contribuicao": [
+      "We have identified and analyzed the problems of incoherent and uninformative extractions for Open IE systems, and shown their prevalence for systems such as TEXTRUNNER and WOE.",
+      "We articulated general, easy-to-enforce constraints on binary, verb-based relation phrases in English that ameliorate these problems and yield richer and more informative relations (see, for example, Table 2).",
+      "Based on these constraints, we designed, implemented, and evaluated the REVERB extractor, which substantially outperforms previous Open IE systems in both recall and precision.",
+      "We make REVERB and the data used in our experiments available to the research community."
+    ],
+    "trabalho_futuro": [
+      "In future work, we plan to explore utilizing our constraints to improve the performance of learned CRF models.",
+      "The error analysis in Section 5.2 also suggests natural directions for future work.",
+      "For instance, since many of REVERB's errors are due to incorrect arguments, improved methods for argument extraction are in order."
+    ]
+  },
+  "dyer12.pdf": {
+    "titulo": "Joint Feature Selection in Distributed Stochastic Learning for Large-Scale Discriminative Training in SMT",
+    "ano": 2012,
+    "num_referencias": 47,
+    "objetivo": [
+      "The goal of this paper is to show that this common wisdom can also be brought to bear upon SMT.",
+      "The goal of this paper is to investigate if and how it is possible to benefit from scaling discriminative training for SMT to large training sets."
+    ],
+    "problema": [
+      "With a few exceptions, discriminative training in statistical machine translation (SMT) has been content with tuning weights for large feature sets on small development data.",
+      "Various approaches to feature engineering for discriminative models have been presented (see Section 2), however, with a few exceptions, discriminative learning in SMT has been confined to training on small tuning sets of a few thousand examples."
+    ],
+    "metodo": [
+      "We deploy local features for SCFG-based SMT that can be read off from rules at runtime, and present a learning algorithm that applies l1/l2 regularization for joint feature selection over distributed stochastic learning processes.",
+      "The simple but effective idea is to randomly divide training data into evenly sized shards, use stochastic learning on each shard in parallel, while performing l1/l2 regularization for joint feature selection on the shards after each epoch, before starting a new epoch with a reduced feature vector averaged across shards.",
+      "Another crucial ingredient of our approach is a combination of parallelized stochastic learning with feature selection inspired by multi-task learning."
+    ],
+    "contribuicao": [],
+    "trabalho_futuro": [
+      "In future work, we would like to investigate more sophisticated features, better learners, and in general improve the components of our system that have been neglected in the current investigation of relative improvements by scaling the size of data and feature sets.",
+      "Ultimately, since our algorithms are inspired by multi-task learning, we would like to apply them to scenarios where a natural definition of tasks is given."
+    ]
+  },
+  "roark13.pdf": {
+    "titulo": "Discriminative Joint Modeling of Lexical Variation and Acoustic Confusion for Automated Narrative Retelling Assessment",
+    "ano": 2013,
+    "num_referencias": 25,
+    "objetivo": [
+      "In this paper, we present and evaluate the use of word tagging models for this task, in contrast to just using automatic (unsupervised) word-alignment methods.",
+      "This paper examines the task of automatically scoring narrative retellings in terms of their fidelity to the original narrative content, using discriminatively trained log-linear tagging models."
+    ],
+    "problema": [
+      "Automatically assessing the fidelity of a retelling to the original narrative - a task of growing clinical importance - is challenging, given extensive paraphrasing during retelling along with cascading automatic speech recognition (ASR) errors.",
+      "Relying on manual transcripts to train the alignment models limits the ability of these methods to handle ASR errors."
+    ],
+    "metodo": [
+      "We present a word tagging approach using conditional random fields (CRFs) that allows a diversity of features to be considered during inference, including some capturing acoustic confusions encoded in word confusion networks.",
+      "We evaluate the approach under several scenarios, including both supervised and unsupervised training, the latter achieved by training on the output of a baseline automatic word-alignment model.",
+      "We present results under a range of experimental conditions, including: variously adapting the ASR models to the domain; using maximum entropy models rather than CRFs; differing tagsets (BIO versus IO); and with varying degrees of supervision."
+    ],
+    "contribuicao": [],
+    "trabalho_futuro": [
+      "In future work, we would like to investigate two questions left open by these results.",
+      "First, word-alignment models can be extended to process ASR lattices or word confusion networks as part of the unsupervised alignment learning algorithm, and incorporated into our approach.",
+      "Second, the contextual features can be refined (e.g., concatenated features instead of smoothed features) when large amounts of training data is available."
+    ]
+  },
+  "P14-1059.pdf": {
+    "titulo": "How to make words with vectors: Phrase generation in distributional semantics",
+    "ano": 2014,
+    "num_referencias": 32,
+    "objetivo": [
+      "We introduce the problem of generation in distributional semantics: Given a distributional vector representing some meaning, how can we generate the phrase that best expresses that meaning?",
+      "In this paper, we introduce a more direct approach to phrase generation, inspired by the work in compositional distributional semantics."
+    ],
+    "problema": [
+      "If distributional semantics is to be considered a proper semantic theory, then it must deal not only with synthesis (going from words to vectors), but also with generation (from vectors to words).",
+      "This is however unfeasible for larger expressions: Given n vocabulary elements, this approach requires checking nk phrases of length k."
+    ],
+    "metodo": [
+      "In short, we revert the composition process and we propose a framework of data-induced, syntax-dependent functions that decompose a single vector into a vector sequence.",
+      "We motivate this novel challenge on theoretical and practical grounds and propose a simple data-driven approach to the estimation of generation functions.",
+      "We test this in a monolingual scenario (paraphrase generation) as well as in a cross-lingual setting (translation by synthesizing adjective-noun phrase vectors in English and generating the equivalent expressions in Italian)."
+    ],
+    "contribuicao": [
+      "From a more theoretical point of view, our work fills an important gap in distributional semantics, making it a bidirectional theory of the connection between language and meaning."
+    ],
+    "trabalho_futuro": [
+      "For future work we would like to experiment with more complex models for (de-)composition in order to improve the performance on the tasks we used in this paper.",
+      "Following this, we would like to extend the framework to handle arbitrary phrases, including making (confidence-based) choices on the syntactic structure of the phrase to be generated, which we have assumed to be given throughout this paper."
+    ]
+  },
+  "N18-3011.pdf": {
+    "titulo": "Construction of the Literature Graph in Semantic Scholar",
+    "ano": 2018,
+    "num_referencias": 27,
+    "objetivo": [
+      "The goal of this work is to facilitate algorithmic discovery in the scientific literature.",
+      "In this paper, we focus on the problem of extracting structured data from scientific documents, which can later be used in natural language interfaces or to improve ranking of results in academic search."
+    ],
+    "problema": [
+      "Despite notable advances in scientific search engines, data mining and digital libraries (e.g., Wu et al., 2014), researchers remain unable to answer simple questions such as: What is the percentage of female subjects in depression clinical trials?",
+      "These assumptions, while useful for developing and benchmarking new methods, are unrealistic for many domains and applications."
+    ],
+    "metodo": [
+      "We reduce literature graph construction into familiar NLP tasks such as sequence labeling, entity linking and relation extraction, and address some of the impractical assumptions commonly made in the standard formulations of these tasks.",
+      "We describe methods used in a scalable deployed production system for extracting structured information from scientific documents into the literature graph (see Fig. 1)."
+    ],
+    "contribuicao": [],
+    "trabalho_futuro": [
+      "Three research directions follow from this work and other similar projects, e.g., Hahn-Powell et al. (2017); Wu et al. (2014): i) improving quality and enriching content of the literature graph (e.g., ontology matching and knowledge base population). ii) aggregating domain-specific extractions across many papers to enable a better understanding of the literature as a whole. iii) exploring the literature via natural language interfaces."
+    ]
+  },
+  "2020.acl-main.207.pdf": {
+    "titulo": "SPECTER: Document-level Representation Learning using Citation-informed Transformers",
+    "ano": 2020,
+    "num_referencias": 57,
+    "objetivo": [
+      "In this paper, we introduce a new method for learning general-purpose vector representations of scientific documents.",
+      "Here, we study how to leverage the power of pretrained language models to learn embeddings for scientific documents."
+    ],
+    "problema": [
+      "Recent Transformer language models like BERT learn powerful textual representations, but these models are targeted towards token- and sentence-level training objectives and do not leverage information on inter-document relatedness, which limits their document-level representation power.",
+      "The language modeling objectives used to pretrain the model do not lead it to output representations that are helpful for document-level tasks such as topic classification or recommendation."
+    ],
+    "metodo": [
+      "We propose SPECTER, a new method to generate document-level embedding of scientific documents based on pretraining a Transformer language model on a powerful signal of document-level relatedness: the citation graph.",
+      "We specifically use citations as a naturally occurring, inter-document incidental supervision signal indicating which documents are most related and formulate the signal into a triplet-loss pretraining objective.",
+      "Our system, SPECTER, incorporates inter-document context into the Transformer (Vaswani et al., 2017) language models (e.g., SciBERT (Beltagy et al., 2019)) to learn document representations that are effective across a wide-variety of downstream tasks, without the need for any task-specific fine-tuning of the pretrained language model."
+    ],
+    "contribuicao": [
+      "As an additional contribution of this work, we introduce and release SCIDOCS, a novel collection of data sets and an evaluation suite for document-level embeddings in the scientific domain."
+    ],
+    "trabalho_futuro": [
+      "It would be interesting to initialize our model weights from more recent Transformer models to investigate if additional gains are possible.",
+      "Another item of future work is to develop better multitask approaches to leverage multiple signals of relatedness information during training.",
+      "Including other information such as outgoing citations as additional input to the model would be yet another area to explore in future."
+    ]
+  },
+  "2020.acl-main.447.pdf": {
+    "titulo": "S2ORC: The Semantic Scholar Open Research Corpus",
+    "ano": 2020,
+    "num_referencias": 56,
+    "objetivo": [
+      "We introduce S2ORC, a large corpus of 81.1M English-language academic papers spanning many academic disciplines.",
+      "In this paper, we describe the construction of S2ORC (§2)."
+    ],
+    "problema": [
+      "Yet, existing corpora are not without their limitations.",
+      "Some cover a small number of papers (e.g. AAN), are domain-specific (e.g. AAN, PubMed Central, Saier and Farber (2019)), or may not provide usable full text (e.g. Saier and Farber (2019) and RefSeer)."
+    ],
+    "metodo": [
+      "In S2ORC, we aggregate papers from hundreds of academic publishers and digital archives into a unified source, and create the largest publicly-available collection of machine-readable academic text to date.",
+      "Each paper is associated with metadata and abstracts aggregated from hundreds of trusted sources such as academic publishers and literature archives like PubMed and arXiv.",
+      "We aggregate metadata and abstracts from hundreds of trusted sources."
+    ],
+    "contribuicao": [],
+    "trabalho_futuro": []
+  },
+  "2023.eacl-main.121.pdf": {
+    "titulo": "LONGEVAL: Guidelines for Human Evaluation of Faithfulness in Long-form Summarization",
+    "ano": 2023,
+    "num_referencias": 66,
+    "objetivo": [
+      "To move towards a more consistent and efficient human evaluation, we present LONGEVAL, a set of guidelines for human evaluation of faithfulness in long-form summarization (Section 3).",
+      "Motivated by our survey, we present LONGEVAL, a set of guidelines for human evaluation of faithfulness in long-form summaries that addresses the following challenges: (1) How can we achieve high inter-annotator agreement on faithfulness scores?"
+    ],
+    "problema": [
+      "While human evaluation remains best practice for accurately judging the faithfulness of automatically-generated summaries, few solutions exist to address the increased difficulty and workload when evaluating long-form summaries.",
+      "Human evaluation is especially challenging when long sequences of generated text need to be evaluated, due to the inherent subjectivity in the task (Karpinska et al., 2021; Clark et al., 2021; Krishna et al., 2021; Goyal et al., 2022)."
+    ],
+    "metodo": [
+      "Through a survey of 162 papers on long-form summarization, we first shed light on current human evaluation practices surrounding long-form summaries.",
+      "To better understand the challenges of human evaluation on long-form summaries (150 words or longer), we first conduct a comprehensive survey of 162 publications and preprints on long-form summarization (Section 2).",
+      "We empirically evaluate LONGEVAL using human annotation studies on two long-form summarization datasets: SQuALITY (Wang et al., 2022) and PubMed (Cohan et al., 2018)."
+    ],
+    "contribuicao": [
+      "Overall, our contributions are: (1) a 162-paper survey of current human evaluation practices in long-form summarization; (2) LONGEVAL, a set of three guidelines for evaluating faithfulness in long-form summarization; (3) an empirical validation of LONGEVAL guidelines on two long-form summarization datasets in different domains (SQuALITY and PubMed); (4) A dataset with 3-way fine-grained human faithfulness judgments for 120 SQuALITY & PubMed summaries annotated using LONGEVAL which can be used for benchmarking automatic metrics."
+    ],
+    "trabalho_futuro": [
+      "As future work, we plan to conduct experiments on other aspects of summarization evaluation like salience and coherence.",
+      "Designing non-uniform weighing schemes is an interesting direction for future research."
+    ]
+  },
+  "2206.10883v3.pdf": {
+    "titulo": "Multi-LexSum: Real-World Summaries of Civil Rights Lawsuits at Multiple Granularities",
+    "ano": 2022,
+    "num_referencias": 64,
+    "objetivo": [
+      "In this paper, we present a new dataset, Multi-LexSum, for studying automatic summarization in an important real-world application setting found in the Civil Rights Litigation Clearinghouse (CRLC).",
+      "Motivated by this ongoing real-world summarization effort, we introduce Multi-LexSum, a collection of 9,280 expert-authored summaries drawn from ongoing CRLC writing."
+    ],
+    "problema": [
+      "Today, summarization in the CRLC requires extensive training of lawyers and law students who spend hours per case understanding multiple relevant documents in order to produce high-quality summaries of key events and outcomes.",
+      "Multi-LexSum presents a challenging multi-document summarization task given the length of the source documents, often exceeding two hundred pages per case."
+    ],
+    "metodo": [
+      "We conduct a series of experiments on Multi-LexSum, and find that existing summarization models perform poorly.",
+      "We present extensive analysis demonstrating that despite the high-quality summaries in the training data (adhering to strict content and style guidelines), state-of-the-art summarization models perform poorly on this task."
+    ],
+    "contribuicao": [
+      "But to our knowledge, Multi-LexSum is the first dataset to provide summaries at multiple levels of granularity."
+    ],
+    "trabalho_futuro": []
+  },
+  "2304.02623v1.pdf": {
+    "titulo": "Beyond Summarization: Designing AI Support for Real-World Expository Writing Tasks",
+    "ano": 2023,
+    "num_referencias": 35,
+    "objetivo": [
+      "In this position paper, we argue that developing AI supports for expository writing has unique and exciting research challenges and can lead to high real-world impacts.",
+      "In this paper, we argue that the unique characteristics in expository writing open up new opportunities for designing AI support."
+    ],
+    "problema": [
+      "However, AI-supported expository writing - including real-world tasks like scholars writing literature reviews or doctors writing progress notes - is relatively understudied.",
+      "While prior work has explored many exciting applications for LLMs, we argue that expository writing is a task that is understudied in existing work on AI augmented writing."
+    ],
+    "metodo": [
+      "We characterize expository writing as evidence-based and knowledge-generating: it contains summaries of external documents as well as new information or knowledge.",
+      "We sketch three components for AI support design and discuss considerations for future research."
+    ],
+    "contribuicao": [],
+    "trabalho_futuro": []
+  },
+  "2203.00130v1.pdf": {
+    "titulo": "Paper Plain: Making Medical Research Papers Approachable to Healthcare Consumers with Natural Language Processing",
+    "ano": 2022,
+    "num_referencias": 111,
+    "objetivo": [
+      "In this paper, we ask how interactive information interfaces can make the research literature approachable to non-expert healthcare consumers that need it - whom we refer to as \"readers\" in this paper.",
+      "To improve access to medical papers, we introduce a novel interactive interface - Paper Plain - with four features powered by natural language processing: definitions of unfamiliar terms, in-situ plain language section summaries, a collection of key questions that guide readers to answering passages, and plain language summaries of the answering passages."
+    ],
+    "problema": [
+      "Reading medical papers, however, can be a challenging experience.",
+      "Healthcare consumers report that, unsurprisingly, medical papers are difficult to read [30, 80]."
+    ],
+    "metodo": [
+      "This paper begins with a formative observational study of 12 non-expert readers to identify barriers in reading medical research papers.",
+      "To improve access to medical papers, we develop a novel interactive system, Paper Plain, through an iterative design process.",
+      "To assess how Paper Plain supports the reading experience, we conducted a 24 within-participant usability study where participants read papers with variants of Paper Plain or a typical PDF reader during a timed reading task."
+    ],
+    "contribuicao": [
+      "In summary, this paper contributes: (1) A characterization of the barriers readers face when they approach medical research papers.",
+      "(2) Paper Plain, an interactive reading interface for research papers that integrates existing affordances like term definition tooltips with novel affordances like in-situ plain language summaries of paper sections and a collection of key questions that guide readers to answering passages in the paper with paired plain language answers (§4).",
+      "(3) Evidence from our usability study that these new affordances helped readers quickly find places in a paper that were informative to them."
+    ],
+    "trabalho_futuro": [
+      "In future work we are excited to observe the use of Paper Plain in more naturalistic settings.",
+      "An important future step is to design interventions for explicitly improving paper comprehension.",
+      "Future systems could go further by reporting factuality measures along with generated text [83] or integrating a feedback mechanism for reporting inconsistent information in order to crowd-source these factuality checks."
+    ]
+  }
+}

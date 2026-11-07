@@ -1,0 +1,454 @@
+{
+  "resumo": {
+    "artigos_avaliados": 12,
+    "objetivo": {
+      "precisao": 0.6956521739130435,
+      "revocacao": 0.6956521739130435,
+      "f1": 0.6956521739130435,
+      "acertos": 16,
+      "extraidas": 23,
+      "anotadas": 23
+    },
+    "problema": {
+      "precisao": 0.4,
+      "revocacao": 0.36363636363636365,
+      "f1": 0.380952380952381,
+      "acertos": 8,
+      "extraidas": 20,
+      "anotadas": 22
+    },
+    "metodo": {
+      "precisao": 0.5428571428571428,
+      "revocacao": 0.5588235294117647,
+      "f1": 0.5507246376811593,
+      "acertos": 19,
+      "extraidas": 35,
+      "anotadas": 34
+    },
+    "contribuicao": {
+      "precisao": 1.0,
+      "revocacao": 1.0,
+      "f1": 1.0,
+      "acertos": 11,
+      "extraidas": 11,
+      "anotadas": 11
+    },
+    "trabalho_futuro": {
+      "precisao": 0.95,
+      "revocacao": 0.9047619047619048,
+      "f1": 0.9268292682926829,
+      "acertos": 19,
+      "extraidas": 20,
+      "anotadas": 21
+    },
+    "media": {
+      "precisao": 0.7177018633540373,
+      "revocacao": 0.7045747943446153,
+      "f1": 0.7108316921678532
+    },
+    "referencias": {
+      "erro_medio": 0.08333333333333333,
+      "artigos_sem_erro": 11,
+      "acerto": 0.9975490196078431
+    },
+    "titulo_correto": 1.0,
+    "ano_correto": 1.0,
+    "tempo_medio": 0.5866666666666667,
+    "trocas_entre_elementos": {
+      "objetivo -> metodo": 1,
+      "objetivo -> contribuicao": 1,
+      "problema -> objetivo": 1,
+      "problema -> contribuicao": 1,
+      "metodo -> objetivo": 3,
+      "metodo -> contribuicao": 1,
+      "contribuicao -> objetivo": 1,
+      "contribuicao -> metodo": 1
+    }
+  },
+  "por_artigo": [
+    {
+      "arquivo": "2020.acl-main.207.pdf",
+      "objetivo": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 1,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 1,
+        "extraidas": 1,
+        "anotadas": 1
+      },
+      "trabalho_futuro": {
+        "acertos": 3,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "referencias": {
+        "sistema": 57,
+        "gabarito": 57
+      }
+    },
+    {
+      "arquivo": "2020.acl-main.447.pdf",
+      "objetivo": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 1,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "trabalho_futuro": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "referencias": {
+        "sistema": 55,
+        "gabarito": 56
+      }
+    },
+    {
+      "arquivo": "2023.eacl-main.121.pdf",
+      "objetivo": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 2,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 1,
+        "extraidas": 1,
+        "anotadas": 1
+      },
+      "trabalho_futuro": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "referencias": {
+        "sistema": 66,
+        "gabarito": 66
+      }
+    },
+    {
+      "arquivo": "N18-3011.pdf",
+      "objetivo": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 1,
+        "extraidas": 3,
+        "anotadas": 2
+      },
+      "contribuicao": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "trabalho_futuro": {
+        "acertos": 1,
+        "extraidas": 1,
+        "anotadas": 1
+      },
+      "referencias": {
+        "sistema": 27,
+        "gabarito": 27
+      }
+    },
+    {
+      "arquivo": "P07-1088.pdf",
+      "objetivo": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 0,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 1,
+        "extraidas": 3,
+        "anotadas": 2
+      },
+      "contribuicao": {
+        "acertos": 4,
+        "extraidas": 4,
+        "anotadas": 4
+      },
+      "trabalho_futuro": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "referencias": {
+        "sistema": 15,
+        "gabarito": 15
+      }
+    },
+    {
+      "arquivo": "P14-1059.pdf",
+      "objetivo": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 2,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 1,
+        "extraidas": 1,
+        "anotadas": 1
+      },
+      "trabalho_futuro": {
+        "acertos": 2,
+        "extraidas": 3,
+        "anotadas": 2
+      },
+      "referencias": {
+        "sistema": 32,
+        "gabarito": 32
+      }
+    },
+    {
+      "arquivo": "bohnet09.pdf",
+      "objetivo": {
+        "acertos": 1,
+        "extraidas": 1,
+        "anotadas": 1
+      },
+      "problema": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 1
+      },
+      "metodo": {
+        "acertos": 3,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "trabalho_futuro": {
+        "acertos": 1,
+        "extraidas": 1,
+        "anotadas": 1
+      },
+      "referencias": {
+        "sistema": 20,
+        "gabarito": 20
+      }
+    },
+    {
+      "arquivo": "bunescu-acl07.pdf",
+      "objetivo": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 1,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "trabalho_futuro": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "referencias": {
+        "sistema": 16,
+        "gabarito": 16
+      }
+    },
+    {
+      "arquivo": "dyer12.pdf",
+      "objetivo": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 0,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 2,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "trabalho_futuro": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "referencias": {
+        "sistema": 47,
+        "gabarito": 47
+      }
+    },
+    {
+      "arquivo": "fader11.pdf",
+      "objetivo": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 0,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 4,
+        "extraidas": 4,
+        "anotadas": 4
+      },
+      "trabalho_futuro": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 3
+      },
+      "referencias": {
+        "sistema": 30,
+        "gabarito": 30
+      }
+    },
+    {
+      "arquivo": "mooney05.pdf",
+      "objetivo": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 1
+      },
+      "metodo": {
+        "acertos": 2,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "trabalho_futuro": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "referencias": {
+        "sistema": 17,
+        "gabarito": 17
+      }
+    },
+    {
+      "arquivo": "roark13.pdf",
+      "objetivo": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "problema": {
+        "acertos": 1,
+        "extraidas": 2,
+        "anotadas": 2
+      },
+      "metodo": {
+        "acertos": 2,
+        "extraidas": 3,
+        "anotadas": 3
+      },
+      "contribuicao": {
+        "acertos": 0,
+        "extraidas": 0,
+        "anotadas": 0
+      },
+      "trabalho_futuro": {
+        "acertos": 2,
+        "extraidas": 2,
+        "anotadas": 3
+      },
+      "referencias": {
+        "sistema": 25,
+        "gabarito": 25
+      }
+    }
+  ]
+}
